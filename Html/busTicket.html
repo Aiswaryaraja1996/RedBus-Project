@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://www.redbus.in/favicon.ico?root=rbus"
+      rel="shortcut icon"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/busTicket.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css"
+    />
+    <title>
+      Mumbai to Bangalore (Bengaluru) Bus Tickets Booking, Save upto 25% -
+      redBus
+    </title>
+  </head>
+  <body>
+    <div class="main-container">
+      <!-- Navbar comes under the header -->
+      <header></header>
+
+      <!-- All the content code -->
+      <div class="content-wrapper">
+        <!-- The top ribbon of the page -->
+        <section>
+          <div class="top-ribbon">
+            <ul>
+              <li>
+                <a href="">
+                  <span>Home</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <span>Bus Tickets</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <span>Mumbai Bus</span>
+                </a>
+              </li>
+              <li>
+                <h1>Mumbai to Bangalore (Bengaluru) Bus</h1>
+              </li>
+            </ul>
+            <div class="fare-starts">Fare Starts from INR 950</div>
+          </div>
+        </section>
+
+        <!-- The remaining content  -->
+        <div class="main-content">
+          <div class="search">
+            <div class="fixer">
+              <div class="modify clearfix">
+                <div class="modify-div clearfix">
+                  <div class="onward">
+                    <h2>
+                      <span>Mumbai (All Loca...</span
+                      ><i class="bi bi-arrow-right"></i
+                      ><span>Bangalore (All L...</span>
+                    </h2>
+                    <span class="prev"><i class="bi bi-chevron-left"></i></span
+                    ><span class="dateDisp"
+                      ><input
+                        type="text"
+                        id="searchDat"
+                        readonly=""
+                        class="searchDate"
+                        value="26 Oct"
+                      /><span class="searchday"> Tue</span></span
+                    ><span class="next"
+                      ><i class="bi bi-chevron-right"></i
+                    ></span>
+                  </div>
+                  <div class="modify-btn clearfix">Modify</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bus-data clearfix">
+              <div class="filter-block">
+                <div class="filter-details">
+                  <div class="title">FILTERS</div>
+                  <span class="clearFilters"></span>
+                </div>
+                <div class="details">
+                  <ul class="addn-filters">
+                    <li class="clearfix">
+                      <i class="bi bi-geo-alt-fill left-icon"></i>
+                      <span class="d-color">Live Tracking (24)</span>
+                      <i class="bi bi-check2"></i>
+                    </li>
+                    <li class="clearfix">
+                      <i class="bi bi-tag-fill left-icon"></i>
+                      <span class="d-color">Red Deals (1)</span>
+                      <i class="bi bi-check2"></i>
+                    </li>
+                    <li class="clearfix">
+                      <i class="bi bi-clock-history left-icon"></i>
+                      <span class="d-color">Reschedulable (13)</span>
+                      <i class="bi bi-check2"></i>
+                    </li>
+                  </ul>
+                  <div class="filter-title">DEPARTURE TIME</div>
+                  <ul class="dept-time">
+                    <li class="checkbox fillDisable">
+                      <input type="checkbox" id="dtBefore 6 am" />
+                      <label
+                        for="dtBefore 6 am"
+                        class="custom-checkbox"
+                      ></label>
+                      <span>
+                        <i class="bi bi-sunrise"></i>
+                      </span>
+                      <label
+                        for="dtBefore 6 am"
+                        class="cbox-label"
+                        title="Before 6 am"
+                        >Before 6 am (0)</label
+                      >
+                    </li>
+                    <li class="checkbox fillDisable">
+                      <input type="checkbox" id="dtBefore 6 am" />
+                      <label
+                        for="dt6 am to 12 pm"
+                        class="custom-checkbox"
+                      ></label>
+                      <span>
+                        <i class="bi bi bi-sun"></i>
+                      </span>
+                      <label
+                        for="dt6 am to 12 pm"
+                        class="cbox-label"
+                        title="6 am to 12 pm"
+                        >6 am to 12 pm (4)</label
+                      >
+                    </li>
+                    <li class="checkbox fillDisable">
+                      <input type="checkbox" id="dtBefore 6 am" />
+                      <label
+                        for="dt12 pm to 6 pm"
+                        class="custom-checkbox"
+                      ></label>
+                      <span>
+                        <i class="bi bi-brightness-alt-high"></i>
+                      </span>
+                      <label
+                        for="dt12 pm to 6 pm"
+                        class="cbox-label"
+                        title="12 pm to 6 pm"
+                        >12 pm to 6 pm (23)</label
+                      >
+                    </li>
+                    <li class="checkbox fillDisable">
+                      <input type="checkbox" id="dtBefore 6 am" />
+                      <label for="dtAfter 6 pm" class="custom-checkbox"></label>
+                      <span>
+                        <i class="bi bi-sunset"></i>
+                      </span>
+                      <label
+                        for="dtAfter 6 pm"
+                        class="cbox-label"
+                        title="After 6 pm"
+                        >After 6 pm (5)</label
+                      >
+                    </li>
+                  </ul>
+                  <div class="filter-title">BUS TYPES</div>
+                  <ul class="list-chkbox">
+                    <li data-value="" class="checkbox">
+                      <input type="checkbox" id="bt_SEATER" /><label
+                        for="bt_SEATER"
+                        class="custom-checkbox"
+                      ></label
+                      ><label for="bt_SEATER" class="cbox-label" title="SEATER"
+                        >SEATER (11)</label
+                      >
+                    </li>
+                    <li data-value="" class="checkbox">
+                      <input type="checkbox" id="bt_SLEEPER" /><label
+                        for="bt_SLEEPER"
+                        class="custom-checkbox"
+                      ></label
+                      ><label
+                        for="bt_SLEEPER"
+                        class="cbox-label"
+                        title="SLEEPER"
+                        >SLEEPER (29)</label
+                      >
+                    </li>
+                    <li data-value="" class="checkbox">
+                      <input type="checkbox" id="bt_AC" /><label
+                        for="bt_AC"
+                        class="custom-checkbox"
+                      ></label
+                      ><label for="bt_AC" class="cbox-label" title="AC"
+                        >AC (24)</label
+                      >
+                    </li>
+                    <li data-value="" class="checkbox">
+                      <input type="checkbox" id="bt_NONAC" /><label
+                        for="bt_NONAC"
+                        class="custom-checkbox"
+                      ></label
+                      ><label for="bt_NONAC" class="cbox-label" title="NONAC"
+                        >NONAC (8)</label
+                      >
+                    </li>
+                  </ul>
+                  <div class="filter-title">ARRIVAL TIME</div>
+                </div>
+              </div>
+              <div class="bus-data-block">
+                <ul class="tiles clearfix">
+                  <li class="bannerTiles t1"></li>
+                  <li class="bannerTiles t2"></li>
+                  <li class="bannerTiles t3"></li>
+                </ul>
+                <div class="safety-band">
+                  <div class="icon-safety">
+                    <i class="bi bi-shield-check"></i>
+                  </div>
+                  <div class="caption">
+                    All bus ratings include safety as a major factor
+                  </div>
+                </div>
+                <hr />
+                <div class="sort-section clearfix">
+                  <div class="w-30 float-left flex">
+                    <span class="w-60"
+                      ><span class="f-bold">31 Buses </span>found</span
+                    >
+                    <span class="w-30 d-block f-12 f-bold t-right"
+                      >SORT BY:</span
+                    >
+                  </div>
+                  <div class="w-10 float-left f-12 d-color">
+                    <a>Departure</a>
+                  </div>
+                  <div class="w-10 float-left f-12 d-color">
+                    <a>Duration</a>
+                  </div>
+                  <div class="w-10 float-left f-12 d-color">
+                    <a>Arrival</a>
+                  </div>
+                  <div class="w-10 float-left f-12 d-color">
+                    <a>Ratings</a>
+                  </div>
+                  <div class="w-10 float-left f-12 d-color">
+                    <a>Fare</a>
+                  </div>
+                  <div class="w-10 float-left f-12 d-color">
+                    <a>Seats Available</a>
+                  </div>
+                </div>
+                <div class="result-section">
+                  <ul class="busItems">
+                    <div>
+                      <li class="row clearfix">
+                        <div class="clearfix bus-item">
+                          <div class="clearfix bus-item-details">
+                            <div class="clearfix row-one"></div>
+                            <div class="clearfix row-two"></div>
+                          </div>
+                          <div class="clearfix last-row">
+                            <div class="button view-seats fr">View Seats</div>
+                            <div>
+                              <ul class="bottom-panel">
+                                <li class="amenties b-p-list">
+                                  <span class="txt-val">Amenities</span>
+                                </li>
+                                <li class="amenties b-p-list">
+                                  <span class="txt-val">Bus Photos</span>
+                                </li>
+                                <li class="amenties b-p-list">
+                                  <span class="txt-val"
+                                    >Boarding &amp; Dropping Points</span
+                                  >
+                                </li>
+                                <li class="amenties b-p-list">
+                                  <span class="txt-val">Reviews</span>
+                                </li>
+                                <li class="amenties b-p-list">
+                                  <span class="txt-val">Booking policies</span>
+                                </li>
+                              </ul>
+                              <div class="clearfix"></div>
+                              <div class="panel-loader"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </div>
+                    <div>
+                      <li class="row clearfix">
+                        <div class="clearfix bus-item">
+                          <div class="clearfix bus-item-details">
+                            <div class="clearfix row-one"></div>
+                            <div class="clearfix row-two"></div>
+                          </div>
+                          <div class="clearfix last-row">
+                            <div class="button view-seats fr">View Seats</div>
+                            <div>
+                              <ul class="bottom-panel">
+                                <li class="amenties b-p-list">
+                                  <span class="txt-val">Amenities</span>
+                                </li>
+                                <li class="amenties b-p-list">
+                                  <span class="txt-val">Bus Photos</span>
+                                </li>
+                                <li class="amenties b-p-list">
+                                  <span class="txt-val"
+                                    >Boarding &amp; Dropping Points</span
+                                  >
+                                </li>
+                                <li class="amenties b-p-list">
+                                  <span class="txt-val">Reviews</span>
+                                </li>
+                                <li class="amenties b-p-list">
+                                  <span class="txt-val">Booking policies</span>
+                                </li>
+                              </ul>
+                              <div class="clearfix"></div>
+                              <div class="panel-loader"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </div>
+                    <div>
+                      <li class="row clearfix">
+                        <div class="clearfix bus-item">
+                          <div class="clearfix bus-item-details">
+                            <div class="clearfix row-one"></div>
+                            <div class="clearfix row-two"></div>
+                          </div>
+                          <div class="clearfix last-row">
+                            <div class="button view-seats fr">View Seats</div>
+                            <div>
+                              <ul class="bottom-panel">
+                                <li class="amenties b-p-list">
+                                  <span class="txt-val">Amenities</span>
+                                </li>
+                                <li class="amenties b-p-list">
+                                  <span class="txt-val">Bus Photos</span>
+                                </li>
+                                <li class="amenties b-p-list">
+                                  <span class="txt-val"
+                                    >Boarding &amp; Dropping Points</span
+                                  >
+                                </li>
+                                <li class="amenties b-p-list">
+                                  <span class="txt-val">Reviews</span>
+                                </li>
+                                <li class="amenties b-p-list">
+                                  <span class="txt-val">Booking policies</span>
+                                </li>
+                              </ul>
+                              <div class="clearfix"></div>
+                              <div class="panel-loader"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </div>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-data">
+          <section class="section-data">
+            <div>
+              <h2>Mumbai to Bangalore Covid-19 Travel Guidelines</h2>
+            </div>
+            <div class="content">
+              <p>
+                If you’re planning to book a bus ticket from Mumbai to Bangalore
+                (Bengaluru), please take a note of Bangalore (Bengaluru) travel
+                guidelines to avoid any last-minute hassle. The continuous spike
+                of new Covid-19 cases in the state has prompted the Government
+                to issue fresh travel guidelines in order to curb the spread of
+                the virus. In a bid to help the passengers on all recent travel
+                updates, we have made a comprehensive report of guidelines one
+                needs to check before booking a bus from Mumbai to Bangalore
+                (Bengaluru) :
+              </p>
+              <ul>
+                <li>
+                  The guidelines will remain in force in the entire state up to
+                  6 am of 27-09-2021, Movement of passengers in buses will be
+                  allowed only on displaying valid travel documents/Tickets.
+                </li>
+                <li>There will be no weekend curfew in the state.</li>
+                <li>The night curfew from 9 pm to 5 am will continue.</li>
+                <li>
+                  Public transport including buses can operate in the state with
+                  100% occupancy.
+                </li>
+                <li>
+                  Apart from Maharashtra &amp; Kerala, No RT-PCR required for
+                  passengers travelling from other states.
+                </li>
+                <li>
+                  Guidelines for traveling from Maharashtra &amp; Kerala to
+                  Karnataka : Travellers arriving from Kerala &amp; Maharashtra
+                  should produce a negative RT - PCR certificate that is not
+                  older than 72 hours irrespective of vaccination status.
+                </li>
+              </ul>
+            </div>
+          </section>
+          <hr />
+          <section class="section-data">
+            <div>
+              <h2>Bus from Mumbai to Bangalore (Bengaluru)</h2>
+            </div>
+            <div class="content">
+              <p>
+                The journey from Mumbai to Bangalore (Bengaluru) is smoothly
+                covered by a bus in 9 hours. The time to travel is dependent on
+                India’s traffic, roads and climatic conditions. There are
+                operators running their buses between Mumbai to Bangalore
+                (Bengaluru) bringing necessary travel convenience for several
+                people in India. All buses are driven by experienced drivers
+                ensuring safety during journey.<br />
+              </p>
+              <p>
+                Many travelers like to take a Mumbai to Bangalore (Bengaluru)
+                train in order to ensure comfort, availability of washroom
+                facilities, and ideal duration of journey. However, buses from
+                Mumbai to Bangalore (Bengaluru) offer equal comfort and
+                convenience given the choice of seater/ sleeper buses and plenty
+                of bus operators to choose from. Getting a perfect seat
+                availability in a train from Mumbai to Bangalore (Bengaluru) is
+                a complex affair due to social distancing rules during Covid-19
+                and Mumbai to Bangalore (Bengaluru) being a busy route. Here
+                Mumbai to Bangalore (Bengaluru) buses come out to be the perfect
+                solution with their ease of booking. Also, if you’re the one who
+                has loved the comfort of AC trains from Mumbai to Bangalore
+                (Bengaluru), you will find plenty of comfortable air conditioned
+                Volvo buses on this route.<br />
+              </p>
+              <p>
+                The Mumbai to Bangalore (Bengaluru) fare varies according to
+                what means of transportation you choose to travel. Both Mumbai
+                to Bangalore (Bengaluru) train booking and bus booking can be
+                done online now-a-days and one gets to choose the choice of
+                seat, lower or upper. While in case of trains, one gets to know
+                about their seat number after booking the tickets, passengers
+                can select and book their seats easily while booking bus tickets
+                online. Some buses on this route come with attached toilets,
+                which makes the travel extremely convenient for the elderly. One
+                can also find a number of volvo buses with restroom facilities.
+                Buses with toilet facilities can be easily filtered out while
+                booking bus tickets on redBus. On the other hand, bus operators
+                that do not have attached toilets in buses give a washroom break
+                of 10-15 mins while covering the Mumbai to Bangalore (Bengaluru)
+                distance as per the passengers’ comfort. The trains may sometime
+                get delayed by hours, but buses mostly run on time. In addition
+                to aforementioned facilities, there are many other reasons to
+                choose buses when you fall short of Mumbai to Bangalore
+                (Bengaluru) train tickets, such as:<br />
+              </p>
+              <ul>
+                <li>
+                  As boarding and dropping points are closer to home, buses can
+                  reduce the distance between passengers’ source and
+                  destination.
+                </li>
+                <li>
+                  Buses are safer modes of transportation as it’s easier to
+                  sanitize buses before and after each trip.
+                </li>
+                <li>
+                  As compared to trains, passengers get a personal cabin in the
+                  bus.
+                </li>
+                <li>
+                  Passengers need not go to crowded areas like a railway station
+                  and catch the bus from their closest boarding point, which
+                  will reduce their exposure to Covid-19.
+                </li>
+                <li>
+                  Using the online bus booking system, buses can be easily
+                  rescheduled, which is still a herculean task with trains.
+                </li>
+                <li>
+                  Most of the buses on Mumbai to Bangalore (Bengaluru) route
+                  stop at great restaurants that offer hot and hygienic meals.
+                </li>
+                <li>
+                  Buses are more flexible than trains since the bus road network
+                  is denser than those of trains.
+                </li>
+                <li>
+                  If you want a non stop smooth and comfortable journey the
+                  premium VOLVO buses might be your option, as for many the
+                  jarring movement of train can be uncomfortable.
+                </li>
+              </ul>
+              <p>
+                So, if you’re looking for an urgent travel and unable to book
+                Mumbai to Bangalore (Bengaluru) train tickets, do not worry!
+                Just log on to redBus.in and choose a suitable bus to travel by.
+              </p>
+            </div>
+          </section>
+          <hr />
+          <section class="section-data">
+            <h2>Bus From Bangalore (Bengaluru) to Mumbai Bus</h2>
+            <div>
+              If this isn’t a one-way journey, you can book your return tickets
+              from Bangalore (Bengaluru) to Mumbai with ease. With a plethora of
+              operators servicing this route, choose a bus that best meets your
+              needs and requirements. You can even use the filter option to
+              arrange the bus operators according to your preferred choice such
+              as duration of travel, fare, seats available, etc. So, what are
+              you waiting for? Book your
+              <a href="/bus-tickets/bangalore-to-mumbai"
+                >Bangalore (Bengaluru) to Mumbai</a
+              >
+              bus tickets with redBus.
+            </div>
+          </section>
+          <hr />
+          <section class="section-data">
+            <h2 class="t-center">Operators Serving on this Route</h2>
+            <p></p>
+            <p>
+              A number of prominent operators ply buses from Mumbai to Bangalore
+              (Bengaluru) ensuring punctuality and safety for its passengers.
+              Major operators offering various kinds of bus services are:
+            </p>
+            <p></p>
+            <ul class="operators">
+              <li class="">
+                <a href="/travels/sharma-travels-sharma-bangalore"
+                  >Sharma Transports
+                </a>
+              </li>
+              <li class="">
+                <a href="/travels/khicha">Khicha</a>
+              </li>
+              <li class="">
+                <a href="/travels/mr-travels-company">MR Travels Company</a>
+              </li>
+              <li class="">
+                <a href="/travels/s-kanade-transline">S Kanade Transline</a>
+              </li>
+              <li class="">
+                <a href="/travels/crl-travels">CRL Travels</a>
+              </li>
+              <li class="">
+                <a href="/travels/msrtc">MSRTC</a>
+              </li>
+              <li class="">
+                <a href="/travels/anand-travel">Anand Travel</a>
+              </li>
+              <li class="">
+                <a href="/travels/b-r-travels">B R Travels</a>
+              </li>
+              <li class="">
+                <a href="/travels/limra-travel-agency">Limra Travel Agency</a>
+              </li>
+              <li class="">
+                <a href="/travels/srs-travels-srs">SRS Travels</a>
+              </li>
+              <li class="">
+                <a href="/travels/national-travels-national"
+                  >National Travels</a
+                >
+              </li>
+              <li class="">
+                <a href="/travels/ideal-travels">Ideal Travels</a>
+              </li>
+              <li class="">
+                <a href="/travels/meenakshi-travels">Meenakshi Travels</a>
+              </li>
+              <li class="">
+                <a href="/travels/jakhar-travels">Jakhar Travels</a>
+              </li>
+              <li class="">
+                <a href="/travels/vrl-travels-vrl">VRL Travels</a>
+              </li>
+              <li class="">
+                <a href="/travels/seabird-tourist-seabird">Sea Bird Tourist</a>
+              </li>
+              <li class="">
+                <a href="/travels/jabbar-travels">Jabbar Travels</a>
+              </li>
+              <li class="">
+                <a href="/travels/gujarat-travels">Gujarat Travels</a>
+              </li>
+              <li class="">
+                <a href="/travels/shrinath-travels-agency-online"
+                  >Shrinath Travels</a
+                >
+              </li>
+              <li class="">
+                <a href="/travels/laxmeswar">Laxmeswar</a>
+              </li>
+              <li class="hide">
+                <a href="/travels/reshma-tourist">Reshma Tourist</a>
+              </li>
+              <li class="hide">
+                <a href="/travels/shree-vishwakarma-travels"
+                  >Shree Vishwakarma Travels</a
+                >
+              </li>
+              <li class="hide">
+                <a href="/travels/vastavika-tours-and-travels"
+                  >Vastavika Tours and Travels</a
+                >
+              </li>
+              <li class="hide">
+                <a href="/travels/national-travels-ntsb"
+                  >National travels ntsb</a
+                >
+              </li>
+              <li class="hide">
+                <a href="/travels/orange-travels-orange">Orange Travels</a>
+              </li>
+              <li class="hide">
+                <a href="/travels/ap-travels">AP Travels</a>
+              </li>
+              <li class="hide">
+                <a href="/travels/citizen-travel-mumbai"
+                  >Citizen travel mumbai</a
+                >
+              </li>
+              <li class="hide">
+                <a href="/travels/citizen-travels-pune">Citizen Travels Pune</a>
+              </li>
+              <li class="hide">
+                <a href="/travels/chirag-travels-co">Chirag Travels Co.™</a>
+              </li>
+              <li class="hide">
+                <a href="/travels/national-travels-abd"
+                  >National Travels (Abd)</a
+                >
+              </li>
+              <li class="hide">
+                <a href="/travels/meera-tours-travels"
+                  >Meera Tours &amp; Travels</a
+                >
+              </li>
+            </ul>
+            <div class="view-more">View More</div>
+          </section>
+          <section class="section-data">
+            <div>
+              <h2>About Mumbai</h2>
+            </div>
+            <div class="content">
+              Sixth among the world’s top ten commercial centers, Mumbai
+              generates 5% of India"s GDP. Apart from having leading financial
+              Institutions and many business conglomerates it also is the
+              headquarter of Indian Entertainment Industry, with bollywood stars
+              residing there which is also an attraction for tourists. Business
+              opportunities, as well as the potential for a higher standard of
+              living, attract migrants and it’s rightly called “The City of
+              Dreams”. Though the best time to visit is between November and
+              February, tourists visit all the year round .Mumbai"s culture
+              offers a cosmopolitan lifestyle with a variety of food,
+              entertainment and the city rarely sleeps at night.
+            </div>
+          </section>
+          <hr />
+          <section class="section-data">
+            <div>
+              <h2>About Bangalore (Bengaluru)</h2>
+            </div>
+            <div class="content">
+              Bangalore (Bengaluru) is located on Deccan highland and belongs to
+              the southeastern state of Karnataka, India. Bangalore (Bengaluru)
+              is considered as the most developed city of Information Technology
+              in India and is one of 10 business locations in the world. There
+              are a lot of modern architectural works, many historical sites and
+              stories of Indian dynasty as well as a cool weather, Bangalore
+              (Bengaluru) is not only a home of scientists and researchers but
+              is also one of the most attractive destinations for foreign
+              tourists in India. You don’t believe in what I am saying but you
+              will know exactly how Bangalore (Bengaluru) steals people’s hearts
+              easily if you have a chance to come to this wonderful city.
+              Bangalore (Bengaluru) is also sometimes referred to as the
+              "Silicon Valley of India". Bangalore (Bengaluru) is famous for the
+              numerous IT Companies.
+            </div>
+          </section>
+          <hr />
+          <section class="section-data">
+            <h2>Avail Discounts on Online Bus Bookings in redBus</h2>
+            <div>
+              You can now book route tickets from Mumbai to Bangalore
+              (Bengaluru) at
+              <a href="https://www.redbus.in" target="_blank">redBus.in</a>.
+              Apply time to time redBus offers on online bus ticket booking.
+              Save some money and memories too!
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
