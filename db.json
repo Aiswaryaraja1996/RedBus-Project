@@ -1,0 +1,215 @@
+{
+    "busDetails": [
+        {
+            "id": 1,
+            "travels": "VRL Travels",
+            
+            "busName": "Volvo Multi-Axle I-Shift A/C Sleeper (2+1)",
+            "departure": [
+                {
+                    "time": "12:30",
+                    "location": "Borivali West",
+                    "date": "27 Oct 2021"
+                }
+            ],
+            "duration": "19:00",
+            "arrival": [
+                {
+                    "time": "07:30",
+                    "location": "Anand Rao Circle",
+                    "date": "27 Oct 2021"
+                }
+            ],
+            "ratings": [
+                {
+                    "points": "3.2",
+                    "count": "237"
+                }
+            ],
+            "fare": "2100",
+            "seats": [
+                {
+                    "normal": "20",
+                    "window": "10"
+                }
+            ],
+            "amenities": [
+                "Charging Point",
+                "Reading Light",
+                "Track My Bus",
+                "WIFI",
+                "Blankets",
+                "Pillow",
+                "Headsets"
+            ]
+        },
+        {
+            "id": 2,
+            "travels": "Orange Tours and Travels Platinum",
+            "busName": "Volvo Multi-Axle Sleeper A/C (2+1)",
+            "departure": [
+                {
+                    "time": "16:00",
+                    "location": "Sion",
+                    "date": "27 Oct 2021"
+                }
+            ],
+            "duration": "17:30",
+            "arrival": [
+                {
+                    "time": "09:30",
+                    "location": "Yeshwantpur",
+                    "date": "27 Oct 2021"
+                }
+            ],
+            "ratings": [
+                {
+                    "points": "3.3",
+                    "count": "391"
+                }
+            ],
+            "fare": "1900",
+            "seats": [
+                {
+                    "normal": "20",
+                    "window": "10"
+                }
+            ],
+            "amenities": [
+                "Charging Point",
+                "Reading Light",
+                "Track My Bus",
+                "WIFI",
+                "Blankets",
+                "Pillow",
+                "Headsets"
+            ]
+        },
+        {
+            "id": 3,
+            "travels": "Reshma Tourist",
+            "busName": "Bharat Benz A/C Sleeper (2+1)",
+            "departure": [
+                {
+                    "time": "15:00",
+                    "location": "Mira Road East",
+                    "date": "27 Oct 2021"
+                }
+            ],
+            "duration": "19:30",
+            "arrival": [
+                {
+                    "time": "10:30",
+                    "location": "Kalasipalyam",
+                    "date": "27 Oct 2021"
+                }
+            ],
+            "ratings": [
+                {
+                    "points": "3.2",
+                    "count": "107"
+                }
+            ],
+            "fare": "1400",
+            "seats": [
+                {
+                    "normal": "20",
+                    "window": "10"
+                }
+            ],
+            "amenities": [
+                "Charging Point",
+                "Reading Light",
+                "Track My Bus",
+                "WIFI",
+                "Blankets",
+                "Pillow",
+                "Headsets"
+            ]
+        },
+        {
+            "id": 5,
+            "travels": "National travels ntsb",
+            "busName": "Bharat Benz A/C Sleeper (2+1)",
+            "departure": [
+                {
+                    "time": "14:45",
+                    "location": "Borivali East",
+                    "date": "27 Oct 2021"
+                }
+            ],
+            "duration": "18:19",
+            "arrival": [
+                {
+                    "time": "09:04",
+                    "location": "Nelamangala",
+                    "date": "27 Oct 2021"
+                }
+            ],
+            "ratings": [
+                {
+                    "points": "2.8",
+                    "count": "97"
+                }
+            ],
+            "fare": "1300",
+            "seats": [
+                {
+                    "normal": "20",
+                    "window": "10"
+                }
+            ],
+            "amenities": [
+                "Charging Point",
+                "Reading Light",
+                "Track My Bus",
+                "WIFI",
+                "Blankets",
+                "Pillow",
+                "Headsets"
+            ]
+        },
+        {
+            "id": 5,
+            "travels": "Anand Travels",
+            "busName": "Bharat Benz A/C Sleeper (2+1)",
+            "departure": [
+                {
+                    "time": "11:20",
+                    "location": "Malad East",
+                    "date": "27 Oct 2021"
+                }
+            ],
+            "duration": "19:10",
+            "arrival": [
+                {
+                    "time": "06:30",
+                    "location": "Kalasipalyam",
+                    "date": "27 Oct 2021"
+                }
+            ],
+            "ratings": [
+                {
+                    "points": "2.7",
+                    "count": "112"
+                }
+            ],
+            "fare": "1400",
+            "seats": [
+                {
+                    "normal": "20",
+                    "window": "10"
+                }
+            ],
+            "amenities": [
+                "Charging Point",
+                "Reading Light",
+                "Track My Bus",
+                "WIFI",
+                "Blankets",
+                "Pillow",
+                "Headsets"
+            ]
+        }
+    ]
+}
