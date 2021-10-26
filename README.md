@@ -1,6 +1,6 @@
 # RedBus-Project
 
-#### Steps to install project
+#### Steps to install project and work on seperate branches
 ```
 git clone git@github.com:<your SSH key>/github_guide.git
 cd RedBus-Project
