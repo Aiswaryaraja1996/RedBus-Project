@@ -9,3 +9,10 @@ git branch <your Name>
 git checkout <your Branch Name>
 
 ```
+#### To work with JSON server
+```
+cd RedBus-Project
+npm install
+npm run start
+
+```
