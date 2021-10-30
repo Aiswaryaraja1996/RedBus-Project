@@ -3,8 +3,10 @@
         {
             "id": 1,
             "travels": "VRL Travels",
-            
+
             "busName": "Volvo Multi-Axle I-Shift A/C Sleeper (2+1)",
+            "source":"Mumbai",
+            "destination":"Bangalore",
             "departure": [
                 {
                     "time": "12:30",
@@ -47,6 +49,8 @@
             "id": 2,
             "travels": "Orange Tours and Travels Platinum",
             "busName": "Volvo Multi-Axle Sleeper A/C (2+1)",
+            "source":"Mumbai",
+            "destination":"Bangalore",
             "departure": [
                 {
                     "time": "16:00",
@@ -89,6 +93,8 @@
             "id": 3,
             "travels": "Reshma Tourist",
             "busName": "Bharat Benz A/C Sleeper (2+1)",
+            "source":"Mumbai",
+            "destination":"Bangalore",
             "departure": [
                 {
                     "time": "15:00",
@@ -131,6 +137,8 @@
             "id": 5,
             "travels": "National travels ntsb",
             "busName": "Bharat Benz A/C Sleeper (2+1)",
+            "source":"Mumbai",
+            "destination":"Bangalore",
             "departure": [
                 {
                     "time": "14:45",
@@ -173,6 +181,8 @@
             "id": 5,
             "travels": "Anand Travels",
             "busName": "Bharat Benz A/C Sleeper (2+1)",
+            "source":"Mumbai",
+            "destination":"Bangalore",
             "departure": [
                 {
                     "time": "11:20",
