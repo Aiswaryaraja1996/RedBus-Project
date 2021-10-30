@@ -3,10 +3,9 @@
         {
             "id": 1,
             "travels": "VRL Travels",
-
             "busName": "Volvo Multi-Axle I-Shift A/C Sleeper (2+1)",
-            "source":"Mumbai",
-            "destination":"Bangalore",
+            "source": "Mumbai",
+            "destination": "Bangalore",
             "departure": [
                 {
                     "time": "12:30",
@@ -24,15 +23,249 @@
             ],
             "ratings": [
                 {
-                    "points": "3.2",
+                    "points": "4.2",
                     "count": "237"
                 }
             ],
             "fare": "2100",
             "seats": [
                 {
-                    "normal": "20",
-                    "window": "10"
+                    "name": "L1",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L2",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1600"
+                },
+                {
+                    "name": "L3",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1600"
+                },
+                {
+                    "name": "L4",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L5",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L6",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L7",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L8",
+                    "value": "1",
+                    "sex": "F",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L9",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L10",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L11",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L12",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L13",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L14",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L15",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L16",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L17",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U1",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1600"
+                },
+                {
+                    "name": "U2",
+                    "value": "1",
+                    "sex": "F",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U3",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U4",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U5",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U6",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U7",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U8",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U9",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U10",
+                    "value": "1",
+                    "sex": "F",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U11",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U12",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U13",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1600"
+                },
+                {
+                    "name": "U14",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U15",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U16",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U17",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1500"
                 }
             ],
             "amenities": [
@@ -49,8 +282,8 @@
             "id": 2,
             "travels": "Orange Tours and Travels Platinum",
             "busName": "Volvo Multi-Axle Sleeper A/C (2+1)",
-            "source":"Mumbai",
-            "destination":"Bangalore",
+            "source": "Mumbai",
+            "destination": "Bangalore",
             "departure": [
                 {
                     "time": "16:00",
@@ -75,8 +308,242 @@
             "fare": "1900",
             "seats": [
                 {
-                    "normal": "20",
-                    "window": "10"
+                    "name": "L1",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L2",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1600"
+                },
+                {
+                    "name": "L3",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1600"
+                },
+                {
+                    "name": "L4",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L5",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L6",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L7",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L8",
+                    "value": "1",
+                    "sex": "F",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L9",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L10",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L11",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L12",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L13",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L14",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L15",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L16",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L17",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U1",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1600"
+                },
+                {
+                    "name": "U2",
+                    "value": "1",
+                    "sex": "F",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U3",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U4",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U5",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U6",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U7",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U8",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U9",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U10",
+                    "value": "1",
+                    "sex": "F",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U11",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U12",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U13",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1600"
+                },
+                {
+                    "name": "U14",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U15",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U16",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U17",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1500"
                 }
             ],
             "amenities": [
@@ -93,8 +560,8 @@
             "id": 3,
             "travels": "Reshma Tourist",
             "busName": "Bharat Benz A/C Sleeper (2+1)",
-            "source":"Mumbai",
-            "destination":"Bangalore",
+            "source": "Mumbai",
+            "destination": "Bangalore",
             "departure": [
                 {
                     "time": "15:00",
@@ -119,8 +586,242 @@
             "fare": "1400",
             "seats": [
                 {
-                    "normal": "20",
-                    "window": "10"
+                    "name": "L1",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L2",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1600"
+                },
+                {
+                    "name": "L3",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1600"
+                },
+                {
+                    "name": "L4",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L5",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L6",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L7",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L8",
+                    "value": "1",
+                    "sex": "F",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L9",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L10",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L11",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L12",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L13",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L14",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L15",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L16",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L17",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U1",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1600"
+                },
+                {
+                    "name": "U2",
+                    "value": "1",
+                    "sex": "F",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U3",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U4",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U5",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U6",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U7",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U8",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U9",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U10",
+                    "value": "1",
+                    "sex": "F",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U11",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U12",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U13",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1600"
+                },
+                {
+                    "name": "U14",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U15",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U16",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U17",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1500"
                 }
             ],
             "amenities": [
@@ -137,8 +838,8 @@
             "id": 5,
             "travels": "National travels ntsb",
             "busName": "Bharat Benz A/C Sleeper (2+1)",
-            "source":"Mumbai",
-            "destination":"Bangalore",
+            "source": "Mumbai",
+            "destination": "Bangalore",
             "departure": [
                 {
                     "time": "14:45",
@@ -163,8 +864,242 @@
             "fare": "1300",
             "seats": [
                 {
-                    "normal": "20",
-                    "window": "10"
+                    "name": "L1",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L2",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1600"
+                },
+                {
+                    "name": "L3",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1600"
+                },
+                {
+                    "name": "L4",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L5",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L6",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L7",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L8",
+                    "value": "1",
+                    "sex": "F",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L9",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L10",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L11",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L12",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L13",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L14",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L15",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L16",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L17",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U1",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1600"
+                },
+                {
+                    "name": "U2",
+                    "value": "1",
+                    "sex": "F",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U3",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U4",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U5",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U6",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U7",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U8",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U9",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U10",
+                    "value": "1",
+                    "sex": "F",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U11",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U12",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U13",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1600"
+                },
+                {
+                    "name": "U14",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U15",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U16",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U17",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1500"
                 }
             ],
             "amenities": [
@@ -181,8 +1116,8 @@
             "id": 5,
             "travels": "Anand Travels",
             "busName": "Bharat Benz A/C Sleeper (2+1)",
-            "source":"Mumbai",
-            "destination":"Bangalore",
+            "source": "Mumbai",
+            "destination": "Bangalore",
             "departure": [
                 {
                     "time": "11:20",
@@ -207,8 +1142,242 @@
             "fare": "1400",
             "seats": [
                 {
-                    "normal": "20",
-                    "window": "10"
+                    "name": "L1",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L2",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1600"
+                },
+                {
+                    "name": "L3",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1600"
+                },
+                {
+                    "name": "L4",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L5",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L6",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L7",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L8",
+                    "value": "1",
+                    "sex": "F",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L9",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L10",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L11",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L12",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L13",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L14",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L15",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L16",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "L17",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U1",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1600"
+                },
+                {
+                    "name": "U2",
+                    "value": "1",
+                    "sex": "F",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U3",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U4",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U5",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U6",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U7",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U8",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U9",
+                    "value": "1",
+                    "sex": "M",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U10",
+                    "value": "1",
+                    "sex": "F",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U11",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U12",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U13",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1600"
+                },
+                {
+                    "name": "U14",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U15",
+                    "value": "0",
+                    "sex": "",
+                    "type": "W",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U16",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1500"
+                },
+                {
+                    "name": "U17",
+                    "value": "0",
+                    "sex": "",
+                    "type": "N",
+                    "rate": "1500"
                 }
             ],
             "amenities": [
