@@ -819,6 +819,7 @@ hr {
   border: 1px solid #6a6a6a;
   display: flex;
   justify-content: flex-end;
+  cursor: pointer;
 }
 .element {
   width: 6px;
@@ -912,6 +913,12 @@ hr {
 .rat-green {
   background-color: #38b87c;
 }
+.rat-orange {
+  background-color: #ebaf3c;
+}
+.rat-red {
+  background-color: #f04747;
+}
 .rating {
   padding: 4px 3px;
   color: #fff;
@@ -919,7 +926,7 @@ hr {
   margin-right: 5px;
   text-align: center;
   height: 24px;
-  font-size: 12px;
+  font-size: 11px;
 }
 .lh-18 {
   line-height: 18px;
