@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Responsive Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Adding Bootstrap CDN - Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- <--------Adding fontawesome link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <!-- Adding CSS -->
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <title>redBus NavBar</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+
+        .navbar-nav>li>a:hover {
+            background-color: red;
+            color: #FFC0CB;
+        }
+
+         /* <---------------------------footer css---------------------------> */
+      .footer {
+          margin-top:500px;
+        display: flex;
+        gap: 2rem;
+        color: white;
+        background-color: rgb(31, 31, 46);
+        flex-direction: row;
+      }
+      .footer h4 {
+        color: rgb(90, 89, 89);
+      }
+      #firstCol {
+        margin-left: 10%;
+      }
+      #lastCol {
+        margin-left: 5%;
+        margin-right: 10%;
+        /* width:100%; */
+      }
+      .icon {
+        border: 1px solid grey;
+        height: 30px;
+        width: 40px;
+        float: left;
+        text-align: center;
+        padding-top: 3px;
+        margin-right: 10px;
+        border-radius: 20px;
+      }
+      #lastP {
+        clear: both;
+        margin-top: 100px;
+      }
+
+      .widthFooter {
+        width: 9%;
+      }
+      #logoFooter {
+        height: 60px;
+        width: 80px;
+        background-color: rgb(31, 31, 46);
+        margin-top: 20px;
+        border: 1px solid grey;
+        border-radius: 20px;
+      }
+      #lastCol{
+        width: 55%;
+      }
+      @media screen and (max-width:600px){
+        .footer{
+          flex-direction: column;
+          flex-wrap: wrap;
+        }
+        #firstCol {
+        margin-left: 50px;
+      }
+        .widthFooter {
+          width: 60%;
+          margin-left: 50px;
+      }
+      #lastCol{
+        width:90%;
+      }
+    }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-danger navbar-dark fixed-top">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#"><img src="https://i.postimg.cc/zXFNsGkg/redbus-white.png" alt="redBus"
+                    width="60px"></a>
+
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="menu-nav">
+                <!-- Left-aligned nav (default) -->
+                <div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-uppercase" href="#">Bus Tickets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">rPool</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-uppercase" href="#">Bus Hire</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right-aligned nav -->
+                <div class="collapse navbar-collapse justify-content-end" id="menu-nav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Help</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
+                                Manage Booking
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Bus Tickets</a>
+                                <a class="dropdown-item" href="#">Cancel</a>
+                                <a class="dropdown-item" href="#">Change Travel Date</a>
+                                <a class="dropdown-item" href="#">Show My Tickets</a>
+                                <a class="dropdown-item" href="#">Email/SMS</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
+                                <i class="fa fa-user-circle"></i>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Sign In/Sign Up</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+
+    
+
+    <!-- <---------------------footer html--------------------------------->
+
+        <footer id="footer">
+            <div class="footer">
+              <div class="contentList widthFooter" id="firstCol">
+                <h4>About redBus</h4>
+                <p>About Us</p>
+                <p>Contact Us</p>
+                <p>Mobile Version</p>
+              </div>
+              <div class="contentList widthFooter">
+                <h4>Info</h4>
+                <p>T & C</p>
+                <p>Privacy Policy</p>
+                <p>Cookie Policy</p>
+                <p>FAQ</p>
+                <p>Blog</p>
+              </div>
+              <div class="contentList widthFooter">
+                <h4>Global Sites</h4>
+                <p>India</p>
+                <p>Singapore</p>
+                <p>Malaysia</p>
+                <p>Indonesia</p>
+                <p>Peru</p>
+                <p>Columbia</p>
+              </div>
+              <div class="contentList widthFooter">
+                <h4>Our Partners</h4>
+                <p>Goibibo</p>
+                <p>Makemytrip</p>
+              </div>
+              <div id="lastCol">
+                <img src="https://logodix.com/logo/304293.png" id="logoFooter" />
+                <p>
+                  redBus is the world's largest online bus ticket booking service
+                  trusted by over 25 million happy customers globally. redBus offers
+                  bus ticket booking through its website,iOS and Android mobile apps
+                  for all major routes.
+                </p>
+                <div>
+                  <div class="icon"><i class="fa fa-facebook-f"></i></div>
+                  <div class="icon"><i class="fa fa-twitter"></i></div>
+                </div>
+                <div id="lastP">
+                  <p>© 2021 ibibogroup All rights reserved</p>
+                </div>
+              </div>
+            </div>
+          </footer>
+    <!-- Adding Bootstrap CDN - jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Adding Bootstrap CDN - Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
