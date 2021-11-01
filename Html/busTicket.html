@@ -39,7 +39,7 @@
   <body>
     <div class="main-container">
       <!-- Navbar comes under the header -->
-      <header></header>
+      <header class="header"></header>
 
       <!-- All the content code -->
       <div class="content-wrapper">
@@ -90,7 +90,7 @@
                         readonly=""
                         class="searchDate"
                         value="26 Oct"
-                      /><span class="searchday"> Tue</span></span
+                      /><span class="searchday" id="searchDay"> Tue</span></span
                     ><span class="next"
                       ><i class="bi bi-chevron-right"></i
                     ></span>
@@ -101,7 +101,7 @@
             </div>
 
             <div class="bus-data clearfix">
-              <div class="filter-block">
+              <div class="filter-block filter-sec">
                 <div class="filter-details">
                   <div class="title">FILTERS</div>
                   <span class="clearFilters"></span>
@@ -230,7 +230,125 @@
                       >
                     </li>
                   </ul>
+
+                  <!-- Arrival time search -->
                   <div class="filter-title">ARRIVAL TIME</div>
+                  <ul class="dept-time at-time-filter">
+                    <li data-value="" class="checkbox">
+                      <input type="checkbox" id="atBefore 6 am" /><label
+                        for="atBefore 6 am"
+                        class="custom-checkbox"
+                      ></label
+                      ><span> <i class="bi bi-sunrise"></i></span
+                      ><label
+                        for="atBefore 6 am"
+                        class="cbox-label"
+                        title="Before 6 am"
+                        >Before 6 am (2)</label
+                      >
+                    </li>
+                    <li data-value="" class="checkbox">
+                      <input type="checkbox" id="at6 am to 12 pm" /><label
+                        for="at6 am to 12 pm"
+                        class="custom-checkbox"
+                      ></label
+                      ><span><i class="bi bi bi-sun"></i></span
+                      ><label
+                        for="at6 am to 12 pm"
+                        class="cbox-label"
+                        title="6 am to 12 pm"
+                        >6 am to 12 pm (26)</label
+                      >
+                    </li>
+                    <li data-value="" class="checkbox">
+                      <input type="checkbox" id="at12 pm to 6 pm" /><label
+                        for="at12 pm to 6 pm"
+                        class="custom-checkbox"
+                      ></label
+                      ><span><i class="bi bi-brightness-alt-high"></i></span
+                      ><label
+                        for="at12 pm to 6 pm"
+                        class="cbox-label"
+                        title="12 pm to 6 pm"
+                        >12 pm to 6 pm (10)</label
+                      >
+                    </li>
+                    <li data-value="" class="checkbox">
+                      <input type="checkbox" id="atAfter 6 pm" /><label
+                        for="atAfter 6 pm"
+                        class="custom-checkbox"
+                      ></label
+                      ><span><i class="bi bi-sunset"></i></span
+                      ><label
+                        for="atAfter 6 pm"
+                        class="cbox-label"
+                        title="After 6 pm"
+                        >After 6 pm (1)</label
+                      >
+                    </li>
+                  </ul>
+
+                  <!-- Boarding Point -->
+                  <div class="filter-titles f-12 f-bold">BOARDING POINT</div>
+                  <div class="fil-search">
+                    <i class="bi bi-search"></i
+                    ><input type="text" placeholder="BOARDING POINT" />
+                  </div>
+
+                  <!-- Dropping Point -->
+                  <div class="filter-titles f-12 f-bold">DROPPING POINT</div>
+                  <div class="fil-search">
+                    <i class="bi bi-search"></i
+                    ><input type="text" placeholder="DROPPING POINT" />
+                  </div>
+
+                  <!-- Operator -->
+                  <div class="filter-titles f-12 f-bold">OPERATOR</div>
+                  <div class="fil-search">
+                    <i class="bi bi-search"></i
+                    ><input type="text" placeholder="OPERATOR" />
+                  </div>
+
+                  <!-- Amenities -->
+                  <div class="filter-titles f-12 f-bold">AMENITIES</div>
+                  <ul class="amenity-list clearfix">
+                    <li value="1" class="clearfix fl">
+                      <i class="icon fl icon-am_1"></i
+                      ><span class="fl" title="WIFI">WIFI (5)</span>
+                    </li>
+                    <li value="4" class="clearfix fl">
+                      <i class="icon fl icon-am_4"></i
+                      ><span class="fl" title="Water Bottle"
+                        >Water Bottle (8)</span
+                      >
+                    </li>
+                    <li value="5" class="clearfix fl">
+                      <i class="icon fl icon-am_5"></i
+                      ><span class="fl" title="Blankets">Blankets (8)</span>
+                    </li>
+                    <li value="7" class="clearfix fl">
+                      <i class="icon fl icon-am_7"></i
+                      ><span class="fl" title="Charging Point"
+                        >Charging Point (23)</span
+                      >
+                    </li>
+                    <li value="8" class="clearfix fl">
+                      <i class="icon fl icon-am_8"></i
+                      ><span class="fl" title="Movie">Movie (9)</span>
+                    </li>
+                    <li value="19" class="clearfix fl">
+                      <i class="icon fl icon-am_19"></i
+                      ><span class="fl" title="Track My Bus"
+                        >Track My Bus (24)</span
+                      >
+                    </li>
+                    <li value="27" class="clearfix fl">
+                      <i class="icon fl icon-am_27"></i
+                      ><span class="fl" title="Emergency Contact Number"
+                        >Emergency Contact Nu... (19)</span
+                      >
+                    </li>
+                  </ul>
                 </div>
               </div>
               <div class="bus-data-block">
@@ -251,7 +369,8 @@
                 <div class="sort-section clearfix">
                   <div class="w-30 float-left flex">
                     <span class="w-60"
-                      ><span class="f-bold">31 Buses </span>found</span
+                      ><span class="f-bold" id="busCount">31 Buses </span
+                      >found</span
                     >
                     <span class="w-30 d-block f-12 f-bold t-right"
                       >SORT BY:</span
@@ -277,10 +396,7 @@
                   </div>
                 </div>
                 <div class="result-section">
-                  <ul class="busItems" id="busItems">
-   
-
-                  </ul>
+                  <ul class="busItems" id="busItems"></ul>
                 </div>
               </div>
             </div>
@@ -567,7 +683,7 @@
             </ul>
             <div class="view-more">View More</div>
           </section>
-          <hr />
+         
           <section class="slide_section">
             <div class="slide-container">
               <div>
@@ -604,9 +720,9 @@
                         class="image"
                       />
                     </li>
-                    <li li-image-id="4" class="slide"></li>
-                    <li li-image-id="5" class="slide"></li>
-                    <li li-image-id="6" class="slide"></li>
+                    <li li-image-id="4" class="slide hide"></li>
+                    <li li-image-id="5" class="slide hide"></li>
+                    <li li-image-id="6" class="slide hide"></li>
                   </ul>
                 </div>
                 <div
@@ -616,7 +732,7 @@
               </div>
             </div>
           </section>
-          <hr />
+          <hr class="thin-divider"/>
           <section class="section-data">
             <div>
               <h2>About Mumbai</h2>
@@ -668,9 +784,886 @@
               Save some money and memories too!
             </div>
           </section>
+          <hr />
+
+          <div class="safety_main">
+            <script>
+              window.addEventListener("DOMContentLoaded", function () {
+                var arrowElement = document.getElementsByClassName("data_head");
+                for (var i = 0; i < arrowElement.length; i++) {
+                  arrowElement[i].addEventListener(
+                    "click",
+                    toggleCovidPartial,
+                    false
+                  );
+                }
+              });
+              function toggleCovidPartial() {
+                if (this.children[1].classList.contains("down")) {
+                  this.nextElementSibling.classList.remove("close");
+                  this.nextElementSibling.classList.add("open");
+                  this.children[1].classList.remove("down");
+                  this.children[1].classList.add("up");
+                } else {
+                  this.nextElementSibling.classList.remove("open");
+                  this.nextElementSibling.classList.add("close");
+                  this.children[1].classList.remove("up");
+                  this.children[1].classList.add("down");
+                }
+              }
+            </script>
+            <section class="safety_section">
+              <h2>Travel Safety during Covid-19</h2>
+              <h3>
+                Covid-19 Updates on Mumbai to Bangalore (Bengaluru) Bus Route
+              </h3>
+              <div class="safety_data_container">
+                <div class="data_main">
+                  <div class="data_head">
+                    <div class="data_title">
+                      Travel safe from Mumbai to Bangalore (Bengaluru) during
+                      Covid-19 Pandemic
+                    </div>
+                    <div class="arrow down">⌃</div>
+                  </div>
+                  <ul class="data_content close">
+                    <li>
+                      While traveling from Mumbai to Bangalore (Bengaluru)
+                      during Covid-19 Pandemic, passengers have to follow
+                      certain guidelines as per the orders of the Government and
+                      local authorities. One can find the key highlights of the
+                      restrictions to follow from Mumbai to Bangalore
+                      (Bengaluru) route on this page.
+                    </li>
+                  </ul>
+                </div>
+                <div class="data_main">
+                  <div class="data_head">
+                    <div class="data_title">
+                      Covid-19 Test and Quarantine Rules
+                    </div>
+                    <div class="arrow down">⌃</div>
+                  </div>
+                  <ul class="data_content close">
+                    <li>
+                      If you are wondering if you need to take a Covid-19 test
+                      while travelling from Mumbai to Bangalore (Bengaluru)
+                      during Covid-19 Pandemic or looking for quarantine rules,
+                      this page will give you updated information on the same,
+                      so that you can keep the documents handy while travelling.
+                    </li>
+                  </ul>
+                </div>
+                <div class="data_main">
+                  <div class="data_head">
+                    <div class="data_title">List of Useful Resources</div>
+                    <div class="arrow down">⌃</div>
+                  </div>
+                  <ul class="data_content close">
+                    <li>
+                      Passengers need to visit the official website of the
+                      Government and take a note of Covid-19 PCR test validity
+                      for traveling on this bus route.
+                    </li>
+                  </ul>
+                </div>
+                <div class="data_main">
+                  <div class="data_head">
+                    <div class="data_title">
+                      Key Points to Remember for Interstate Travelers
+                    </div>
+                    <div class="arrow down">⌃</div>
+                  </div>
+                  <ul class="data_content close">
+                    <li>
+                      The state government has gradually started easing
+                      COVID-related restrictions and curbs that were put in
+                      place on Mumbai to Bangalore (Bengaluru) bus routes due to
+                      the ever-increasing deadly coronavirus cases. If you are
+                      traveling interstate, then check out these latest COVID
+                      rules and restrictions in place.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <h3>
+                General Covid-19 Guidelines to follow while in Bangalore
+                (Bengaluru)
+              </h3>
+              <div class="safety_image_container">
+                <div class="image-div">
+                  <img
+                    class="covid_image"
+                    src="https://st.redbus.in/seo_sassets/imgs/safety-plus-icons/cov_icon_06.png"
+                    alt="covid-partial"
+                  />
+                  <div class="covid_text">Mandatory Mask</div>
+                </div>
+                <div class="image-div">
+                  <img
+                    class="covid_image"
+                    src="https://st.redbus.in/seo_sassets/imgs/safety-plus-icons/cov_icon_07.png"
+                    alt="covid-partial"
+                  />
+                  <div class="covid_text">
+                    Minimum 1 meter of physical distance
+                  </div>
+                </div>
+                <div class="image-div">
+                  <img
+                    class="covid_image"
+                    src="https://st.redbus.in/seo_sassets/imgs/safety-plus-icons/cov_icon_08.png"
+                    alt="covid-partial"
+                  />
+                  <div class="covid_text">Sanitizing hands</div>
+                </div>
+                <div class="image-div">
+                  <img
+                    class="covid_image"
+                    src="https://st.redbus.in/seo_sassets/imgs/safety-plus-icons/cov_icon_09.png"
+                    alt="covid-partial"
+                  />
+                  <div class="covid_text">
+                    Temperature checks at public places
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <section class="routes_main">
+            <div class="routes_interlink">
+              <h2 class="routes_hd">Popular Routes from Mumbai</h2>
+              <ul class="routes_links">
+                <li class="">
+                  <a href="/bus-tickets/mumbai-to-pune" class="routes_ilink">
+                    Mumbai to Pune
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/bus-tickets/mumbai-to-satara" class="routes_ilink">
+                    Mumbai to Satara
+                  </a>
+                </li>
+                <li class="">
+                  <a
+                    href="/bus-tickets/mumbai-to-kolhapur-maharashtra"
+                    class="routes_ilink"
+                  >
+                    Mumbai to Kolhapur(Maharashtra)
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/bus-tickets/mumbai-to-karad" class="routes_ilink">
+                    Mumbai to Karad
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/bus-tickets/mumbai-to-baroda" class="routes_ilink">
+                    Mumbai to Baroda
+                  </a>
+                </li>
+                <li class="routes_more_link">
+                  <a href="/bus-tickets/routes-directory" class="routes_ilink">
+                    more &gt;&gt;
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="routes_interlink">
+              <h2 class="routes_hd">POPULAR ROUTES TO Bangalore (Bengaluru)</h2>
+              <ul class="routes_links">
+                <li class="">
+                  <a
+                    href="/bus-tickets/chennai-to-bangalore"
+                    class="routes_ilink"
+                  >
+                    Chennai to Bangalore (Bengaluru)
+                  </a>
+                </li>
+                <li class="">
+                  <a
+                    href="/bus-tickets/ernakulam-to-bangalore"
+                    class="routes_ilink"
+                  >
+                    Ernakulam to Bangalore (Bengaluru)
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/bus-tickets/hubli-to-bangalore" class="routes_ilink">
+                    Hubli to Bangalore (Bengaluru)
+                  </a>
+                </li>
+                <li class="">
+                  <a
+                    href="/bus-tickets/coimbatore-to-bangalore"
+                    class="routes_ilink"
+                  >
+                    Coimbatore to Bangalore (Bengaluru)
+                  </a>
+                </li>
+                <li class="">
+                  <a
+                    href="/bus-tickets/hyderabad-to-bangalore"
+                    class="routes_ilink"
+                  >
+                    Hyderabad to Bangalore (Bengaluru)
+                  </a>
+                </li>
+                <li class="routes_more_link">
+                  <a href="/bus-tickets/routes-directory" class="routes_ilink">
+                    more &gt;&gt;
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="routes_interlink">
+              <h2 class="routes_hd">Top Bus Operators in Mumbai</h2>
+              <ul class="routes_links">
+                <li class="">
+                  <a href="/travels/msrtc" class="routes_ilink"> MSRTC </a>
+                </li>
+                <li class="">
+                  <a href="/travels/vrl-travels-vrl" class="routes_ilink">
+                    VRL Travels
+                  </a>
+                </li>
+                <li class="">
+                  <a
+                    href="/travels/neeta-travels-neeta-volvo"
+                    class="routes_ilink"
+                  >
+                    Neeta Tours and Travels
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/travels/dolphin-travel-house" class="routes_ilink">
+                    Dolphin Travel House
+                  </a>
+                </li>
+                <li class="">
+                  <a
+                    href="/travels/falcon-bus-lines-pvt-ltd"
+                    class="routes_ilink"
+                  >
+                    Eagle Falcon Bus
+                  </a>
+                </li>
+                <li class="routes_more_link">
+                  <a href="/travels/operators-directory" class="routes_ilink">
+                    more &gt;&gt;
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="routes_interlink">
+              <h2 class="routes_hd">
+                Top Bus Operators in Bangalore (Bengaluru)
+              </h2>
+              <ul class="routes_links">
+                <li class="">
+                  <a href="/travels/vrl-travels-vrl" class="routes_ilink">
+                    VRL Travels
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/travels/apsrtc" class="routes_ilink"> APSRTC </a>
+                </li>
+                <li class="">
+                  <a href="/travels/tsrtc" class="routes_ilink"> TSRTC </a>
+                </li>
+                <li class="">
+                  <a href="/travels/kerala-lines" class="routes_ilink">
+                    Kerala lines
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/travels/tnstc" class="routes_ilink"> TNSTC </a>
+                </li>
+                <li class="routes_more_link">
+                  <a href="/travels/operators-directory" class="routes_ilink">
+                    more &gt;&gt;
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="routes_interlink">
+              <h2 class="routes_hd">Other Routes from Mumbai</h2>
+              <ul class="routes_links">
+                <li class="">
+                  <a
+                    href="/bus-tickets/mumbai-to-pargaon-yavatmal"
+                    class="routes_ilink"
+                  >
+                    Mumbai to Pargaon (Yavatmal)
+                  </a>
+                </li>
+                <li class="">
+                  <a
+                    href="/bus-tickets/mumbai-to-kunwariya-rajasthan"
+                    class="routes_ilink"
+                  >
+                    Mumbai to Kunwariya (Rajasthan)
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/bus-tickets/mumbai-to-kapadvanj" class="routes_ilink">
+                    Mumbai to Kapadvanj
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/bus-tickets/mumbai-to-kuchaman" class="routes_ilink">
+                    Mumbai to Kuchaman
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/bus-tickets/mumbai-to-bantakal" class="routes_ilink">
+                    Mumbai to Bantakal
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/bus-tickets/mumbai-to-iswal" class="routes_ilink">
+                    Mumbai to Iswal
+                  </a>
+                </li>
+                <li class="">
+                  <a
+                    href="/bus-tickets/mumbai-to-mahagaon-yavatmal"
+                    class="routes_ilink"
+                  >
+                    Mumbai to Mahagaon (yavatmal)
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/bus-tickets/mumbai-to-madalmohi" class="routes_ilink">
+                    Mumbai to Madalmohi
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/bus-tickets/mumbai-to-nardana" class="routes_ilink">
+                    Mumbai to Nardana
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/bus-tickets/mumbai-to-guna" class="routes_ilink">
+                    Mumbai to Guna
+                  </a>
+                </li>
+                <li class="routes_more_link">
+                  <a href="/bus-tickets/routes-directory" class="routes_ilink">
+                    more &gt;&gt;
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="routes_interlink">
+              <h2 class="routes_hd">Other Routes to Bangalore (Bengaluru)</h2>
+              <ul class="routes_links">
+                <li class="">
+                  <a
+                    href="/bus-tickets/chengannur-to-bangalore"
+                    class="routes_ilink"
+                  >
+                    Chengannur to Bangalore (Bengaluru)
+                  </a>
+                </li>
+                <li class="">
+                  <a
+                    href="/bus-tickets/mokalsar-to-bangalore"
+                    class="routes_ilink"
+                  >
+                    Mokalsar to Bangalore (Bengaluru)
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/bus-tickets/aversa-to-bangalore" class="routes_ilink">
+                    Aversa to Bangalore (Bengaluru)
+                  </a>
+                </li>
+                <li class="">
+                  <a
+                    href="/bus-tickets/godavarikhani-to-bangalore"
+                    class="routes_ilink"
+                  >
+                    Godavarikhani to Bangalore (Bengaluru)
+                  </a>
+                </li>
+                <li class="">
+                  <a
+                    href="/bus-tickets/shivganj-to-bangalore"
+                    class="routes_ilink"
+                  >
+                    Shivganj to Bangalore (Bengaluru)
+                  </a>
+                </li>
+                <li class="">
+                  <a
+                    href="/bus-tickets/vedaranyam-to-bangalore"
+                    class="routes_ilink"
+                  >
+                    Vedaranyam to Bangalore (Bengaluru)
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/bus-tickets/koppal-to-bangalore" class="routes_ilink">
+                    Koppal to Bangalore (Bengaluru)
+                  </a>
+                </li>
+                <li class="">
+                  <a
+                    href="/bus-tickets/sempathi-to-bangalore"
+                    class="routes_ilink"
+                  >
+                    Sempathi to Bangalore (Bengaluru)
+                  </a>
+                </li>
+                <li class="">
+                  <a
+                    href="/bus-tickets/pitapuram-to-bangalore"
+                    class="routes_ilink"
+                  >
+                    Pitapuram to Bangalore (Bengaluru)
+                  </a>
+                </li>
+                <li class="">
+                  <a
+                    href="/bus-tickets/mandagadde-to-bangalore"
+                    class="routes_ilink"
+                  >
+                    Mandagadde to Bangalore (Bengaluru)
+                  </a>
+                </li>
+                <li class="routes_more_link">
+                  <a href="/bus-tickets/routes-directory" class="routes_ilink">
+                    more &gt;&gt;
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <hr class="thin-divider">
+          <div class="footerLink">
+            <div class="footerLinkContainer">
+              <section>
+                <div>
+                  <h3 class="footer-heading">Top Bus Routes</h3>
+                </div>
+                <ul>
+                  <li>
+                    <a href="/bus-tickets/bangalore-to-chennai"
+                      >Bangalore to Chennai Bus</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/bus-tickets/hyderabad-to-bangalore"
+                      >Hyderabad to Bangalore Bus</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/bus-tickets/pune-to-bangalore"
+                      >Pune to Bangalore Bus</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/bus-tickets/mumbai-to-bangalore"
+                      >Mumbai to Bangalore Bus</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/bus-tickets/routes-directory">More &gt;&gt;</a>
+                  </li>
+                </ul>
+              </section>
+              <section>
+                <div>
+                  <h3 class="D109_heading">Top Cities</h3>
+                </div>
+                <ul>
+                  <li>
+                    <a href="/buses/hyderabad-bus-tickets"
+                      >Hyderabad Bus Tickets</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/buses/bangalore-bus-tickets"
+                      >Bangalore Bus Tickets</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/buses/chennai-bus-tickets">Chennai Bus Tickets</a>
+                  </li>
+                  <li>
+                    <a href="/buses/pune-bus-tickets">Pune Bus Tickets</a>
+                  </li>
+                  <li>
+                    <a href="/buses/cities-directory">More &gt;&gt;</a>
+                  </li>
+                </ul>
+              </section>
+              <section>
+                <div>
+                  <h3 class="D109_heading">Top RTC's</h3>
+                </div>
+                <ul>
+                  <li>
+                    <a href="/online-booking/apsrtc">APSRTC</a>
+                  </li>
+                  <li>
+                    <a href="/online-booking/msrtc">MSRTC</a>
+                  </li>
+                  <li>
+                    <a href="/online-booking/hrtc">HRTC</a>
+                  </li>
+                  <li>
+                    <a href="/online-booking/upsrtc">UPSRTC</a>
+                  </li>
+                  <li>
+                    <a href="/online-booking/rtc-directory">More &gt;&gt;</a>
+                  </li>
+                </ul>
+              </section>
+              <section>
+                <div>
+                  <h3 class="D109_heading">Other</h3>
+                </div>
+                <ul>
+                  <li>
+                    <a href="/online-booking/gsrtc">GSRTC</a>
+                  </li>
+                  <li>
+                    <a href="/online-booking/rsrtc">RSRTC</a>
+                  </li>
+                  <li>
+                    <a href="/online-booking/ktcl">KTCL</a>
+                  </li>
+                  <li>
+                    <a href="/online-booking/pepsu">PEPSU</a>
+                  </li>
+                  <li>
+                    <a href="/online-booking/rtc-directory">More &gt;&gt;</a>
+                  </li>
+                </ul>
+              </section>
+              <section>
+                <div>
+                  <h3 class="D109_heading">Top RTC Bus Types</h3>
+                </div>
+                <ul>
+                  <li>
+                    <a href="/online-booking/msrtc/shivshahi-bus-tickets"
+                      >Shivshahi Bus</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/online-booking/msrtc/shivneri-bus-tickets"
+                      >Shivneri Bus</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/online-booking/apsrtc/amaravathi-bus-tickets"
+                      >Amaravathi Bus</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/online-booking/apsrtc/indra-bus-tickets"
+                      >Indra Bus</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/online-booking/apsrtc/garuda-bus-tickets"
+                      >Garuda Bus</a
+                    >
+                  </li>
+                </ul>
+              </section>
+            </div>
+          </div>
+
+          <section class="topOperators">
+            <h3>Top Operators</h3>
+            <span
+              ><a href="https://www.redbus.in/travels/srs-travels-srs"
+                >SRS Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/evacay-bus "
+                >Evacay Bus</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/kallada-travels-kallada "
+                >Kallada Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/kpn-travels-kpn "
+                >KPN Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/orange-travels-orange "
+                >Orange Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/parveen-travels "
+                >Parveen Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/rajdhani-express "
+                >Rajdhani Express</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/vrl-travels-vrl"
+                >VRL Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/chartered-bus"
+                >Chartered Bus</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/bengal-tiger"
+                >Bengal Tiger</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/srm-travels-srm"
+                >SRM Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/infant-jesus"
+                >Infant Jesus Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/jbt-travels"
+                >JBT Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/shatabdi-travels-1"
+                >Shatabdi Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/eagle-travels"
+                >Eagle Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/kanker-roadways-10172"
+                >Kanker Roadways</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/komitla"
+                >Komitla Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/sri-krishna-travels"
+                >Sri Krishna Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/humsafar-travels-9807"
+                >Humsafar Travels</a
+              ></span
+            >
+            <span
+              ><a
+                href="https://www.redbus.in/travels/mahasagar-travels-mahasagar"
+                >Mahasagar Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/raj-express-1"
+                >Raj Express</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/sharma-travels"
+                >Sharma Travels</a
+              ></span
+            >
+            <span
+              ><a
+                href="https://www.redbus.in/travels/shrinath-travels-agency-online"
+                >Shrinath Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/universal-travels"
+                >Universal Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/verma-travels"
+                >Verma Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/gujarat-travels"
+                >Gujarat Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/madurai-radha-travels"
+                >Madurai Radha Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/patel-tours-and-travels"
+                >Patel Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/paulo-travels"
+                >Paulo Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/royal-travels"
+                >Royal Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/amarnath-travels-9984"
+                >Amarnath Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/vaibhav-travels"
+                >Vaibhav Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/ganesh-travels-2"
+                >Ganesh Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/jabbar-travels"
+                >Jabbar Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/jain-travels"
+                >Jain Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/manish-travels"
+                >Manish Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/pradhan"
+                >Pradhan Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/ybm-travels"
+                >YBM Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/hebron-transports"
+                >Hebron Travels</a
+              ></span
+            >
+            <span
+              ><a
+                href="https://www.redbus.in/travels/mahalaxmi-travels-mahalaxmi"
+                >Mahalaxmi travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/mr-travels"
+                >MR Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/vivegam-travels"
+                >Vivegam Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/vst">VST Travels</a></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/jakhar-travels"
+                >Jakhar Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/kaleswari-travels"
+                >Kaleswari Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/mahendra-travels-10027"
+                >Mahendra Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/neeta-tours-and-travels"
+                >Neeta Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/yamani-travels"
+                >Yamani Travels</a
+              ></span
+            >
+            <span
+              ><a href="https://www.redbus.in/travels/arthi-travels"
+                >Arthi Travels</a
+              ></span
+            >
+          </section>
         </div>
       </div>
     </div>
+    <footer id="footer" style="display: block">
+      <div class="footer-row">
+        <div class="clearfix promotion main-body rest1">
+          <div class="w-100 pR fl footer-links">
+            <div class="fr rights-cont">
+              <div class="img-cont">
+                <img
+                  src="https://s3.rdbuz.com/web/images/home/sgp/r_logo.png"
+                />
+              </div>
+              <div>
+                redBus is the world's largest online bus ticket booking service
+                trusted by over 25 million happy customers globally. redBus
+                offers bus ticket booking through its website,iOS and Android
+                mobile apps for all major routes.
+              </div>
+              <div id="social-media">
+                <a target="_blank" href="https://www.facebook.com/redbus.in/"
+                  ><span class="fbicon icon-Facebook"></span
+                ></a>
+                <a target="_blank" href="https://twitter.com/redBus_in"
+                  ><span class="twittericon icon-Twitter"></span
+                ></a>
+              </div>
+              <div style="float: left">
+                <span>Ⓒ</span>
+                <span> 2021 ibibogroup All rights reserved</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script type="text/javascript" src="../JavaScript/busTicket.js"></script>
   </body>
 </html>
