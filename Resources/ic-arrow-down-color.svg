@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic-arrow-down-color</title>
+    <defs>
+        <path d="M12.0067134,14.7218185 L6.35297791,9.08644349 C6.15739845,8.89149917 5.84081638,8.89201406 5.64587206,9.08759352 C5.45092775,9.28317298 5.45144263,9.59975505 5.64702209,9.79469936 L11.6545315,15.7826994 C11.8499726,15.9775058 12.1662823,15.9771496 12.3612841,15.7819034 L18.3537747,9.78190336 C18.5489145,9.58651898 18.5487163,9.26993656 18.3533319,9.07479672 C18.1579476,8.87965688 17.8413651,8.87985511 17.6462253,9.07523949 L12.0067134,14.7218185 Z" id="path-1"></path>
+    </defs>
+    <g id="mWeb-Home-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ic-arrow-down-color">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="ic-arrow-down" fill="#3E3E52" fill-rule="nonzero" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>
