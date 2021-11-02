@@ -1,3 +1,23 @@
+// Global Variables
+var bpTime;
+var bpLoc;
+var bpAdd;
+var p;
+var fare;
+var seat = [];
+var dpTime;
+var dpDate;
+var dpAdd;
+var dpLoc;
+var busNo = 0;
+var mainDb = [];
+var nameP;
+var gender;
+var age;
+var mail;
+var phone;
+var clickCount = 0;
+
 window.addEventListener("load", () => {
   var dt = new Date("05 Nov");
   var week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -7,13 +27,18 @@ window.addEventListener("load", () => {
   fetchBuses();
 });
 
+function seatLayout(id, seats) {
+  this.id = id;
+  this.seats = seats;
+}
+
 const fetchBuses = async () => {
   try {
     const results = await getBuses();
-    console.log(results[0].busDetails.length);
+    // console.log(results[0].busDetails.length);
     document.getElementById("busCount").textContent =
-      results[0].busDetails.length + " " + "Buses ";
-    displayBuses(results[0].busDetails);
+      results.length + " " + "Buses ";
+    displayBuses(results);
   } catch (e) {
     console.log("Error fetching");
   }
@@ -21,7 +46,7 @@ const fetchBuses = async () => {
 
 const getBuses = () => {
   return fetch(
-    `http://localhost:3000/travelDtls?source=Mumbai&destination=Bangalore&date=05 Nov 2021`
+    `http://localhost:3000/busDetails?date=05 Nov 2021&source=Mumbai&destination=Bangalore`
   ).then((response) => response.json());
 };
 
@@ -35,14 +60,15 @@ const displayBuses = (results) => {
     colorSeats(results[i]);
   }
 
-  viewSeats();
   selectSeats();
   selectBpt();
   selectDpt();
-  clickCont();
 };
 
 const createCard = (result) => {
+  var obj = new seatLayout(result.id, result.seats);
+  mainDb.push(obj);
+
   const mainDiv = document.createElement("div");
 
   const li = document.createElement("li");
@@ -209,7 +235,7 @@ const createCard = (result) => {
   const bottom = document.createElement("div");
   bottom.className = "clearfix m-top-16";
 
-  bottom.innerHTML = ` <div class="button view-seats fr">View Seats</div>
+  bottom.innerHTML = ` <div onClick="viewSeats()" class="button view-seats fr">View Seats</div>
   <div>
  
   <div>
@@ -243,7 +269,7 @@ const createCard = (result) => {
 
   seatInfo.innerHTML = `<div class="seat-container-div clearfix">
   <span class="seat-close">
-    <i class="bi bi-x-circle"></i>
+    <i onClick="closeSeats()" class="bi bi-x-circle"></i>
   </span>
   <div class="seat-container">
     <div>
@@ -650,7 +676,7 @@ const createCard = (result) => {
 
             <div class="bpDpAddr ${result.id}-bpdp hide" >
             <span class="bpdp-lb">Boarding &amp; Dropping</span
-            ><span class="fr bpdp-change">change</span>
+            ><span class="fr bpdp-change" onClick="changePts()">change</span>
             <div class="bpDpAddr">
               <div class="pR oh">
                 <div class="BpDp-dashed"></div>
@@ -658,12 +684,11 @@ const createCard = (result) => {
                   <div class="circleBp"></div>
                 </div>
                 <div class="colBpDp-css">
-                  <span class="bpDpName-Lbl"
-                    >Mira Road E Sheetal Nagar</span
-                  ><span class="bpDpSummaryTm-Lbl"
-                    >11:00 <span class="color-red-next-day"></span
-                  ></span>
-                  <div class="selectedBpDpAdd-Lbl">
+                  <span class="${result.id}-bppt bpDpName-Lbl"
+                    ></span
+                  ><span class="${result.id}-bptime bpDpSummaryTm-Lbl"
+                    >11:00</span>
+                  <div class="${result.id}-bploc selectedBpDpAdd-Lbl">
                     Mira Road (E) National Park
                   </div>
                 </div>
@@ -673,12 +698,12 @@ const createCard = (result) => {
                   <div class="circleDp"></div>
                 </div>
                 <div class="colBpDp-css pR">
-                  <span class="bpDpName-Lbl">Tumkur</span
-                  ><span class="bpDpSummaryTm-Lbl"
+                  <span class="${result.id}-dppt bpDpName-Lbl">Tumkur</span
+                  ><span class="${result.id}-dptime bpDpSummaryTm-Lbl"
                     >05:00
-                    <span class="color-red-next-day">(06 Nov)</span></span
+                    <span class="${result.id}-dpdate color-red-next-day">(06 Nov)</span></span
                   >
-                  <div class="selectedBpDpAdd-Lbl">Tumkur Toll</div>
+                  <div class="${result.id}-dploc selectedBpDpAdd-Lbl">Tumkur Toll</div>
                 </div>
               </div>
             </div>
@@ -688,7 +713,7 @@ const createCard = (result) => {
                 <div>
                   <div class="seats-selected-container">
                     <span class="seat-lb">Seat No.</span
-                    ><span class="selected-seats"><span>L3</span></span>
+                    ><span class="selected-seats"><span class=${result.id}-seat>L3</span></span>
                   </div>
                 </div>
               </div>
@@ -711,7 +736,7 @@ const createCard = (result) => {
                 <span class="fares-lb">Amount</span
                 ><span class="fr fare-summary-value"
                   ><span class="fare-summary-currency">INR</span
-                  ><span>2200.00</span></span
+                  ><span class=${result.id}-fare>2200.00</span></span
                 >
                 <div class="fareDisclaimer">
                   Taxes will be calculated during payment
@@ -720,7 +745,7 @@ const createCard = (result) => {
               <h3 class="fare-toggle-btn fr m-t-0">Show Fare Details</h3>
               <div class="fr showlayout-button-container w-15"></div>
               <div class="continue-container w-100 fl m-b-10">
-                <button class="button continue inactive">
+                <button onClick="proceedClick()" class="button continue prcdBtn inactive " id=${result.id}-proceed>
                   Proceed to book
                 </button>
               </div>
@@ -733,19 +758,19 @@ const createCard = (result) => {
                     <div
                       class="fl w-50 selector default-clr bp selected-bpdp-color tac"
                     >
-                      <span data-value="bp" class="bpdp-point"
+                      <span data-value="bp"  class="bpdp-point"
                         >BOARDING POINT</span
                       >
                     </div>
                     <div class="fl w-50 selector default-clr dp tac">
-                      <span data-value="dp" class="bpdp-point"
+                      <span data-value="dp"  class="bpdp-point"
                         >DROPPING POINT</span
                       >
                     </div>
                   </header>
                   <hr class="hr-stretch" />
                   <div class="bp-dp-list-wrapper bp">
-                    <div class="modal-body oa-y">
+                    <div class="modal-body oa-y ${result.id}-bplist">
                       <ul
                         data-value="bp"
                         class="select-list scrollbar height-bpdp-double-deck"
@@ -859,7 +884,7 @@ const createCard = (result) => {
                         </li>
                       </ul>
                     </div>
-                    <div class="modal-body oa-y hide">
+                    <div class="modal-body oa-y hide ${result.id}-dplist">
                       <ul
                         data-value="dp"
                         class="select-list scrollbar height-bpdp-double-deck"
@@ -936,8 +961,8 @@ const createCard = (result) => {
                     ><span id=${result.id}-total>0.00</span></span
                   >
                 </div>
-                <button
-                  class="button continue inactive text-trans-uc w-h-cont" id="${result.id}-cont"
+                <button onClick="clickCont()"
+                  class="button continue contBtn inactive text-trans-uc w-h-cont hide" id="${result.id}-cont"
                 >
                   continue
                 </button>
@@ -961,16 +986,24 @@ const createCard = (result) => {
   return mainDiv;
 };
 
-const viewSeats = () => {
-  var viewSeats = document.getElementsByClassName("view-seats");
 
-  for (var i = 0; i < viewSeats.length; i++) {
-    viewSeats[i].addEventListener("click", () => {
-      event.target.classList.toggle("hide-seats");
-      event.target.parentNode.parentNode.parentNode.childNodes[1].classList.toggle(
-        "visible"
-      );
-    });
+const viewSeats = () => {
+  clickCount++;
+  if (clickCount % 2 !== 0) {
+    event.target.classList.add("hide-seats");
+    event.target.textContent = "HIDE SEATS";
+    event.target.parentNode.parentNode.parentNode.childNodes[1].classList.add(
+      "visible"
+    );
+  } else {
+    event.target.classList.remove("hide-seats");
+    event.target.textContent = "VIEW SEATS";
+    event.target.parentNode.parentNode.parentNode.childNodes[1].classList.remove(
+      "visible"
+    );
+
+    clickCount = 0;
+    window.location.reload();
   }
 };
 
@@ -994,26 +1027,20 @@ const colorSeats = (data) => {
     }
   }
 };
-var bp ;
-var bp;
-var fare;
-var seat = [];
-var bpTime;
-var dpTime;
-var dpDate;
 
 const selectSeats = () => {
   var seats = document.getElementsByClassName("seat");
   var stck = [];
+
   for (var x = 0; x < seats.length; x++) {
-      seats[x].addEventListener("click", () => {
+    seats[x].addEventListener("click", () => {
       event.target.dataset.select = !event.target.dataset.select;
       console.log(event.target.dataset.select);
       if (event.target.dataset.select === "true") {
         stck.push(event.target.id);
         var st = event.target.id.split("-");
         console.log(event);
-        
+        busNo = st[0];
         event.target.style.backgroundColor = "black";
         event.target.childNodes[1].style.color = "white";
         event.target.childNodes[1].textContent = st[1];
@@ -1043,6 +1070,9 @@ const selectSeats = () => {
         document
           .getElementById(event.target.id.split("-")[0] + "-" + "points")
           .classList.add("visible");
+        fare = document.getElementById(
+          event.target.id.split("-")[0] + "-" + "total"
+        ).textContent;
       } else {
         event.target.style.backgroundColor = null;
         event.target.childNodes[1].classList.add("hide");
@@ -1060,6 +1090,10 @@ const selectSeats = () => {
           ) - Number(event.target.dataset.rate)
         ).toFixed(2);
         event.target.dataset.select = "";
+
+        fare = document.getElementById(
+          event.target.id.split("-")[0] + "-" + "total"
+        ).textContent;
 
         for (var y = 0; y < stck.length; y++) {
           if (stck[y] == event.target.id) {
@@ -1084,28 +1118,67 @@ const selectSeats = () => {
     });
   }
   seat = stck;
-  
-  
 };
 
-var selectBp = false;
-var selectDp = false;
+// Choosing the boarding and deprture points
 const selectBpt = () => {
   var btns = document.getElementsByClassName("radio-css");
+
   for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", () => {
-      for (var j = 0; j < btns.length; j++) {
-        btns[j].childNodes[1].classList.remove("radio-checked");
-        btns[j].childNodes[1].classList.add("radio-unchecked");
-      }
+      console.log(event);
 
-      event.target.classList.remove("radio-unchecked");
-      event.target.classList.add("radio-checked");
-      selectBp = true;
+      if (event.target.parentNode.parentNode.parentNode.dataset.value == "bp") {
+        for (var j = 0; j < btns.length; j++) {
+          btns[j].childNodes[1].classList.remove("radio-checked");
+          btns[j].childNodes[1].classList.add("radio-unchecked");
+        }
+
+        event.target.classList.remove("radio-unchecked");
+        event.target.classList.add("radio-checked");
+
+        bpTime =
+          event.target.parentNode.parentNode.childNodes[3].childNodes[1].textContent.trim();
+        bpAdd =
+          event.target.parentNode.parentNode.childNodes[5].childNodes[1].innerHTML.trim();
+        bpLoc =
+          event.target.parentNode.parentNode.childNodes[5].childNodes[3].textContent.trim();
+        if (bpLoc && dpLoc) {
+          document
+            .getElementById(busNo + "-" + "cont")
+            .classList.remove("hide");
+        }
+      } else {
+        for (var j = 0; j < btns.length; j++) {
+          btns[j].childNodes[1].classList.remove("radio-checked");
+          btns[j].childNodes[1].classList.add("radio-unchecked");
+        }
+
+        event.target.classList.remove("radio-unchecked");
+        event.target.classList.add("radio-checked");
+
+        dpLoc =
+          event.target.parentNode.parentNode.childNodes[5].childNodes[1].innerHTML.trim();
+
+        dpAdd =
+          event.target.parentNode.parentNode.childNodes[5].childNodes[3].innerHTML.trim();
+
+        dpTime =
+          event.target.parentNode.parentNode.childNodes[3].childNodes[1].innerHTML.trim();
+        dpDate =
+          event.target.parentNode.parentNode.childNodes[3].childNodes[3].innerHTML.trim();
+
+        if (bpLoc && dpLoc) {
+          document
+            .getElementById(busNo + "-" + "cont")
+            .classList.remove("hide");
+        }
+      }
     });
   }
 };
 
+// Displaying the boarding an departure points
 const selectDpt = () => {
   var dp = document.getElementsByClassName("bpdp-point");
   for (var i = 0; i < dp.length; i++) {
@@ -1115,38 +1188,340 @@ const selectDpt = () => {
           "selected-bpdp-color"
         );
         event.target.parentNode.classList.add("selected-bpdp-color");
-
-        document.getElementsByClassName("modal-body")[0].classList.add("hide");
         document
-          .getElementsByClassName("modal-body")[1]
+          .getElementsByClassName(busNo + "-" + "dplist")[0]
           .classList.remove("hide");
+        document
+          .getElementsByClassName(busNo + "-" + "bplist")[0]
+          .classList.add("hide");
       } else {
         event.target.parentNode.nextElementSibling.classList.remove(
           "selected-bpdp-color"
         );
         event.target.parentNode.classList.add("selected-bpdp-color");
         document
-          .getElementsByClassName("modal-body")[0]
+          .getElementsByClassName(busNo + "-" + "bplist")[0]
           .classList.remove("hide");
-        document.getElementsByClassName("modal-body")[1].classList.add("hide");
+        document
+          .getElementsByClassName(busNo + "-" + "dplist")[0]
+          .classList.add("hide");
       }
     });
   }
 };
 
-const clickCont = ()=>{
-  
-  var cont = document.getElementsByClassName("continue");
-  
-  for (var i=0; i<cont.length; i++){
-    cont[i].addEventListener("click",()=>{
-      console.log(seat);
-      console.log(event.target.id);
-      document.getElementsByClassName(event.target.id.split("-")[0]+"-"+"bpdp")[0].classList.remove("hide");
-      document
-          .getElementsByClassName("bp-dp-selector-container")[0]
-          .classList.add("hide");
+const clickCont = () => {
+  console.log(seat, bpTime, bpLoc, bpAdd, dpTime, dpAdd, dpLoc, dpDate);
+  console.log(event.target.id);
 
-    })
+  document
+    .getElementsByClassName(event.target.id.split("-")[0] + "-" + "bpdp")[0]
+    .classList.remove("hide");
+  document
+    .getElementsByClassName("bp-dp-selector-container")[busNo-1]
+    .classList.add("hide");
+
+  document.getElementsByClassName(
+    event.target.id.split("-")[0] + "-" + "bppt"
+  )[0].textContent = bpAdd.substr(0, 15);
+
+  document.getElementsByClassName(
+    event.target.id.split("-")[0] + "-" + "bptime"
+  )[0].textContent = bpTime;
+
+  document.getElementsByClassName(
+    event.target.id.split("-")[0] + "-" + "bploc"
+  )[0].textContent = bpLoc;
+
+  document.getElementsByClassName(
+    event.target.id.split("-")[0] + "-" + "dppt"
+  )[0].textContent = dpAdd.substr(0, 15);
+
+  document.getElementsByClassName(
+    event.target.id.split("-")[0] + "-" + "dptime"
+  )[0].innerHTML = `${dpTime}<span class="color-red-next-day">${dpDate}</span>`;
+
+  document.getElementsByClassName(
+    event.target.id.split("-")[0] + "-" + "dploc"
+  )[0].textContent = dpLoc;
+
+  var temp_seat = [];
+  for (var i = 0; i < seat.length; i++) {
+    temp_seat.push(seat[i].split("-")[1]);
   }
+
+  document.getElementsByClassName(
+    event.target.id.split("-")[0] + "-" + "seat"
+  )[0].textContent = temp_seat.join(",");
+
+  document.getElementsByClassName(
+    event.target.id.split("-")[0] + "-" + "fare"
+  )[0].textContent = fare;
+};
+
+const proceedClick = () => {
+  console.log(1);
+  console.log(document.getElementsByClassName("page-overlay"));
+  document.getElementsByClassName("page-overlay")[0].classList.remove("hide");
+  document.getElementsByClassName("custinfo")[0].classList.remove("hide");
+  var passgr = document.getElementsByClassName("passenger_info_outer_block")[0];
+  for (var k = 0; k < seat.length; k++) {
+    passgr.innerHTML += `<div class="passenger_info_content_block">
+    <div class="passenger_sub_title" id="st-seat0">
+      <span class="passenger_priority">Passenger ${k + 1}</span
+      ><span class="passenger_seat"
+        ><span class="passenger_seatno f-bold"
+          >Seat ${seat[k].split("-")[1]}</span
+        ></span
+      ><span class="ladies_seat fr"></span>
+    </div>
+    <div class="passenger_contact_container clearfix">
+      <div class="passenger_outer_container w-100">
+        <div class="input_block">
+          <label class="custinfo_label" for="04"
+            >Name<input
+              class="input_box"
+              type="text"
+              pattern="/^([A-Za-z\u00E9\u00E0\u00EB\u00E1\u00ED\u00F3\u00FA\u00FC\u00F1\u00BF\u00A1\s+]{1,40}?)+$/"
+              placeholder="Name"
+              data-validation-msg="Please enter valid Name"
+              name="Name_0"
+              maxlength="300"
+              id="seatno-04"
+              value="" /></label
+          ><span
+            id="seatno04"
+            class="hide"
+            data-seaterrmsg="seatno04"
+            >Please enter valid Name</span
+          >
+        </div>
+      </div>
+      <div class="combined_block clearfix">
+        <div class="combined_mpax gender_block">
+          <div class="passenger_outer_container">
+            <div class="radio_block">
+              <span class="radio_block_title"
+                >Gender</span
+              >
+              <div class="radio_container clearfix">
+                <span for="22" class="radio_block"
+                  ><div class="gender_position_rel">
+                    <div
+                      id="div_22_0"
+                      class="gender_position_abs"
+                    ></div>
+                    <input
+                      type="radio"
+                      id="male"
+                      name="Gender0"
+                      onClick = "selectGender()"
+                      value="Male"
+                     
+                    /><label
+                      for="male"
+                      class="radio_css"
+                      value="Male"
+                      >Male</label
+                    >
+                  </div></span
+                ><span for="23" class="radio_block"
+                  ><div
+                    class="
+                      gender_position_rel
+                      float_left
+                    "
+                  >
+                    <div
+                      id="div_23_0"
+                      class="
+                        gender_position_abs
+                        width_81p
+                      "
+                    ></div>
+                    <input
+                      type="radio"
+                      id="female"
+                      name="Gender0"
+                     onClick = "selectGender()"
+                      value="Female"
+                      
+                    /><label
+                      for="female"
+                      class="radio_css"
+                      value="Female"
+                      >Female</label
+                    >
+                  </div></span
+                >
+              </div>
+              <span
+                id="seatno02"
+                class="hide"
+                data-seaterrmsg="seatno02"
+                >Please select valid gender</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="combined_mpax age_block">
+          <div
+            class="
+              passenger_outer_container
+              cust-list
+              w-45
+            "
+          >
+            <div class="input_block">
+              <label class="custinfo_label" for="01"
+                >Age<input
+                  class="input_box"
+                  type="number"
+                  pattern="/^[1-9]?[0-9]{1}$|^150$/"
+                  placeholder="Age"
+                  data-validation-msg="Please enter valid Age"
+                  name="Age_0"
+                  maxlength="2"
+                  id="seatno-01"
+                  value="" /></label
+              ><span
+                id="seatno01"
+                class="hide"
+                data-seaterrmsg="seatno01"
+                >Please enter valid Age</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>`;
+
+    document.getElementById("pay-amnt").textContent = fare;
+  }
+};
+
+const hideForm = () => {
+  document.getElementsByClassName("page-overlay")[0].classList.add("hide");
+  document.getElementsByClassName("custinfo")[0].classList.add("hide");
+};
+
+const closeSeats = () => {
+  console.log(event);
+
+  event.target.parentNode.parentNode.parentNode.previousElementSibling.childNodes[1].childNodes[1].classList.remove(
+    "hide-seats"
+  );
+  event.target.parentNode.parentNode.parentNode.previousElementSibling.childNodes[1].childNodes[1].textContent =
+    "VIEW SEATS";
+  event.target.parentNode.parentNode.parentNode.classList.remove("visible");
+  window.location.reload();
+};
+
+const changePts = () => {
+  console.log(event);
+
+  event.target.parentNode.nextElementSibling.classList.remove("hide");
+  event.target.parentNode.classList.add("hide");
+};
+
+const modifyDt = () => {
+  document.getElementsByClassName("search-wrapper")[0].classList.remove("hide");
+  document.getElementsByClassName("modify")[0].classList.add("hide");
+};
+
+const closeModify = () => {
+  document.getElementsByClassName("search-wrapper")[0].classList.add("hide");
+  document.getElementsByClassName("modify")[0].classList.remove("hide");
+};
+
+
+
+const selectGender = () => {
+  if (event.target.id == "male") gender = "M";
+  else gender = "F";
+  console.log(gender);
+};
+
+const payAmnt = () => {
+  nameP = document.getElementById("seatno-04").value;
+  age = document.getElementById("seatno-01").value;
+  mail = document.getElementById("seatno-05").value;
+  phone = document.getElementById("seatno-06").value;
+
+  var selSeat = [];
+  for (var k = 0; k < seat.length; k++) {
+    selSeat.push(seat[k].split("-")[1]);
+  }
+
+  for (var k = 0; k < selSeat.length; k++) {
+    for (var j = 0; j < mainDb.length; j++) {
+      if (mainDb[j].id == busNo) {
+        for (var i = 0; i < mainDb[j].seats.length; i++) {
+          if (mainDb[j].seats[i].name == selSeat[k]) {
+            mainDb[j].seats[i].value = "1";
+            mainDb[j].seats[i].sex = gender;
+            break;
+          }
+        }
+        break;
+      }
+    }
+
+    addPassenger({
+      name: nameP,
+      age: age,
+      seat: selSeat[k],
+      sex: gender,
+      mail: mail,
+      phone: phone,
+      amount: fare,
+    });
+  }
+
+  console.log(busNo, mainDb[j].seats);
+  updateSeats({
+    id: busNo,
+    seats: mainDb[j].seats,
+  });
+};
+
+async function addPassenger(load) {
+  try {
+    console.log(load);
+    var res = await addPass(load);
+  } catch (e) {
+    console.log("Error adding Passenger");
+  }
+}
+
+function addPass(payload) {
+  return fetch(`http://localhost:3000/passengers`, {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    method: "POST",
+    body: JSON.stringify(payload),
+  }).then((res) => res.json());
+}
+
+async function updateSeats(payload) {
+  try {
+    console.log(payload);
+    const res = await patchSeat(payload);
+  } catch (e) {
+    console.log(e.message);
+  }
+}
+
+function patchSeat(payload) {
+  return fetch(`http://localhost:3000/busDetails/${busNo}`, {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    method: "PATCH",
+    body: JSON.stringify(payload),
+  }).then((res) => res.json());
 }

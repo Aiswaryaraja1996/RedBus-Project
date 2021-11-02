@@ -8,6 +8,12 @@
       href="https://www.redbus.in/favicon.ico?root=rbus"
       rel="shortcut icon"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" type="text/css" href="../css/busTicket.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -95,9 +101,64 @@
                       ><i class="bi bi-chevron-right"></i
                     ></span>
                   </div>
-                  <div class="modify-btn clearfix">Modify</div>
+                  <div onClick="modifyDt()" class="modify-btn clearfix">
+                    Modify
+                  </div>
                 </div>
               </div>
+
+              <section class="clearfix search-wrapper hide">
+                <div class="search-section">
+                  <div class="parent-textbox fl">
+                    <div class="top-lbl">FROM</div>
+                    <div class="textbox fl">
+                      <input
+                        type="text"
+                        id="src"
+                        class=""
+                        data-id="462"
+                        autocomplete="off"
+                        value="Mumbai (All Locations)"
+                      />
+                    </div>
+                  </div>
+                  <span class="icon-doublearrow icon fl" id="switchButton"
+                    ><i class="bi bi-arrow-left-right"></i
+                  ></span>
+                  <div class="parent-textbox fl">
+                    <div class="top-lbl">To</div>
+                    <div class="textbox fl">
+                      <input
+                        type="text"
+                        id="dest"
+                        class=""
+                        data-id="122"
+                        autocomplete="off"
+                        value="Bangalore (All Locations)"
+                      />
+                    </div>
+                  </div>
+                  <div class="textbox fl">
+                    <div class="top-lbl">DATE</div>
+                    <input
+                      type="text"
+                      id="onward_cal"
+                      readonly=""
+                      value="05-Nov-2021"
+                    />
+                    <div
+                      id="onward_modify"
+                      class="calendar-blk-search calendar-blk-ond hide"
+                    ></div>
+                  </div>
+                  <div class="parent-textbox fl">
+                    <button class="button ms-btn">SEARCH</button>
+                  </div>
+                  <div class="fr" id="mod_cancel" onClick="closeModify()">
+                    <i class="bi bi-x-circle"></i>
+                  </div>
+                </div>
+              </section>
             </div>
 
             <div class="bus-data clearfix">
@@ -400,6 +461,377 @@
                 </div>
               </div>
             </div>
+
+            <div class="page-overlay hide" id="page_overlay"></div>
+
+            <div class="custinfo slidein hide" data-view="custinfoView">
+              <div class="cinfo-header">
+                <i
+                  class="bi bi-chevron-right fl icon icon-right back-arrow"
+                  id="cust-info-back-arrow"
+                  onClick="hideForm()"
+                  title="Back"
+                ></i>
+
+                <h4 class="passenger-maintitle">Passenger Details</h4>
+              </div>
+              <div class="custinfo_container">
+                <div class="cusinfo-sub-components">
+                  <div class="cusinfo_subcomponents clearfix">
+                    <div class="passenger_contact_container">
+                      <div class="passenger_info_title clearfix">
+                        <i class="bi bi-person-circle icon-profileIcon fl"></i>
+                        <span class="fl p-title">Passenger Information</span>
+                      </div>
+                      <div class="passenger_info_content_block clearfix">
+                        <div class="passenger_info_outer_block"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="usinfo_subcomponents clearfix">
+                    <div class="passenger_contact_container">
+                      <div class="passenger_contact_title clearfix">
+                        <i class="bi bi-envelope icon-contact_details fl"></i>
+                        <span class="fl p-title">Contact Details</span>
+                      </div>
+                      <div class="passenger_contact_contents">
+                        <div class="passenger_contact_msg">
+                          Your ticket will be sent to these details
+                        </div>
+                        <div class="passenger_outer_container">
+                          <div class="input_block">
+                            <label class="custinfo_label" for="05"
+                              >Email ID<input
+                                class="input_box"
+                                type="text"
+                                pattern="/^[-a-z0-9~!$%^&amp;*_=+}{\'?]+(\.[-a-z0-9~!$%^&amp;*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i"
+                                placeholder="Email ID"
+                                data-validation-msg="Please enter valid email"
+                                maxlength="300"
+                                id="seatno-05"
+                                value="" /></label
+                            ><span
+                              id="seatno05"
+                              class="hide"
+                              data-seaterrmsg="seatno05"
+                              >Please enter valid email</span
+                            >
+                          </div>
+                        </div>
+                        <div class="passenger_outer_container">
+                          <label>Phone</label>
+                          <div class="phone_container">
+                            <div class="phone_select_box clearfix">
+                              <ul
+                                id="6"
+                                data-value="91"
+                                class="select_input_code"
+                              >
+                                + 91
+                              </ul>
+                              <span class="icon icon-down"></span
+                              ><span
+                                id="seatnoCountryCode"
+                                class="hide"
+                                data-seaterrmsg="seatnoCountryCode"
+                                >Please select country code</span
+                              >
+                            </div>
+                            <div class="phone_field">
+                              <div class="input_block">
+                                <label class="custinfo_label" for="06"
+                                  ><input
+                                    class="input_box"
+                                    type="number"
+                                    pattern="/^[0-9]{08,15}$/"
+                                    placeholder="Phone"
+                                    data-validation-msg="Please enter valid phone number"
+                                    maxlength="13"
+                                    id="seatno-06"
+                                    value="" /></label
+                                ><span
+                                  id="seatno06"
+                                  class="hide"
+                                  data-seaterrmsg="seatno06"
+                                  >Please enter valid phone number</span
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div></div>
+                  <div class="whatsApp_block">
+                    <label class="checkbox_css"
+                      ><input
+                        type="checkbox"
+                        id="whatsAppFeature"
+                        class="input-checkbox hide"
+                        checked=""
+                      /><label
+                        for="whatsAppFeature"
+                        id="whatsAppFeatureCheckBox"
+                        class="checkmark"
+                      ></label
+                      ><span class="icon-whatsApp"></span
+                      ><span class="subscribe-txt"
+                        >Subscribe to Whatsapp messages.</span
+                      ></label
+                    >
+                  </div>
+                  <div>
+                    <div class="insurance-block">
+                      <div>
+                        <div class="insurance_new_title">
+                          <div class="insurance_new_title_1">
+                            <span
+                              ><img
+                                src="https://st.redbus.in/images/insurance-section/icici_logo.png"
+                                alt="ins"
+                                width="120px" /></span
+                            ><span class="insurance_new_title_2"
+                              >Travel Insurance</span
+                            >
+                          </div>
+                          <a
+                            target="_blank"
+                            class="tnc_link"
+                            href="https://s1.rdbuz.com/apps/icici_new_terms.html"
+                            >T&amp;C Apply</a
+                          >
+                        </div>
+                        <div class="insurance_new_subtitle">
+                          Secure your trip just at<span
+                            class="insurance_new_subtitle_1"
+                          >
+                            ₹ 15.0 </span
+                          >per passenger
+                        </div>
+                      </div>
+                      <div class="insurance_container">
+                        <ul id="insurance" class="clearfix">
+                          <li class="ins-list">
+                            <div>
+                              <img
+                                src="https://st.redbus.in/images/insurance-section/luggage.png"
+                                alt="insurance"
+                                width="70px"
+                                height="70px"
+                                class="i-img"
+                              />
+                            </div>
+                            <div class="i-details">
+                              <div class="benefits-title">Upto ₹ 5,000</div>
+                              <div class="benefits-desc-new">
+                                In the event of loss of luggage
+                              </div>
+                            </div>
+                          </li>
+                          <li class="ins-list">
+                            <div>
+                              <img
+                                src="https://st.redbus.in/images/insurance-section/hospital.png"
+                                alt="insurance"
+                                width="70px"
+                                height="70px"
+                                class="i-img"
+                              />
+                            </div>
+                            <div class="i-details">
+                              <div class="benefits-title">Upto ₹ 1,00,000</div>
+                              <div class="benefits-desc-new">
+                                In the event of accidental hospitalisation
+                              </div>
+                            </div>
+                          </li>
+                          <li class="ins-list">
+                            <div>
+                              <img
+                                src="https://st.redbus.in/images/insurance-section/accident.png"
+                                alt="insurance"
+                                width="70px"
+                                height="70px"
+                                class="i-img"
+                              />
+                            </div>
+                            <div class="i-details">
+                              <div class="benefits-title">Upto ₹ 6 Lakh</div>
+                              <div class="benefits-desc-new">
+                                In case of death/PTD/PPD
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class="bottomRow insurance-radio">
+                          <label class="ins-container"
+                            ><span
+                              ><span>Yes, Protect my trip at </span
+                              ><span class="ins_price">₹ 15</span
+                              ><span class="noOfPsng"
+                                >(1 passenger),</span
+                              ></span
+                            ><span id="insuranceTNC" class="term-cond">
+                              Yes, secure my trip with insurance. I have read,
+                              understood and agree to the
+                              <a
+                                href="https://s1.rdbuz.com/apps/icici_new_terms.html"
+                                target="_blank"
+                                >Terms and Conditions</a
+                              ></span
+                            ><input
+                              type="radio"
+                              id="insuranceOpted"
+                              class="policyCheckBox policyCheckBoxtrueradio"
+                              name="policyCheckBox"
+                              value="yes" /><span
+                              class="checkmark-radio"
+                            ></span></label
+                          ><label class="ins-container"
+                            >No, I would like to proceed without insurance<input
+                              type="radio"
+                              id="insuranceNotOpted"
+                              class="policyCheckBox policyCheckBoxfalseradio"
+                              name="policyCheckBox"
+                              value="no" /><span class="checkmark-radio"></span
+                          ></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div><div class=""></div></div>
+                  <div class="sc-cIShpX cpCbij">
+                    <div class="addonsContainer">
+                      <div class="sc-caSCKo dUblmd">
+                        <header class="addons_header">
+                          <div class="addons_container">
+                            <div class="sc-hEsumM isYFcb">
+                              <span class="img-icon"
+                                ><img
+                                  src="https://www.redbus.in/images/addonsIcon.svg"
+                                  alt="img" /></span
+                              >Additional Services
+                            </div>
+                            <div class="sc-tilXH csLoEt">
+                              Check out our new additional services at exciting
+                              prices
+                            </div>
+                            <div class="sc-cHGsZl ekQapo">
+                              <div class="sc-gisBJw jbzGyZ">
+                                <div class="display_addons_block">
+                                  <div class="sc-kjoXOD kdEOzT">
+                                    <img
+                                      src="https://st.redbus.in/images/addon/opd_hospi/Hospicash.png"
+                                      alt="img"
+                                      id="imgnew-0"
+                                      class="sc-hmzhuo imdmCO"
+                                    />
+                                    <div class="sc-kvZOFW ZXoMC">
+                                      <div class="sc-hqyNC busTvs">
+                                        COVID-19 Hospicash Powered by Acko
+                                      </div>
+                                      <div class="sc-jbKcbu dNdcFj">
+                                        <span class="sc-dNLxif lnOVqS"
+                                          >₹<span id="addons_display_price-0"
+                                            >10</span
+                                          ></span
+                                        ><span>/ policy</span>
+                                      </div>
+                                    </div>
+                                    <div class="sc-kgAjT itmKFi">
+                                      <div class="sc-jqCOkK bXWOOx">
+                                        view details
+                                      </div>
+                                      <span
+                                        class="input_div_new"
+                                        id="input_div_new"
+                                        ><input
+                                          type="button"
+                                          id="minus_addons-0"
+                                          class="minus_addons"
+                                          value="-" /><input
+                                          type="number"
+                                          class="count_plus"
+                                          max="1"
+                                          min="1"
+                                          id="count_plus-0"
+                                          disabled=""
+                                          value="0" /><input
+                                          type="button"
+                                          id="plus_addons-0"
+                                          class="plus_addons"
+                                          value="+"
+                                      /></span>
+                                    </div>
+                                    <div class="sc-ktHwxA bsFBKs"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </header>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="addOn_block">
+                    <div class="addOnTitle clearfix">
+                      <span class="fl p-title"
+                        >redBus Cares: your contribution makes a
+                        difference!</span
+                      >
+                    </div>
+                    <label class="checkbox_css"
+                      ><div class="displayFlex">
+                        <div>
+                          <input
+                            type="checkbox"
+                            id="addOnFeature"
+                            class="input-checkbox hide"
+                          /><label
+                            for="addOnFeature"
+                            id="addOnFeatureCheckBox"
+                            class="checkmark"
+                          ></label>
+                        </div>
+                        <div class="icon-red_care"></div>
+                        <div class="subscribe-txt">
+                          Donate ₹5 for COVID-19 Relief and Other Charity
+                          Initiatives.
+                        </div>
+                      </div></label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="clearfix continue-booking withpptclink">
+                <div class="pptnc-link">
+                  By clicking on proceed, I agree that I have read and
+                  understood the
+                  <a href="/info/termscondition" target="_blank">TnCs</a> and
+                  the
+                  <a href="/info/privacypolicy" target="_blank"
+                    >Privacy Policy</a
+                  >
+                </div>
+                <div class="pR">
+                  <div class="booking-amt-details fl clearfix f-bold">
+                    <div class="booking-amt-title fl">Total Amount :</div>
+                    <div class="booking-amt fl">
+                      INR<span class="f-bold" id="pay-amnt"></span>
+                    </div>
+                  </div>
+                  <div class="button-container fr">
+                    <input
+                      type="submit"
+                      onClick="payAmnt()"
+                      class="button main-btn gtm-continueBooking"
+                      value="Proceed to pay"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -683,7 +1115,7 @@
             </ul>
             <div class="view-more">View More</div>
           </section>
-         
+
           <section class="slide_section">
             <div class="slide-container">
               <div>
@@ -732,7 +1164,7 @@
               </div>
             </div>
           </section>
-          <hr class="thin-divider"/>
+          <hr class="thin-divider" />
           <section class="section-data">
             <div>
               <h2>About Mumbai</h2>
@@ -990,7 +1422,10 @@
                   </a>
                 </li>
                 <li class="">
-                  <a href="/bus-tickets/hubli-to-bangalore" class="routes_ilink">
+                  <a
+                    href="/bus-tickets/hubli-to-bangalore"
+                    class="routes_ilink"
+                  >
                     Hubli to Bangalore (Bengaluru)
                   </a>
                 </li>
@@ -1107,17 +1542,26 @@
                   </a>
                 </li>
                 <li class="">
-                  <a href="/bus-tickets/mumbai-to-kapadvanj" class="routes_ilink">
+                  <a
+                    href="/bus-tickets/mumbai-to-kapadvanj"
+                    class="routes_ilink"
+                  >
                     Mumbai to Kapadvanj
                   </a>
                 </li>
                 <li class="">
-                  <a href="/bus-tickets/mumbai-to-kuchaman" class="routes_ilink">
+                  <a
+                    href="/bus-tickets/mumbai-to-kuchaman"
+                    class="routes_ilink"
+                  >
                     Mumbai to Kuchaman
                   </a>
                 </li>
                 <li class="">
-                  <a href="/bus-tickets/mumbai-to-bantakal" class="routes_ilink">
+                  <a
+                    href="/bus-tickets/mumbai-to-bantakal"
+                    class="routes_ilink"
+                  >
                     Mumbai to Bantakal
                   </a>
                 </li>
@@ -1135,7 +1579,10 @@
                   </a>
                 </li>
                 <li class="">
-                  <a href="/bus-tickets/mumbai-to-madalmohi" class="routes_ilink">
+                  <a
+                    href="/bus-tickets/mumbai-to-madalmohi"
+                    class="routes_ilink"
+                  >
                     Mumbai to Madalmohi
                   </a>
                 </li>
@@ -1176,7 +1623,10 @@
                   </a>
                 </li>
                 <li class="">
-                  <a href="/bus-tickets/aversa-to-bangalore" class="routes_ilink">
+                  <a
+                    href="/bus-tickets/aversa-to-bangalore"
+                    class="routes_ilink"
+                  >
                     Aversa to Bangalore (Bengaluru)
                   </a>
                 </li>
@@ -1205,7 +1655,10 @@
                   </a>
                 </li>
                 <li class="">
-                  <a href="/bus-tickets/koppal-to-bangalore" class="routes_ilink">
+                  <a
+                    href="/bus-tickets/koppal-to-bangalore"
+                    class="routes_ilink"
+                  >
                     Koppal to Bangalore (Bengaluru)
                   </a>
                 </li>
@@ -1241,7 +1694,7 @@
               </ul>
             </div>
           </section>
-          <hr class="thin-divider">
+          <hr class="thin-divider" />
           <div class="footerLink">
             <div class="footerLinkContainer">
               <section>
