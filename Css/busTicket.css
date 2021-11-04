@@ -34,12 +34,166 @@ ul {
   position: relative;
   min-height: 100%;
 }
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+  cursor: pointer;
+}
 
-.header {
+#page_main_header {
+  padding: 0 10px 10px;
+  color: #e6545b;
+}
+#page_main_header nav {
+  padding: 10px 0 0;
+  display: inline-block;
+}
+#page_main_header nav ul {
+  padding-left: 0;
+}
+#page_main_header nav ul li {
+  display: inline-block;
+  list-style: none;
+}
+#page_main_header nav ul li .selectedBus {
+  color: #fff;
+  border-bottom: 3px solid #fff;
+  padding-bottom: 18px;
+}
+
+#charterbuses a,
+#curr_dd,
+#lang_dd,
+#redbusPartner a,
+#reschedule a,
+.config-div,
+.main-header-row .corner-wrapper a,
+.main-header-row .icon-profile-new-signed,
+.main-header-row .icon-profile-new-unsigned,
+#call-us-at,
+#cancellation a,
+#chat-with-us,
+#howtoorder,
+#page_main_header nav ul li a,
+#support-options,
+.print-sms,
+.signin-block .icon-down,
+.signin-block .icon-profile_colour {
+  color: #fff;
+}
+#manageHeaderdd {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+#page_main_header nav ul li a {
+  padding: 3px 4px;
+  margin: 0 5px;
+  font-size: 13px;
+  line-height: 0;
+  letter-spacing: 0.2px;
+}
+.corner-wrapper {
+  font-size: 12px;
+}
+.icon-profile-new-signed,
+.icon-profile-new-unsigned {
+  color: #fff;
+  font-size: 33px;
+  margin-right: 5px;
+}
+
+.manageHeaderLbl {
+  display: inline-block;
+}
+.signin-block .icon-down {
+  display: inline-block;
+  float: right;
+  margin-top: 17px;
+  margin-left: 8px;
+  font-size: 16px;
+  top: -9px;
+  left: -4px;
+  line-height: inherit !important;
+  position: relative;
+  vertical-align: middle !important;
+  font-weight: 700;
+}
+.config-wrapper {
+  display: inline-block;
+  margin-top: 12px;
+}
+
+.config-wrapper > div {
+  margin-right: 20px;
+}
+.signin-block {
+  margin-top: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.rest .promotions-wrap {
+  margin-left: 44px;
+  margin-top: -96px;
+}
+.cntEnd,
+.timName {
+  color: #fff;
+}
+.signin-block .hid-config-sign {
+  left: -200px;
+  top: 35px;
+}
+.toparrowhead-sign {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  margin-left: -5px;
+  border-width: 12px;
+  border-style: solid;
+  border-color: transparent transparent #fff;
+}
+.manageBookHeader {
+  vertical-align: middle;
+  margin-top: 12px;
+  margin-right: 15px;
+}
+.config-div {
+  position: relative;
+  outline: 0;
+}
+.countInfo .position {
+  height: 1.23em;
+}
+.bpdpcoach-block.coach-remove {
+  pointer-events: none;
+}
+
+.main-header {
+  margin: 0 auto;
+}
+.main-header {
+  overflow: visible !important;
+  padding: 10px 20px !important;
+  padding-right: 0 !important;
+}
+.redbus-logo {
+  width: 79px;
+  height: 49px;
+  text-indent: -1000px;
+  margin-top: -4px;
+  float: left;
+  background: url(https://www.redbus.in/i/59538b35953097248522a65b4b79650e.png)
+    no-repeat;
+}
+#rh_header {
+  background-color: #d84f57;
   width: 100%;
   margin: 0;
   height: 60px;
-  background-color: #d84f57;
 }
 
 .top-ribbon {
@@ -375,10 +529,6 @@ input[type="number"] {
   width: 30%;
 }
 
-.float-left {
-  float: left;
-}
-
 .flex {
   display: flex;
 }
@@ -446,6 +596,25 @@ hr {
   float: right;
 }
 
+.no-of-buses {
+  text-align: center;
+  font-weight: 700;
+  clear: both;
+  margin: 2em 0 0;
+}
+
+.no-of-buses-block {
+  padding: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+.no-of-buses-block .buses-down {
+  margin-left: 5px;
+}
+.no-of-buses-block:hover {
+  background-color: #ddd;
+}
 .b-p-list:first-child {
   border: 0 none;
   cursor: pointer;
@@ -460,6 +629,10 @@ hr {
 }
 .section-data {
   padding: 2em 6em;
+}
+
+.first-one {
+  margin-top: 50px;
 }
 
 .section-data .content {
@@ -600,8 +773,6 @@ hr {
   margin-right: 10px;
   border-radius: 2px;
   border: 1px solid #ddd;
-  /* background-color: #fff; */
-  /* color: #3e3e52; */
   text-align: center;
   cursor: pointer;
   height: 33px;
@@ -639,10 +810,6 @@ hr {
 
 .fr {
   float: right;
-}
-
-.fl {
-  float: left;
 }
 
 .canvas-wrapper {
@@ -862,10 +1029,6 @@ hr {
   padding-right: 10px;
 }
 
-.fl {
-  float: left;
-}
-
 .lh-24 {
   line-height: 24px;
 }
@@ -1034,13 +1197,7 @@ hr {
   height: 320px;
   margin-top: 20px;
 }
-ol,
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
+
 .select-list li {
   color: #4a4a4a;
   padding: 5px 0;
@@ -1302,7 +1459,10 @@ input[type="text"]::placeholder {
   margin-left: 0;
   padding-left: 0;
   user-select: none;
-  justify-content: center;
+}
+
+#slider::-webkit-scrollbar {
+  width: 0;
 }
 .icon-left:before,
 .icon-right-arrow:before,
@@ -1736,6 +1896,9 @@ footer {
 .m-b-15 {
   margin-bottom: 15px;
 }
+.float-left {
+  float: left;
+}
 
 .m-t-15 {
   margin-top: 15px;
@@ -1980,15 +2143,11 @@ ul.fares-container {
   margin-bottom: 0.5em;
 }
 .clearfix.radio_container {
-  
   text-align: center;
   display: flex;
 }
 
-
-
 .gender_position_abs {
-  
   width: 62px;
   height: 18px;
 }
@@ -2146,9 +2305,10 @@ label.radio_css {
 
 .icon-down {
   font-weight: 700;
+  font-size: 16px;
 }
 
-.phone_select_box > span#seatnoCountryCode {
+.phone_select_box > span #seatnoCountryCode {
   font-size: 11px;
   color: #ea4c53;
   margin: 29px -0.5em 1em;
@@ -2349,23 +2509,23 @@ addOn_block .subscribe-txt {
   border-radius: 50%;
 }
 
-.cpCbij .addonsContainer {
+.addser .addonsContainer {
   border-bottom: 1px solid rgb(221, 221, 221) !important;
 }
-.cpCbij .addons_header {
+.addser .addons_header {
   padding-left: 1em;
 }
-.isYFcb {
+.addserCont {
   color: rgb(62, 62, 82);
   font-weight: 700;
   padding-top: 1em;
   margin-bottom: 1.5em;
 }
-.isYFcb .img-icon {
+.addserCont .img-icon {
   margin-right: 8px;
   position: relative;
 }
-.isYFcb .img-icon::after {
+.addserCont .img-icon::after {
   content: "+";
   display: inline-block;
   position: absolute;
@@ -2375,27 +2535,27 @@ addOn_block .subscribe-txt {
   color: rgb(255, 255, 255);
   font-weight: 400;
 }
-.csLoEt {
+.addSerExt {
   font-size: 0.857em;
   margin-bottom: 1.5em;
   overflow-wrap: break-word;
   white-space: initial;
   margin-left: 1em;
 }
-.ekQapo {
+.imgCont-1 {
   font-size: 0.8em;
   white-space: nowrap;
   margin-left: 1.2em;
 }
-.jbzGyZ {
+.imgCont-2 {
   display: flex;
   flex-direction: row;
   margin-left: 1em;
 }
-.dUblmd .display_addons_block {
+.display_addons_block {
   display: flex;
 }
-.kdEOzT {
+.imdImg {
   background: rgb(255, 255, 255);
   margin-right: 1em;
   margin-bottom: 1em;
@@ -2405,12 +2565,12 @@ addOn_block .subscribe-txt {
   flex-grow: 1;
   position: relative;
 }
-.imdmCO {
+.imd {
   height: 220px;
   min-width: 300px;
   max-width: 330px;
 }
-.ZXoMC {
+.covidCont {
   top: 160px;
   position: absolute;
   color: white;
@@ -2429,7 +2589,7 @@ addOn_block .subscribe-txt {
   overflow: hidden;
   width: 60%;
 }
-.dNdcFj {
+.dprcCont {
   width: 30%;
   text-align: right;
   padding-right: 1em;
@@ -2437,10 +2597,10 @@ addOn_block .subscribe-txt {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.lnOVqS {
+.dprc {
   font-size: 1.3em;
 }
-.itmKFi {
+.vdtls {
   display: flex;
   font-weight: bold;
   font-size: 1.25em;
@@ -2448,21 +2608,21 @@ addOn_block .subscribe-txt {
   justify-content: space-between;
   align-items: center;
 }
-.bXWOOx {
+.viewdtls {
   color: rgb(16, 52, 217);
   font-weight: bold;
   font-size: 0.85em;
   cursor: pointer;
 }
-.dUblmd .input_div_new {
+.input_div_new {
   float: right;
   display: flex;
 }
-.cpCbij .minus_addons {
+.minus_addons {
   max-height: 20vh;
 }
 
-.dUblmd .minus_addons {
+.minus_addons {
   background-color: rgb(248, 244, 244);
   border: 1px solid rgb(20, 70, 160);
   font-weight: 500;
@@ -2473,7 +2633,7 @@ addOn_block .subscribe-txt {
   width: 40px;
   padding-top: 0px;
 }
-.dUblmd .count_plus {
+.count_plus {
   font-size: 16px;
   border: none;
   text-align: center;
@@ -2482,7 +2642,7 @@ addOn_block .subscribe-txt {
   padding: 0.4em;
   background-color: rgb(255, 255, 255);
 }
-.dUblmd .plus_addons {
+.plus_addons {
   background-color: rgb(248, 244, 244);
   border: 1px solid rgb(20, 70, 160);
   font-weight: 500;

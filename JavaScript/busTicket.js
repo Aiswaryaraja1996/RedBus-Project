@@ -17,6 +17,7 @@ var age;
 var mail;
 var phone;
 var clickCount = 0;
+var totalBusCount = 0;
 
 window.addEventListener("load", () => {
   var dt = new Date("05 Nov");
@@ -25,6 +26,14 @@ window.addEventListener("load", () => {
   document.getElementById("searchDat").value = "05 Nov";
   document.getElementById("searchDay").textContent = week[dt.getDay()];
   fetchBuses();
+});
+
+document.getElementById("fwd").addEventListener("click", () => {
+  document.getElementById("slider").scrollLeft += 356;
+});
+
+document.getElementById("bwd").addEventListener("click", () => {
+  document.getElementById("slider").scrollLeft -= 356;
 });
 
 function seatLayout(id, seats) {
@@ -38,6 +47,7 @@ const fetchBuses = async () => {
     // console.log(results[0].busDetails.length);
     document.getElementById("busCount").textContent =
       results.length + " " + "Buses ";
+    totalBusCount = results.length;
     displayBuses(results);
   } catch (e) {
     console.log("Error fetching");
@@ -70,6 +80,8 @@ const createCard = (result) => {
   mainDb.push(obj);
 
   const mainDiv = document.createElement("div");
+  mainDiv.className = "bus-card";
+  mainDiv.id = result.id;
 
   const li = document.createElement("li");
   li.className = "row clearfix";
@@ -272,7 +284,7 @@ const createCard = (result) => {
     <i onClick="closeSeats()" class="bi bi-x-circle"></i>
   </span>
   <div class="seat-container">
-    <div>
+    <div >
       <div class="seat-wrapper">
         <div class="clearfix SeatsSelector MB">
           <div class="price-ploy-container">
@@ -361,31 +373,41 @@ const createCard = (result) => {
                     <div class="front-seats">
                       <div>
                         <div class="first-row">
-                          <div class="seat" data-select="" data-rate=${result.seats[2].rate} id=${result.id}-L3>
+                          <div class="seat" data-select="" data-rate=${
+                            result.seats[2].rate
+                          } id=${result.id}-L3>
                           <div class="seat-name"></div>  
                           <div
                               class="element" 
                             ></div>
                           </div>
-                          <div class="seat" data-select="" data-rate=${result.seats[3].rate} id=${result.id}-L4>
+                          <div class="seat" data-select="" data-rate=${
+                            result.seats[3].rate
+                          } id=${result.id}-L4>
                           <div class="seat-name"></div>  
                           <div
                               class="element" 
                             ></div>
                           </div>
-                          <div class="seat" data-select="" data-rate=${result.seats[8].rate} id=${result.id}-L9>
+                          <div class="seat" data-select="" data-rate=${
+                            result.seats[8].rate
+                          } id=${result.id}-L9>
                           <div class="seat-name"></div>  
                           <div
                               class="element" 
                             ></div>
                           </div>
-                          <div class="seat" data-select="" data-rate=${result.seats[9].rate} id=${result.id}-L10>
+                          <div class="seat" data-select="" data-rate=${
+                            result.seats[9].rate
+                          } id=${result.id}-L10>
                           <div class="seat-name"></div>  
                           <div
                               class="element" 
                             ></div>
                           </div>
-                          <div class="seat" data-select="" data-rate=${result.seats[14].rate} id=${result.id}-L15>
+                          <div class="seat" data-select="" data-rate=${
+                            result.seats[14].rate
+                          } id=${result.id}-L15>
                           <div class="seat-name"></div>  
                           <div
                               class="element" 
@@ -393,31 +415,41 @@ const createCard = (result) => {
                           </div>
                         </div>
                         <div class="second-row">
-                          <div class="seat" data-select="" data-rate=${result.seats[1].rate} id=${result.id}-L2>
+                          <div class="seat" data-select="" data-rate=${
+                            result.seats[1].rate
+                          } id=${result.id}-L2>
                           <div class="seat-name"></div>  
                           <div
                               class="element" 
                             ></div>
                           </div>
-                          <div class="seat" data-select="" data-rate=${result.seats[4].rate} id=${result.id}-L5>
+                          <div class="seat" data-select="" data-rate=${
+                            result.seats[4].rate
+                          } id=${result.id}-L5>
                           <div class="seat-name"></div>  
                           <div
                               class="element" 
                             ></div>
                           </div>
-                          <div class="seat" data-select="" data-rate=${result.seats[7].rate} id=${result.id}-L8>
+                          <div class="seat" data-select="" data-rate=${
+                            result.seats[7].rate
+                          } id=${result.id}-L8>
                           <div class="seat-name"></div>  
                           <div
                               class="element" 
                             ></div>
                           </div>
-                          <div class="seat" data-select="" data-rate=${result.seats[10].rate} id=${result.id}-L11>
+                          <div class="seat" data-select="" data-rate=${
+                            result.seats[10].rate
+                          } id=${result.id}-L11>
                           <div class="seat-name"></div>  
                           <div
                               class="element" 
                             ></div>
                           </div>
-                          <div class="seat" data-select="" data-rate=${result.seats[13].rate} id=${result.id}-L14>
+                          <div class="seat" data-select="" data-rate=${
+                            result.seats[13].rate
+                          } id=${result.id}-L14>
                           <div class="seat-name"></div>  
                           <div
                               class="element" 
@@ -427,31 +459,41 @@ const createCard = (result) => {
                       </div>
   
                       <div class="third-row">
-                        <div class="seat" data-select="" data-rate=${result.seats[0].rate} id=${result.id}-L1>
+                        <div class="seat" data-select="" data-rate=${
+                          result.seats[0].rate
+                        } id=${result.id}-L1>
                         <div class="seat-name"></div>  
                         <div
                             class="element" 
                           ></div>
                         </div>
-                        <div class="seat"  data-select="" data-rate=${result.seats[5].rate} id=${result.id}-L6>
+                        <div class="seat"  data-select="" data-rate=${
+                          result.seats[5].rate
+                        } id=${result.id}-L6>
                         <div class="seat-name"></div>  
                         <div
                             class="element" 
                           ></div>
                         </div>
-                        <div class="seat"  data-select="" data-rate=${result.seats[6].rate} id=${result.id}-L7>
+                        <div class="seat"  data-select="" data-rate=${
+                          result.seats[6].rate
+                        } id=${result.id}-L7>
                         <div class="seat-name"></div>  
                         <div
                             class="element" 
                           ></div>
                         </div>
-                        <div class="seat"  data-select="" data-rate=${result.seats[11].rate} id=${result.id}-L12>
+                        <div class="seat"  data-select="" data-rate=${
+                          result.seats[11].rate
+                        } id=${result.id}-L12>
                         <div class="seat-name"></div>  
                         <div
                             class="element" 
                           ></div>
                         </div>
-                        <div class="seat"  data-select="" data-rate=${result.seats[12].rate} id=${result.id}-L13>
+                        <div class="seat"  data-select="" data-rate=${
+                          result.seats[12].rate
+                        } id=${result.id}-L13>
                         <div class="seat-name"></div>  
                         <div
                             class="element" 
@@ -460,13 +502,17 @@ const createCard = (result) => {
                       </div>
                     </div>
                     <div class="back-seats">
-                      <div class="seat"  data-select="" data-rate=${result.seats[15].rate} id=${result.id}-L16>
+                      <div class="seat"  data-select="" data-rate=${
+                        result.seats[15].rate
+                      } id=${result.id}-L16>
                       <div class="seat-name"></div>  
                       <div
                           class="element" 
                         ></div>
                       </div>
-                      <div class="seat"  data-select="" data-rate=${result.seats[16].rate} id=${result.id}-L17>
+                      <div class="seat"  data-select="" data-rate=${
+                        result.seats[16].rate
+                      } id=${result.id}-L17>
                       <div class="seat-name"></div>  
                       <div
                           class="element" 
@@ -490,31 +536,41 @@ const createCard = (result) => {
                     <div class="front-seats">
                       <div>
                         <div class="first-row">
-                          <div class="seat"  data-select="" data-rate=${result.seats[19].rate} id=${result.id}-U3>
+                          <div class="seat"  data-select="" data-rate=${
+                            result.seats[19].rate
+                          } id=${result.id}-U3>
                           <div class="seat-name"></div>  
                           <div
                               class="element" 
                             ></div>
                           </div>
-                          <div class="seat"  data-select="" data-rate=${result.seats[20].rate} id=${result.id}-U4>
+                          <div class="seat"  data-select="" data-rate=${
+                            result.seats[20].rate
+                          } id=${result.id}-U4>
                           <div class="seat-name"></div>  
                           <div
                               class="element" 
                             ></div>
                           </div>
-                          <div class="seat"  data-select="" data-rate=${result.seats[25].rate} id=${result.id}-U9>
+                          <div class="seat"  data-select="" data-rate=${
+                            result.seats[25].rate
+                          } id=${result.id}-U9>
                           <div class="seat-name"></div>  
                           <div
                               class="element" 
                             ></div>
                           </div>
-                          <div class="seat"  data-select="" data-rate=${result.seats[26].rate} id=${result.id}-U10>
+                          <div class="seat"  data-select="" data-rate=${
+                            result.seats[26].rate
+                          } id=${result.id}-U10>
                           <div class="seat-name"></div>  
                           <div
                               class="element" 
                             ></div>
                           </div>
-                          <div class="seat"  data-select="" data-rate=${result.seats[31].rate} id=${result.id}-U15>
+                          <div class="seat"  data-select="" data-rate=${
+                            result.seats[31].rate
+                          } id=${result.id}-U15>
                           <div class="seat-name"></div>  
                           <div
                               class="element" 
@@ -522,31 +578,41 @@ const createCard = (result) => {
                           </div>
                         </div>
                         <div class="second-row">
-                          <div class="seat"  data-select="" data-rate=${result.seats[18].rate} id=${result.id}-U2>
+                          <div class="seat"  data-select="" data-rate=${
+                            result.seats[18].rate
+                          } id=${result.id}-U2>
                           <div class="seat-name"></div>  
                           <div
                               class="element" 
                             ></div>
                           </div>
-                          <div class="seat"  data-select="" data-rate=${result.seats[21].rate} id=${result.id}-U5>
+                          <div class="seat"  data-select="" data-rate=${
+                            result.seats[21].rate
+                          } id=${result.id}-U5>
                           <div class="seat-name"></div>  
                           <div
                               class="element" 
                             ></div>
                           </div>
-                          <div class="seat"  data-select="" data-rate=${result.seats[24].rate} id=${result.id}-U8>
+                          <div class="seat"  data-select="" data-rate=${
+                            result.seats[24].rate
+                          } id=${result.id}-U8>
                           <div class="seat-name"></div>  
                           <div
                               class="element" 
                             ></div>
                           </div>
-                          <div class="seat"  data-select="" data-rate=${result.seats[27].rate} id=${result.id}-U11>
+                          <div class="seat"  data-select="" data-rate=${
+                            result.seats[27].rate
+                          } id=${result.id}-U11>
                           <div class="seat-name"></div>  
                           <div
                               class="element" 
                             ></div>
                           </div>
-                          <div class="seat"  data-select="" data-rate=${result.seats[30].rate} id=${result.id}-U14>
+                          <div class="seat"  data-select="" data-rate=${
+                            result.seats[30].rate
+                          } id=${result.id}-U14>
                           <div class="seat-name"></div>  
                           <div
                               class="element" 
@@ -556,31 +622,41 @@ const createCard = (result) => {
                       </div>
   
                       <div class="third-row">
-                        <div class="seat"  data-select="" data-rate=${result.seats[17].rate} id=${result.id}-U1>
+                        <div class="seat"  data-select="" data-rate=${
+                          result.seats[17].rate
+                        } id=${result.id}-U1>
                         <div class="seat-name"></div>  
                         <div
                             class="element" 
                           ></div>
                         </div>
-                        <div class="seat"  data-select="" data-rate=${result.seats[22].rate} id=${result.id}-U6>
+                        <div class="seat"  data-select="" data-rate=${
+                          result.seats[22].rate
+                        } id=${result.id}-U6>
                         <div class="seat-name"></div>  
                         <div
                             class="element" 
                           ></div>
                         </div>
-                        <div class="seat"  data-select="" data-rate=${result.seats[23].rate} id=${result.id}-U7>
+                        <div class="seat"  data-select="" data-rate=${
+                          result.seats[23].rate
+                        } id=${result.id}-U7>
                         <div class="seat-name"></div>  
                         <div
                             class="element" 
                           ></div>
                         </div>
-                        <div class="seat"  data-select="" data-rate=${result.seats[28].rate} id=${result.id}-U12>
+                        <div class="seat"  data-select="" data-rate=${
+                          result.seats[28].rate
+                        } id=${result.id}-U12>
                         <div class="seat-name"></div>  
                         <div
                             class="element" 
                           ></div>
                         </div>
-                        <div class="seat"  data-select="" data-rate=${result.seats[29].rate} id=${result.id}-U13>
+                        <div class="seat"  data-select="" data-rate=${
+                          result.seats[29].rate
+                        } id=${result.id}-U13>
                         <div class="seat-name"></div>  
                         <div
                             class="element" 
@@ -589,13 +665,17 @@ const createCard = (result) => {
                       </div>
                     </div>
                     <div class="back-seats">
-                      <div class="seat"  data-select="" data-rate=${result.seats[32].rate} id=${result.id}-U16>
+                      <div class="seat"  data-select="" data-rate=${
+                        result.seats[32].rate
+                      } id=${result.id}-U16>
                       <div class="seat-name"></div>  
                       <div
                           class="element" 
                         ></div>
                       </div>
-                      <div class="seat"  data-select="" data-rate=${result.seats[33].rate} id=${result.id}-U17>
+                      <div class="seat"  data-select="" data-rate=${
+                        result.seats[33].rate
+                      } id=${result.id}-U17>
                       <div class="seat-name"></div>  
                       <div
                           class="element" 
@@ -701,9 +781,13 @@ const createCard = (result) => {
                   <span class="${result.id}-dppt bpDpName-Lbl">Tumkur</span
                   ><span class="${result.id}-dptime bpDpSummaryTm-Lbl"
                     >05:00
-                    <span class="${result.id}-dpdate color-red-next-day">(06 Nov)</span></span
+                    <span class="${
+                      result.id
+                    }-dpdate color-red-next-day">(06 Nov)</span></span
                   >
-                  <div class="${result.id}-dploc selectedBpDpAdd-Lbl">Tumkur Toll</div>
+                  <div class="${
+                    result.id
+                  }-dploc selectedBpDpAdd-Lbl">Tumkur Toll</div>
                 </div>
               </div>
             </div>
@@ -713,7 +797,9 @@ const createCard = (result) => {
                 <div>
                   <div class="seats-selected-container">
                     <span class="seat-lb">Seat No.</span
-                    ><span class="selected-seats"><span class=${result.id}-seat>L3</span></span>
+                    ><span class="selected-seats"><span class=${
+                      result.id
+                    }-seat>L3</span></span>
                   </div>
                 </div>
               </div>
@@ -745,7 +831,9 @@ const createCard = (result) => {
               <h3 class="fare-toggle-btn fr m-t-0">Show Fare Details</h3>
               <div class="fr showlayout-button-container w-15"></div>
               <div class="continue-container w-100 fl m-b-10">
-                <button onClick="proceedClick()" class="button continue prcdBtn inactive " id=${result.id}-proceed>
+                <button onClick="proceedClick()" class="button continue prcdBtn inactive " id=${
+                  result.id
+                }-proceed>
                   Proceed to book
                 </button>
               </div>
@@ -852,7 +940,9 @@ const createCard = (result) => {
                             <div class="radio-unchecked"></div>
                           </div>
                           <div class="bpDpTime-css">
-                            <span class="time bpdp-time">  ${result.boarding[4].time} </span>
+                            <span class="time bpdp-time">  ${
+                              result.boarding[4].time
+                            } </span>
                           </div>
                           <div class="bpDpAddr-css">
                             <span
@@ -870,7 +960,9 @@ const createCard = (result) => {
                             <div class="radio-unchecked"></div>
                           </div>
                           <div class="bpDpTime-css">
-                            <span class="time bpdp-time"> ${result.boarding[5].time} </span>
+                            <span class="time bpdp-time"> ${
+                              result.boarding[5].time
+                            } </span>
                           </div>
                           <div class="bpDpAddr-css">
                             <span
@@ -894,7 +986,9 @@ const createCard = (result) => {
                             <div class="radio-checked"></div>
                           </div>
                           <div class="bpDpTime-css">
-                            <span class="time bpdp-time"> ${result.dropping[0].time} </span>
+                            <span class="time bpdp-time"> ${
+                              result.dropping[0].time
+                            } </span>
                             <div class="bpdp-time next-day-props">
                               (${result.dropping[0].date})
                             </div>
@@ -915,7 +1009,9 @@ const createCard = (result) => {
                             <div class="radio-unchecked"></div>
                           </div>
                           <div class="bpDpTime-css">
-                            <span class="time bpdp-time"> ${result.dropping[1].time} </span>
+                            <span class="time bpdp-time"> ${
+                              result.dropping[1].time
+                            } </span>
                             <div class="bpdp-time next-day-props">
                               (${result.dropping[1].date})
                             </div>
@@ -925,7 +1021,9 @@ const createCard = (result) => {
                               class="loc"
                               >${result.dropping[1].location}</span
                             >
-                            <div class="bpdpPanelAddress"> ${result.dropping[1].address}</div>
+                            <div class="bpdpPanelAddress"> ${
+                              result.dropping[1].address
+                            }</div>
                           </div>
                         </li>
                         <li class="db oh">
@@ -933,13 +1031,17 @@ const createCard = (result) => {
                             <div class="radio-unchecked"></div>
                           </div>
                           <div class="bpDpTime-css">
-                            <span class="time bpdp-time">${result.dropping[2].time}  </span>
+                            <span class="time bpdp-time">${
+                              result.dropping[2].time
+                            }  </span>
                             <div class="bpdp-time next-day-props">
                               (${result.dropping[2].date})
                             </div>
                           </div>
                           <div class="bpDpAddr-css">
-                            <span class="loc">(${result.dropping[2].location})</span>
+                            <span class="loc">(${
+                              result.dropping[2].location
+                            })</span>
                             <div class="bpdpPanelAddress">
                               ${result.dropping[2].address}
                             </div>
@@ -962,7 +1064,9 @@ const createCard = (result) => {
                   >
                 </div>
                 <button onClick="clickCont()"
-                  class="button continue contBtn inactive text-trans-uc w-h-cont hide" id="${result.id}-cont"
+                  class="button continue contBtn inactive text-trans-uc w-h-cont hide" id="${
+                    result.id
+                  }-cont"
                 >
                   continue
                 </button>
@@ -974,7 +1078,19 @@ const createCard = (result) => {
     </div>
   </div>
 
+
+
   </div>
+  <div class="no-of-buses clearfix " >
+  <span class="no-of-buses-block hide" onClick="closeSeat()"  id=${
+    result.id
+  }-busCnt>
+  <span class="buses-remaining">${
+    Number(totalBusCount) - 1
+  }</span><span>&nbsp;Buses</span>
+  
+  <i class="bi bi-chevron-down icon icon-down buses-down fr" ></i>
+  </span></div>
   </div>`;
 
   rowOne.append(col2, col2, col3, col4, col5, col6, col7, col8);
@@ -986,6 +1102,22 @@ const createCard = (result) => {
   return mainDiv;
 };
 
+const closeSeat = () => {
+  console.log(event);
+  event.target.parentNode.parentNode.parentNode.parentNode.previousElementSibling.childNodes[1].childNodes[1].classList.remove(
+    "hide-seats"
+  );
+  event.target.parentNode.parentNode.parentNode.parentNode.previousElementSibling.childNodes[1].childNodes[1].textContent =
+    "VIEW SEATS";
+  event.target.parentNode.parentNode.parentNode.parentNode.classList.remove(
+    "visible"
+  );
+  var busCards = document.getElementsByClassName("bus-card");
+  for (var i = 0; i < busCards.length; i++) {
+    busCards[i].classList.remove("hide");
+  }
+    
+};
 
 const viewSeats = () => {
   clickCount++;
@@ -1003,7 +1135,6 @@ const viewSeats = () => {
     );
 
     clickCount = 0;
-    window.location.reload();
   }
 };
 
@@ -1035,12 +1166,24 @@ const selectSeats = () => {
   for (var x = 0; x < seats.length; x++) {
     seats[x].addEventListener("click", () => {
       event.target.dataset.select = !event.target.dataset.select;
-      console.log(event.target.dataset.select);
+      console.log(event);
       if (event.target.dataset.select === "true") {
         stck.push(event.target.id);
         var st = event.target.id.split("-");
         console.log(event);
         busNo = st[0];
+
+        var busCards = document.getElementsByClassName("bus-card");
+        for (var i = 0; i < busCards.length; i++) {
+          if (busCards[i].id != busNo) {
+            busCards[i].classList.add("hide");
+          }
+        }
+
+        document
+          .getElementById(busNo + "-" + "busCnt")
+          .classList.remove("hide");
+
         event.target.style.backgroundColor = "black";
         event.target.childNodes[1].style.color = "white";
         event.target.childNodes[1].textContent = st[1];
@@ -1100,7 +1243,7 @@ const selectSeats = () => {
             stck.splice(y, 1);
           }
         }
-
+        console.log(stck.length);
         if (stck.length === 0) {
           console.log(stck.length);
           document
@@ -1110,9 +1253,15 @@ const selectSeats = () => {
           document
             .getElementById(event.target.id.split("-")[0] + "-" + "points")
             .classList.remove("visible");
+
+          document.getElementById(busNo + "-" + "busCnt").classList.add("hide");
           document
             .getElementById(event.target.id.split("-")[0] + "-" + "points")
             .classList.add("hide");
+          var busCards = document.getElementsByClassName("bus-card");
+          for (var i = 0; i < busCards.length; i++) {
+            busCards[i].classList.remove("hide");
+          }
         }
       }
     });
@@ -1218,8 +1367,8 @@ const clickCont = () => {
     .getElementsByClassName(event.target.id.split("-")[0] + "-" + "bpdp")[0]
     .classList.remove("hide");
   document
-    .getElementsByClassName("bp-dp-selector-container")[busNo-1]
-    .classList.add("hide");
+    .getElementsByClassName("bp-dp-selector-container")
+    [busNo - 1].classList.add("hide");
 
   document.getElementsByClassName(
     event.target.id.split("-")[0] + "-" + "bppt"
@@ -1415,7 +1564,6 @@ const closeSeats = () => {
   event.target.parentNode.parentNode.parentNode.previousElementSibling.childNodes[1].childNodes[1].textContent =
     "VIEW SEATS";
   event.target.parentNode.parentNode.parentNode.classList.remove("visible");
-  window.location.reload();
 };
 
 const changePts = () => {
@@ -1434,8 +1582,6 @@ const closeModify = () => {
   document.getElementsByClassName("search-wrapper")[0].classList.add("hide");
   document.getElementsByClassName("modify")[0].classList.remove("hide");
 };
-
-
 
 const selectGender = () => {
   if (event.target.id == "male") gender = "M";

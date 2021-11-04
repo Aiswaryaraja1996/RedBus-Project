@@ -45,7 +45,172 @@
   <body>
     <div class="main-container">
       <!-- Navbar comes under the header -->
-      <header class="header"></header>
+      <header id="rh_header" class="home-only-header fixer1">
+        <div class="main-header-row">
+          <div class="main-header clearfix">
+            <a href="javascript:void(0)" class="redbus-logo home-redirect"
+              >redbus</a
+            >
+
+            <div class="fl clearfix" id="page_main_header">
+              <nav class="product-nav fl">
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.redbus.in/bus-tickets/"
+                      title="redBus"
+                      class="selectedBus site-links"
+                      id="redBus"
+                    >
+                      BUS TICKETS
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href=" /rPool/"
+                      title="cars"
+                      class="site-links rpool_title"
+                      id="cars"
+                      >rPool <sup style="font-weight: bold">New</sup>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.redbus.in/bushire/?utm_source=website&amp;utm_medium=referral&amp;utm_campaign=Homepage_bushire_banner"
+                      title="redBus Bus Hire"
+                      class="site-links gtm-busHire"
+                      id="redBus Bus Hire"
+                      >BUS HIRE
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="corner-wrapper fr">
+              <div class="fr config-div" tabindex="0" id="select_box_sign">
+                <div id="signin_dd">
+                  <div class="fr signin-block" id="signin-block">
+                    <i
+                      id="i-icon-profile"
+                      class="icon-profile-new-signed bi bi-person-circle"
+                    ></i>
+
+                    <div id="walletbalance" class="walletBalanceHeader hide">
+                      <div id="BalanceText"></div>
+                      <div id="Balance"></div>
+                    </div>
+
+                    <i
+                      class="bi bi-chevron-down icon-down"
+                      id="sign-in-icon-down"
+                    ></i>
+
+                    <div class="hid-config-sign hide" id="hc">
+                      <div class="toparrowhead-sign"></div>
+                      <ul class="config-list">
+                        <li
+                          class="personalization-link-blocks config-options"
+                          data-link="myprofile#trips"
+                        >
+                          My Trips
+                        </li>
+                        <li
+                          class="personalization-link-blocks config-options"
+                          data-link="myprofile#wallet"
+                        >
+                          Wallets/Cards
+                        </li>
+                        <li
+                          class="personalization-link-blocks config-options"
+                          data-link="myprofile"
+                        >
+                          My Profile
+                        </li>
+                        <li
+                          class="personalization-link-blocks config-options"
+                          data-link="myprofile#walletHistory"
+                        >
+                          Wallet
+                        </li>
+                        <li id="signOutLink" class="config-options">
+                          Sign Out
+                        </li>
+                        <li id="signOutAllLink" class="config-options">
+                          Sign Out From All Devices
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="fr config-div manageBookHeader"
+                tabindex="0"
+                id="select_box_managebooking"
+              >
+                <div id="manageHeaderdd">
+                  <div class="manageHeaderLbl">Manage Booking</div>
+                  <i
+                    class="bi bi-chevron-down icon-down"
+                    id="sign-in-icon-down"
+                  ></i>
+                  <div class="hid-config-managaeBooking hide" id="hmb">
+                    <div class="toparrowhead-managebooking"></div>
+                    <div>
+                      <ul class="config-list">
+                        <li class="MBListHeader">Bus Tickets</li>
+                        <li
+                          data-busmb="/Cancellation"
+                          data-label="Cancel"
+                          class="config-option-mb mblist"
+                        >
+                          <span class="cli">
+                            <span class="w-65"> Cancel </span>
+                          </span>
+                        </li>
+                        <li
+                          data-busmb="/Reschedule"
+                          data-label="Change Travel Date"
+                          class="config-option-mb mblist"
+                        >
+                          <span class="cli">
+                            <span class="w-65"> Change Travel Date </span>
+                          </span>
+                        </li>
+                        <li
+                          data-busmb="/Home/PrintTicket"
+                          data-label="Show My Ticket"
+                          class="config-option-mb mblist"
+                        >
+                          <span class="cli">
+                            <span class="w-65"> Show My Ticket </span>
+                          </span>
+                        </li>
+                        <li
+                          data-busmb="/Home/SmsAndEmailTicket"
+                          data-label="Email/SMS"
+                          class="config-option-mb mblist"
+                        >
+                          <span class="cli">
+                            <span class="w-65"> Email/SMS </span>
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="config-wrapper fr">
+                <div class="fr hr-shelp config-div">
+                  <a href="/info/redcare" target="_blank">Help</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
 
       <!-- All the content code -->
       <div class="content-wrapper">
@@ -449,10 +614,10 @@
                   <div class="w-10 float-left f-12 d-color">
                     <a>Ratings</a>
                   </div>
-                  <div class="w-10 float-left f-12 d-color">
+                  <div class="w-15 float-left f-12 d-color">
                     <a>Fare</a>
                   </div>
-                  <div class="w-10 float-left f-12 d-color">
+                  <div class="w-15 float-left f-12 d-color">
                     <a>Seats Available</a>
                   </div>
                 </div>
@@ -701,48 +866,46 @@
                     </div>
                   </div>
                   <div><div class=""></div></div>
-                  <div class="sc-cIShpX cpCbij">
+                  <div class="addser">
                     <div class="addonsContainer">
-                      <div class="sc-caSCKo dUblmd">
+                      <div>
                         <header class="addons_header">
                           <div class="addons_container">
-                            <div class="sc-hEsumM isYFcb">
+                            <div class="addserCont">
                               <span class="img-icon"
                                 ><img
                                   src="https://www.redbus.in/images/addonsIcon.svg"
                                   alt="img" /></span
                               >Additional Services
                             </div>
-                            <div class="sc-tilXH csLoEt">
+                            <div class="addSerExt">
                               Check out our new additional services at exciting
                               prices
                             </div>
-                            <div class="sc-cHGsZl ekQapo">
-                              <div class="sc-gisBJw jbzGyZ">
+                            <div class="imgCont-1">
+                              <div class="imgCont-2">
                                 <div class="display_addons_block">
-                                  <div class="sc-kjoXOD kdEOzT">
+                                  <div class="imdImg">
                                     <img
                                       src="https://st.redbus.in/images/addon/opd_hospi/Hospicash.png"
                                       alt="img"
                                       id="imgnew-0"
-                                      class="sc-hmzhuo imdmCO"
+                                      class="imd"
                                     />
-                                    <div class="sc-kvZOFW ZXoMC">
-                                      <div class="sc-hqyNC busTvs">
+                                    <div class="covidCont">
+                                      <div class="busTvs">
                                         COVID-19 Hospicash Powered by Acko
                                       </div>
-                                      <div class="sc-jbKcbu dNdcFj">
-                                        <span class="sc-dNLxif lnOVqS"
+                                      <div class="dprcCont">
+                                        <span class="dprc"
                                           >₹<span id="addons_display_price-0"
                                             >10</span
                                           ></span
                                         ><span>/ policy</span>
                                       </div>
                                     </div>
-                                    <div class="sc-kgAjT itmKFi">
-                                      <div class="sc-jqCOkK bXWOOx">
-                                        view details
-                                      </div>
+                                    <div class="vdtls">
+                                      <div class="viewdtls">view details</div>
                                       <span
                                         class="input_div_new"
                                         id="input_div_new"
@@ -836,7 +999,7 @@
         </div>
 
         <div class="sub-data">
-          <section class="section-data">
+          <section class="section-data first-one">
             <div>
               <h2>Mumbai to Bangalore Covid-19 Travel Guidelines</h2>
             </div>
@@ -1122,10 +1285,9 @@
                 <h2 class="partial_heading">Top Bus Operator Images</h2>
               </div>
               <div class="slider_main">
-                <div
-                  id="backward"
-                  class="icon icon-left D115_slider_icon"
-                ></div>
+                <div id="backward" class="icon icon-left D115_slider_icon">
+                  <i id="bwd" class="bi bi-chevron-left"></i>
+                </div>
                 <div class="slick-list">
                   <ul id="slider">
                     <li li-image-id="1" class="slide active" id="active-main">
@@ -1152,15 +1314,35 @@
                         class="image"
                       />
                     </li>
-                    <li li-image-id="4" class="slide hide"></li>
-                    <li li-image-id="5" class="slide hide"></li>
-                    <li li-image-id="6" class="slide hide"></li>
+                    <li li-image-id="4" class="slide active">
+                      <img
+                        image-id="4"
+                        src="https://st.redbus.in/bo-images/IND/WM/10612/26/FR/L/27LSkl.jpeg"
+                        alt="National          Travels Bus-Front Image"
+                        class="D115_image"
+                      />
+                    </li>
+                    <li li-image-id="5" class="slide active">
+                      <img
+                        image-id="5"
+                        src="https://st.redbus.in/bo-images/IND/WM/10612/54/FR/L/ZXnQIO.jpeg"
+                        alt="National          Travels Bus-Front Image"
+                        class="D115_image"
+                      />
+                    </li>
+                    <li li-image-id="6" class="slide active">
+                      <img
+                        image-id="6"
+                        src="https://st.redbus.in/bo-images/IND/WM/10383/4/FR/L/eQW8VK.jpeg"
+                        alt="Shree Vishwakarma Travels Bus-Front Image"
+                        class="D115_image"
+                      />
+                    </li>
                   </ul>
                 </div>
-                <div
-                  id="forward"
-                  class="icon icon-right D115_slider_icon"
-                ></div>
+                <div id="forward" class="icon icon-right D115_slider_icon">
+                  <i id="fwd" class="bi bi-chevron-right"></i>
+                </div>
               </div>
             </div>
           </section>
