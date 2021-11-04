@@ -98,7 +98,7 @@
         align-items: center;
       }
 
-      .nav-item {
+      .nav-item,.nav-item-right {
         height: 100%;
         padding: 0 10px;
 
@@ -152,9 +152,10 @@
         width: 210px;
       }
       .drop-down-content p {
-        padding: 2px 0px;
+        padding: 10px;
         margin: 0;
       }
+ 
       .drop-down-content .dropdown-heading {
         color: #737373;
       }
@@ -354,7 +355,7 @@
         display: flex;
         align-items: center;
         width: auto;
-        height: 300px;
+        height: 320px;
         overflow-x: auto;
         padding-top: 52px;
         scroll-behavior: smooth;
@@ -393,7 +394,7 @@
 
       .coupen-box:hover {
         transition: all 0.2s ease-in-out;
-        transform: scale(1.06);
+        transform: scale(1.04);
       }
 
       .safety {
@@ -409,11 +410,14 @@
         padding: 20px 100px;
         opacity: 0.9;
         margin: 20px;
+        justify-content: space-between;
       }
       .convenience .text-content {
-        width: 70%;
+        width: 33%;
       }
-      .convenience .image {
+
+      .text-content p{
+        font-size: 14px;
       }
 
       .advantages-div {
@@ -532,7 +536,16 @@
         padding: 20px;
         min-width: 300px;
       }
-
+      h6 {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        letter-spacing: 2.7px;
+        color: #737373;
+        font-size: 14px;
+        text-transform: uppercase;
+      }
       .number {
         height: 80%;
         height: 276px;
@@ -561,27 +574,38 @@
       }
       .description {
         text-align: center;
-        color: #f1f1f1;
+        color: #4a4a4a;
+        font-size: 14px;
         line-height: 1.5em !important;
-        word-spacing: 2 px !important;
+        word-spacing: 2px !important;
         font-weight: 300 !important;
       }
 
       /* Footer Section */
+
+      .container-custom-footer {
+        min-width: 1000px;
+        max-width: 1300px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
       .routes-div {
         background-color: #e5e5e5;
       }
       .routes {
-        height: 294px;
-        border-bottom: gray solid 1px;
-        margin: 0px 100px;
-        padding: 20px 0px;
+        /* height: 294px; */
+        /* border-bottom: gray solid 1px; */
+        /* margin: 0px 100px; */
+        padding: 55px 1px 40px 90px;
         display: flex;
         justify-content: space-between;
       }
       .content-list {
+        font-size: 14px;
+        display: block;
         color: #444343;
-        font-size: 15px;
+        cursor: pointer;
+        margin-bottom: 15px;
       }
       .content-list-heading {
         margin-bottom: 15px;
@@ -600,34 +624,32 @@
         height: 328px;
       }
       .top-operators {
-        color: #444343;
-        line-height: 20px;
-        font-size: 16px;
-        font-weight: 100;
-        margin: 0px 100px;
+        margin-left: 90px;
+        text-align: left;
       }
       .top-operators .operator {
         display: inline-block;
-        padding: 2px 10px;
+        padding-right: 10px;
         margin-top: 10px;
         border-right: #444343 solid 1px;
         cursor: pointer;
+        font-size: 14px;
       }
       .top-operators .operator:hover {
         color: #d84e55;
       }
       .operator-heading {
-        color: #444343;
-        margin: 0px 110px;
-        padding-top: 20px;
+        margin-left: 90px;
+        border-top: 1px solid #999;
+        padding-top: 40px;
         font-weight: 800;
-        font-size: 20px;
+        font-size: 1.1em;
       }
       .operator-footer {
         color: #444343;
         margin: 0px 110px;
-        font-weight: 800;
-        font-size: 18px;
+        font-size: 14px;
+        font-weight: 600;
         text-align: end;
         cursor: pointer;
       }
@@ -636,19 +658,22 @@
         background-color: #1b2330;
       }
       .footer-row {
+        font-size: 14px;
         height: 372px;
         margin: 0px 100px;
+        padding-top: 30px;
         color: #d7d7d7;
         display: flex;
         justify-content: space-evenly;
       }
       .footer-col {
-        flex: 1;
+        
         padding: 20px;
+        margin-right: 40px;
       }
       .footer-col p {
         padding: 2px;
-        margin: 0px;
+        margin-bottom: 10px;
       }
       .footer-heading {
         color: #797979;
@@ -657,14 +682,16 @@
       }
       .last-col {
         flex: 3;
+        color: #b1babf;
+        line-height: 27px;
       }
       .brand-text {
-        padding: 20px 0px;
         font-weight: 100;
       }
       .contactus-icon {
         margin: 10px;
-        padding: 20px;
+        padding: 16px;
+      
         border-radius: 50%;
         border: #797979 solid 1px;
         cursor: pointer;
@@ -710,8 +737,8 @@
             <div class="nav-item">BUS HIRE</div>
           </div>
           <div class="nav-left">
-            <div class="nav-item">Help</div>
-            <div class="nav-item">
+            <div class="nav-item-right">Help</div>
+            <div class="nav-item-right">
               <div class="manage-items">
                 Manage Booking
                 <i
@@ -894,7 +921,7 @@
           <div class="container-custom">
             <div class="convenience">
               <div class="text-content">
-                <h2>CONVENIENCE ON-THE-GO.</h2>
+                <h4 style="font-weight: 600; padding-bottom: 20px;">CONVENIENCE ON-THE-GO.</h4>
                 <p>
                   Enjoy the following exclusive features on the redBus app
                   <br />
@@ -1069,7 +1096,7 @@
                       height="90px"
                       width="150px"
                     />
-                    <p>MALAYSIA</p>
+                    <h6>MALAYSIA</h6>
                   </div>
                   <div class="inner-global">
                     <img
@@ -1078,7 +1105,7 @@
                       height="90px"
                       width="150px"
                     />
-                    <p>PERU</p>
+                    <h6>PERU</h6>
                   </div>
                   <div class="inner-global hideBox">
                     <img
@@ -1087,7 +1114,7 @@
                       height="90px"
                       width="150px"
                     />
-                    <p>SINGAPORE</p>
+                    <h6>SINGAPORE</h6>
                   </div>
                 </div>
               </div>
@@ -1162,7 +1189,7 @@
     </main>
     <footer>
       <div class="routes-div">
-        <div class="container-custom">
+        <div class="container-custom-footer">
           <div class="routes">
             <div class="content-list">
               <div class="content-list-heading">Top Bus Routes</div>
@@ -1203,7 +1230,7 @@
         </div>
       </div>
       <div class="top-operators-div">
-        <div class="container-custom">
+        <div class="container-custom-footer">
           <div class="operator-heading">Top Operators</div>
           <div class="top-operators">
             <div class="operator">SRS Travels</div>
