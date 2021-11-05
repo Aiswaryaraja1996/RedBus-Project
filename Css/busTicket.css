@@ -196,8 +196,8 @@ a:visited {
   height: 60px;
 }
 
-.amenity-list span{
-  font-size:12px;
+.amenity-list span {
+  font-size: 12px;
   color: #3e3e52;
 }
 .top-ribbon {
@@ -657,6 +657,39 @@ hr {
   text-align: center;
 }
 
+.error-view.oops-page {
+  display: flex;
+  max-width: 530px;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.error-view {
+  margin-bottom: 40px;
+  padding-top: 40px;
+}
+
+.error-view.oops-page img {
+  width: 33.33%;
+}
+.error-view.oops-page .oops-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  text-align: justify;
+}
+.error-view.oops-page .oops-wrapper h3 {
+  font-size: 1.25rem;
+  margin-top: 0;
+}
+.message-container {
+  display: flex;
+  justify-content: center;
+}
+.message-container .msg-c-msg {
+  width: 527px;
+}
 .operators {
   display: flex;
   flex-wrap: wrap;
@@ -1404,7 +1437,6 @@ input[type="text"]::placeholder {
   font-size: 12px;
 }
 
-
 .filter-sec .amenity-list li {
   border: 1px solid #e2e1e1;
   border-radius: 4px;
@@ -1418,7 +1450,6 @@ input[type="text"]::placeholder {
   vertical-align: middle;
   font-size: 12px;
   color: #3e3e52;
-
 }
 
 .slide_section {
