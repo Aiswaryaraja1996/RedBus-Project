@@ -127,6 +127,7 @@ async function handleOutstationForm(){
     localStorage.setItem('outstationFormValues', JSON.stringify(outstationFormValues))
 
     window.location.assign('/Html/userQuotes.html');
+    console.log('newBranch?')
 }
 
 function fetchTripKms(city1, city2){
