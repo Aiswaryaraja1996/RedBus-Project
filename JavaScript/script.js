@@ -5,6 +5,15 @@ import Outstation from '../components/outstation.js'
 import QuoteBox from '../components/quoteBox.js'
 
 
+window.addEventListener("scroll", function(){
+    const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+    console.log(scrollTop,scrollHeight,clientHeight);
+    if (scrollTop + clientHeight >= scrollHeight - 30){
+        document.getElementsByClassName("form")[0].style.position="sticky";
+    }
+})
+
+
 window.addEventListener('load', () => {
     const windowLoc = window.location.pathname;
     if(windowLoc.includes('busHire.html') ){
