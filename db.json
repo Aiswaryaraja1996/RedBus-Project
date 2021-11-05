@@ -4399,6 +4399,56 @@
           "image": "../Resources/reading_light.svg"
         }
       ]
+    },
+    {
+      "id": 4,
+      "cityOfOperation": "delhi",
+      "name": "37 Seater TATA (2+2)",
+      "modelOrMake": "2017",
+      "vehicleNumber": {
+        "number": "DL 1 TE 1737",
+        "show": true
+      },
+      "registeredOn": "03-May-2017",
+      "vehicleImages": [
+        "https://s1.rdbuz.com/busoperatorimages/1585486779517_cr.jpeg",
+        "https://s1.rdbuz.com/busoperatorimages/1612268002867_cr.jpeg",
+        "https://s1.rdbuz.com/busoperatorimages/1612268002864_cr.jpeg",
+        "https://s1.rdbuz.com/busoperatorimages/1585486580460_cr.jpeg"
+      ],
+      "timesBooked": 99,
+      "maxPassengers": 65,
+      "fareDetails": {
+        "ac": {
+          "baseFare": 45,
+          "forExtraKm": 42,
+          "forExtraHour": 350
+        },
+        "nonAc": {
+          "baseFare": 40,
+          "forExtraKm": 39,
+          "forExtraHour": 325
+        },
+        "driverAllowance": 300
+      },
+      "amenities": [
+        {
+          "title": "FasTag",
+          "image": "../Resources/ic-fastag.svg"
+        },
+        {
+          "title": "Music System",
+          "image": "../Resources/music.svg"
+        },
+        {
+          "title": "Charging Point",
+          "image": "../Resources/charging_socket.svg"
+        },
+        {
+          "title": "Personal TV",
+          "image": "../Resources/perosnal_tv.svg"
+        }
+      ]
     }
   ],
   "tripKms": {
