@@ -20,21 +20,40 @@ var clickCount = 0;
 var totalBusCount = 0;
 
 window.addEventListener("load", () => {
-
+  
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
 
-  const from = urlParams.get('from');
-  const to = urlParams.get('to');
-  const dat = urlParams.get('date')
+  const from = urlParams.get("from");
+  const to = urlParams.get("to");
+  const dat = urlParams.get("date");
 
-  console.log(from,to,dat);
+  console.log(from, to, dat);
   var dt = new Date(dat);
+  console.log(dt);
   var week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  console.log(dt.getDay());
-  document.getElementById("searchDat").value = "10 Nov";
+  var month = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  console.log(dt.getMonth());
+  document.getElementById("searchDat").value =
+    dt.getDate() + " " + month[dt.getMonth()];
   document.getElementById("searchDay").textContent = week[dt.getDay()];
-  fetchBuses();
+
+  var dateForm = dt.getDate() + " " + month[dt.getMonth()] + " " + "2021";
+  console.log(dateForm);
+  fetchBuses(dateForm);
 });
 
 document.getElementById("fwd").addEventListener("click", () => {
@@ -50,26 +69,66 @@ function seatLayout(id, seats) {
   this.seats = seats;
 }
 
-const fetchBuses = async () => {
+const fetchBuses = async (dateForm) => {
   try {
-    const results = await getBuses();
+    const results = await getBuses(dateForm);
     // console.log(results[0].busDetails.length);
-    document.getElementById("busCount").textContent =
-      results.length + " " + "Buses ";
-    totalBusCount = results.length;
-    displayBuses(results);
+    if (results.length !== 0) {
+      document.getElementById("busCount").textContent =
+        results.length + " " + "Buses ";
+      totalBusCount = results.length;
+      displayBuses(results);
+    } else {
+      displayNotFound();
+    }
   } catch (e) {
     console.log("Error fetching");
   }
 };
 
-const getBuses = () => {
+const displayNotFound = () => {
+  document.getElementsByClassName("bus-data")[0].classList.add("hide");
+  document.getElementsByClassName("errorPage")[0].classList.remove("hide");
+};
+
+const changeDate = () => {
+  var dat = document.getElementById("onward_cal").value;
+  var dt = new Date(dat);
+  console.log(dt);
+  var week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  var month = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  console.log(dt.getMonth());
+  document.getElementById("searchDat").value =
+    dt.getDate() + " " + month[dt.getMonth()];
+  document.getElementById("searchDay").textContent = week[dt.getDay()];
+
+  var dateForm = dt.getDate() + " " + month[dt.getMonth()] + " " + "2021";
+  document.getElementById("busItems").innerHTML = null;
+  fetchBuses(dateForm);
+};
+
+const getBuses = (dateForm) => {
   return fetch(
-    `http://localhost:3000/busDetails?date=10 Nov 2021&source=Mumbai&destination=Bangalore`
+    `http://localhost:3000/busDetails?date=${dateForm}&source=Mumbai&destination=Bangalore`
   ).then((response) => response.json());
 };
 
 const displayBuses = (results) => {
+  document.getElementsByClassName("bus-data")[0].classList.remove("hide");
+  document.getElementsByClassName("errorPage")[0].classList.add("hide");
   const busItems = document.getElementById("busItems");
 
   for (let i = 0; i < results.length; i++) {
@@ -1125,7 +1184,6 @@ const closeSeat = () => {
   for (var i = 0; i < busCards.length; i++) {
     busCards[i].classList.remove("hide");
   }
-    
 };
 
 const viewSeats = () => {
@@ -1664,8 +1722,11 @@ function addPass(payload) {
 async function updateSeats(payload) {
   try {
     console.log(payload);
+    alert(
+      "You have successfully booked the tickets.Details will be sent your registered phone and email."
+    );
     const res = await patchSeat(payload);
-    alert('You have successfully booked the tickets.Details will be sent your registered phone and email.')
+
   } catch (e) {
     console.log(e.message);
   }
@@ -1681,3 +1742,96 @@ function patchSeat(payload) {
     body: JSON.stringify(payload),
   }).then((res) => res.json());
 }
+
+var durCnt = 0;
+var ratCnt = 0;
+var asc_desc = 0;
+var sort = document.getElementsByClassName("sort-attr");
+const durationSort = () => {
+  // var arrdown = document.getElementsByClassName("bi-arrow-down");
+  // var arrup = document.getElementsByClassName("bi-arrow-up")
+  for (var i = 0; i < sort.length; i++) {
+    sort[i].setAttribute("data-sort", false);
+    document.getElementById("fares").style.color = "black";
+    document.getElementById("fare-arrow").classList.add("hide");
+    //   arrdown[i].classList.add("hide");
+    //   arrup[i].classList.add("hide");
+    //   sort[i].style.color="black";
+  }
+
+  event.target.setAttribute("data-sort", true);
+  if (event.target.getAttribute("data-sort")) {
+    durCnt++;
+    if (durCnt % 2 !== 0) {
+      asc_desc = 1;
+      document.getElementById("busItems").innerHTML = null;
+      document.getElementById("dur").style.color = "#da4e52";
+      document.getElementById("dur-arrow").classList.remove("hide");
+      document.getElementById("dur-arrow").classList.remove("bi-arrow-up");
+      document.getElementById("dur-arrow").classList.add("bi-arrow-down");
+      sortItems(asc_desc, "duration");
+    } else {
+      asc_desc = 2;
+      document.getElementById("busItems").innerHTML = null;
+      document.getElementById("dur").style.color = "#da4e52";
+      document.getElementById("dur-arrow").classList.remove("bi-arrow-down");
+      document.getElementById("dur-arrow").classList.add("bi-arrow-up");
+      sortItems(asc_desc, "duration");
+      durCnt = 0;
+    }
+  }
+};
+
+const fareSort = () => {
+  for (var i = 0; i < sort.length; i++) {
+    sort[i].setAttribute("data-sort", false);
+    document.getElementById("dur").style.color = "black";
+    document.getElementById("dur-arrow").classList.add("hide");
+
+    //   arrdown[i].classList.add("hide");
+    //   arrup[i].classList.add("hide");
+    //   sort[i].style.color="black";
+  }
+  event.target.setAttribute("data-sort", true);
+  if (event.target.getAttribute("data-sort")) {
+    ratCnt++;
+    if (ratCnt % 2 !== 0) {
+      asc_desc = 1;
+      document.getElementById("busItems").innerHTML = null;
+      document.getElementById("fares").style.color = "#da4e52";
+      document.getElementById("fare-arrow").classList.remove("hide");
+      document.getElementById("fare-arrow").classList.remove("bi-arrow-up");
+      document.getElementById("fare-arrow").classList.add("bi-arrow-down");
+      sortItems(asc_desc, "fare");
+    } else {
+      asc_desc = 2;
+      document.getElementById("busItems").innerHTML = null;
+      document.getElementById("fares").style.color = "#da4e52";
+      document.getElementById("fare-arrow").classList.remove("bi-arrow-down");
+      document.getElementById("fare-arrow").classList.add("bi-arrow-up");
+      sortItems(asc_desc, "fare");
+      ratCnt = 0;
+    }
+  }
+};
+
+const sortItems = async (asc_desc, item) => {
+  try {
+    const soln1 = await getsort(asc_desc, item);
+    displayBuses(soln1);
+  } catch (e) {
+    console.log(e.message);
+  }
+};
+
+const getsort = (asc_desc, item) => {
+  if (asc_desc === 1) {
+    return fetch(
+      `http://localhost:3000/busDetails?date=10 Nov 2021&source=Mumbai&destination=Bangalore&_sort=${item}&_order=asc`
+    ).then((res) => res.json());
+  } else {
+    return fetch(
+      `http://localhost:3000/busDetails?date=10 Nov 2021&source=Mumbai&destination=Bangalore&_sort=${item}&_order=desc`
+    ).then((res) => res.json());
+  }
+};

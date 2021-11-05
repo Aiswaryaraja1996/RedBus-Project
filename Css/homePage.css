@@ -20,6 +20,11 @@ body {
   background-size: cover;
 }
 
+.nav-item a{
+  text-decoration: none;
+  color: white;
+}
+
 .nav {
   background: #d84f57;
   position: fixed;

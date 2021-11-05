@@ -868,8 +868,8 @@
         },
         {
           "name": "U14",
-          "value": "0",
-          "sex": "",
+          "value": "1",
+          "sex": "F",
           "type": "N",
           "rate": "1500"
         },
@@ -2631,7 +2631,7 @@
         {
           "time": "07:30",
           "location": "Anand Rao Circle",
-          "date": "08 Nov 2021"
+          "date": "13 Nov 2021"
         }
       ],
       "ratings": [
@@ -2962,7 +2962,7 @@
         {
           "time": "22:30",
           "location": "Yeshwantpur",
-          "date": "08 Nov 2021"
+          "date": "13 Nov 2021"
         }
       ],
       "ratings": [
@@ -3293,7 +3293,7 @@
         {
           "time": "10:30",
           "location": "Kalasipalyam",
-          "date": "08 Nov 2021"
+          "date": "13 Nov 2021"
         }
       ],
       "ratings": [
@@ -3624,7 +3624,7 @@
         {
           "time": "09:04",
           "location": "Nelamangala",
-          "date": "08 Nov 2021"
+          "date": "13 Nov 2021"
         }
       ],
       "ratings": [
@@ -3955,7 +3955,7 @@
         {
           "time": "06:30",
           "location": "Kalasipalyam",
-          "date": "08 Nov 2021"
+          "date": "13 Nov 2021"
         }
       ],
       "ratings": [
@@ -4226,26 +4226,6 @@
       "mail": "abhirami@gmail.com",
       "phone": "9048934825",
       "amount": "2000"
-    },
-    {
-      "name": "Manoji",
-      "age": "52",
-      "seat": "U17",
-      "sex": "M",
-      "mail": "manoji@gmail.com",
-      "phone": "9084934825",
-      "amount": "1500.00",
-      "id": 2
-    },
-    {
-      "name": "Aiswarya",
-      "age": "25",
-      "seat": "L2",
-      "sex": "F",
-      "mail": "dummy@gmail.com",
-      "phone": "9562152083",
-      "amount": "1600.00",
-      "id": 3
     }
   ],
   "busForHire": [
