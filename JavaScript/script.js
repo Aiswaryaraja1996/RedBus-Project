@@ -135,7 +135,7 @@ async function handleOutstationForm(){
     const outstationFormValues = {tripType, outstationPickupInput, outstationDestinationInput, outstationFromDate, outstationTillDate, outstationPassengerNumber, tripKms}
     localStorage.setItem('outstationFormValues', JSON.stringify(outstationFormValues))
 
-    window.location.assign('/Html/userQuotes.html');
+    window.location.assign('../Html/userQuotes.html');
     console.log('newBranch?')
 }
 
@@ -217,7 +217,7 @@ function updateTripDetailsBar(){
 }
 
 function backToResults(){
-    location.assign('http://127.0.0.1:5500/Html/userQuotes.html')
+    location.assign('../Html/userQuotes.html')
 }
 
 async function manageVehiclePage(){
