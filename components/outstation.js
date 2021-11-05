@@ -32,7 +32,7 @@ function Outstation(){
 
             <div class="inputFields">
                 <div class="inputFieldDiv" id="pickupInput">
-                    <input type="text" id="pickup" class='inputField' placeholder="Enter pickup location">
+                    <input type="text" id="pickup" class='inputField' name="outstationPickupInput" placeholder="Enter pickup location">
                     <span class='clear-button'>
                         <img src="../Resources/plus_PNG56.png" alt="">
                     </span>
@@ -40,7 +40,7 @@ function Outstation(){
                 <div class="headerText" id="destination_tag">
                     Destination
                     <div id="destinationInput" class="inputFieldDiv">
-                        <input type="text" id="destination" class='inputField' placeholder="Enter a Location">
+                        <input type="text" id="destination" class='inputField' name="outstationDestinationInput" placeholder="Enter a Location">
                         <span class='clear-button'>
                             <img src="../Resources/plus_PNG56.png" alt="">
                         </span>
@@ -67,7 +67,7 @@ function Outstation(){
                     <img src="../Resources/calendar_icon.png" alt="">
                 </div>
                 <div class="datePicker">
-                    <input type="date" value="Date and Time">
+                    <input type="date" value="Date and Time" name="outstationFromDate">
                 </div>
             </div>
         </div>
@@ -78,7 +78,7 @@ function Outstation(){
                     <img src="../Resources/calendar_icon.png" alt="">
                 </div>
                 <div class="datePicker">
-                    <input type="date" value="Date and Time">
+                    <input type="date" value="Date and Time" name="outstationTillDate">
                 </div>
                 
             </div>
@@ -89,7 +89,7 @@ function Outstation(){
     <div class="inputSection" id='numberOfPassengers'>
         <div class="headerText">Number of passengers</div>
         <div style="margin-top:9px">
-            <input type="number" placeholder="Max 60" class='inputboxcontainerinactive'>
+            <input type="number" placeholder="Max 60" class='inputboxcontainerinactive' name="outstationPassengerNumber">
         </div>
         <div class="inline-error">Enter number of passengers</div>
     </div>

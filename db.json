@@ -1390,5 +1390,174 @@
                 "Headsets"
             ]
         }
-    ]
+    ],
+
+    "busForHire": [
+        {
+            "id": 1,
+            "cityOfOperation": "delhi",
+            "name": "20 Seater Force Motors (2+1)",
+            "modelOrMake": "2017",
+            "vehicleNumber": {
+                "number": "DL 1 VB 9797",
+                "show": true
+            },
+            "registeredOn": "03-May-2017",
+            "vehicleImages": [
+                "https://s1.rdbuz.com/busoperatorimages/1564490630163_cr.jpeg",
+                "https://s1.rdbuz.com/busoperatorimages/1564490630183_cr.jpeg",
+                "https://s1.rdbuz.com/busoperatorimages/1634915888316_cr.jpeg"
+            ],
+            "timesBooked": 99,
+            "maxPassengers": 55,
+            "fareDetails": {
+                "ac": {
+                    "baseFare": 34,
+                    "forExtraKm": 26,
+                    "forExtraHour": 300
+                },
+                "nonAc": {
+                    "baseFare": 31,
+                    "forExtraKm": 25,
+                    "forExtraHour": 250
+                },
+                "driverAllowance": 250
+            },
+            "amenities": [
+                {
+                    "title": "FasTag",
+                    "image": "../Resources/ic-fastag.svg"
+                },
+                {
+                    "title": "Music System",
+                    "image": "../Resources/music.svg"
+                },
+                {
+                    "title": "Charging Point",
+                    "image": "../Resources/charging_socket.svg"
+                },
+                {
+                    "title": "Back Compartment Storage",
+                    "image": "../Resources/magazine_pouch.svg"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "cityOfOperation": "delhi",
+            "name": "26 Seater Force Motors (2+2)",
+            "modelOrMake": "2017",
+            "vehicleNumber": {
+                "number": "DL 3 AC 1089",
+                "show": false
+            },
+            "registeredOn": "5-Aug-2019",
+            "vehicleImages": [
+                "https://s1.rdbuz.com/busoperatorimages/1612266950202_cr.jpeg",
+                "https://s1.rdbuz.com/busoperatorimages/1613479481686_cr.png",
+                "https://s1.rdbuz.com/busoperatorimages/1605960377091_cr.jpeg",
+                "https://s1.rdbuz.com/busoperatorimages/1635139481283_cr.jpeg",
+                "https://s1.rdbuz.com/busoperatorimages/1635139481285_cr.jpeg"
+            ],
+            "timesBooked": 3,
+            "maxPassengers": 35,
+            "fareDetails": {
+                "ac": {
+                    "baseFare": 38,
+                    "forExtraKm": 26,
+                    "forExtraHour": 300
+                },
+                "nonAc": {
+                    "baseFare": 34,
+                    "forExtraKm": 25,
+                    "forExtraHour": 250
+                },
+                "driverAllowance": 250
+            },
+            "amenities": [
+                {
+                    "title": "FasTag",
+                    "image": "../Resources/ic-fastag.svg"
+                },
+    
+                {
+                    "title": "Charging Point",
+                    "image": "../Resources/charging_socket.svg"
+                },
+                {
+                    "title": "Back Compartment Storage",
+                    "image": "../Resources/magazine_pouch.svg"
+                },
+                {
+                    "title": "Music",
+                    "image": "../Resources/music.svg"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "cityOfOperation": "chandigarh",
+            "name": "6 Seater Maruti Suzuki ",
+            "modelOrMake": "2021",
+            "vehicleNumber": {
+                "number": "CH 15 AC 9935",
+                "show": true
+            },
+            "registeredOn": "04-Mar-2021",
+            "vehicleImages": [
+                "https://s1.rdbuz.com/busoperatorimages/1626951573236_cr.jpeg",
+                "https://s1.rdbuz.com/busoperatorimages/1626920615738_cr.jpeg",
+                "https://s1.rdbuz.com/busoperatorimages/1626920615764_cr.jpeg",
+                "https://s1.rdbuz.com/busoperatorimages/1626920615729_cr.jpeg",
+                "https://s1.rdbuz.com/busoperatorimages/1626920615776_cr.jpeg"
+            ],
+            "timesBooked": 3,
+            "maxPassengers": 7,
+            "fareDetails": {
+                "ac": {
+                    "baseFare": 41,
+                    "forExtraKm": 15,
+                    "forExtraHour": 300
+                },
+                "nonAc": {
+                    "baseFare": 38,
+                    "forExtraKm": 13,
+                    "forExtraHour": 300
+                },
+                "driverAllowance": 350
+            },
+            "amenities": [
+                {
+                    "title": "FasTag",
+                    "image": "../Resources/ic-fastag.svg"
+                },
+                {
+                    "title": "Charging Point",
+                    "image": "../Resources/charging_socket.svg"
+                },
+                {
+                    "title": "Back Compartment Storage",
+                    "image": "../Resources/magazine_pouch.svg"
+                },
+                {
+                    "title": "Reading Light",
+                    "image": "../Resources/reading_light.svg"
+                }
+            ]
+        }
+    ],
+
+    "tripKms": {
+        "delhi": {
+            "chandigarh": 250,
+            "bangalore": 2174,
+            "mumbai": 1415
+        },
+        "chandigarh": {
+            "delhi": 250,
+            "bangalore": 2423,
+            "mumbai": 1650
+        }
+    }
+    
 }

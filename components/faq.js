@@ -4,8 +4,8 @@ function FaqBox(faqQuestion, faqText){
         <h3>${faqQuestion}</h3>
         <img src="../Resources/ic-arrow-down-color.svg" alt="">
     </div>
-    <div class="faqText">
-        <p>r${faqText}</p>   
+    <div class="faqText hidden">
+        <p>${faqText}</p>   
     </div>
 `
 }
