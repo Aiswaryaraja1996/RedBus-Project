@@ -196,11 +196,18 @@ a:visited {
   height: 60px;
 }
 
+.amenity-list span{
+  font-size:12px;
+  color: #3e3e52;
+}
 .top-ribbon {
   padding: 10px 0;
   background-color: #f8f4f4;
 }
-
+.sub-data {
+  position: relative;
+  top: 100px;
+}
 .top-ribbon ul {
   display: inline-block;
   vertical-align: middle;
@@ -1397,6 +1404,7 @@ input[type="text"]::placeholder {
   font-size: 12px;
 }
 
+
 .filter-sec .amenity-list li {
   border: 1px solid #e2e1e1;
   border-radius: 4px;
@@ -1408,6 +1416,9 @@ input[type="text"]::placeholder {
 .filter-sec .amenity-list i {
   margin-right: 5px;
   vertical-align: middle;
+  font-size: 12px;
+  color: #3e3e52;
+
 }
 
 .slide_section {

@@ -20,10 +20,19 @@ var clickCount = 0;
 var totalBusCount = 0;
 
 window.addEventListener("load", () => {
-  var dt = new Date("05 Nov");
+
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+
+  const from = urlParams.get('from');
+  const to = urlParams.get('to');
+  const dat = urlParams.get('date')
+
+  console.log(from,to,dat);
+  var dt = new Date(dat);
   var week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   console.log(dt.getDay());
-  document.getElementById("searchDat").value = "05 Nov";
+  document.getElementById("searchDat").value = "10 Nov";
   document.getElementById("searchDay").textContent = week[dt.getDay()];
   fetchBuses();
 });
@@ -56,7 +65,7 @@ const fetchBuses = async () => {
 
 const getBuses = () => {
   return fetch(
-    `http://localhost:3000/busDetails?date=05 Nov 2021&source=Mumbai&destination=Bangalore`
+    `http://localhost:3000/busDetails?date=10 Nov 2021&source=Mumbai&destination=Bangalore`
   ).then((response) => response.json());
 };
 
@@ -1656,6 +1665,7 @@ async function updateSeats(payload) {
   try {
     console.log(payload);
     const res = await patchSeat(payload);
+    alert('You have successfully booked the tickets.Details will be sent your registered phone and email.')
   } catch (e) {
     console.log(e.message);
   }
