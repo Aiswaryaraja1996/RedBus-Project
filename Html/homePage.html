@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Responsive Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Adding Bootstrap CDN - Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <!-- <--------Adding fontawesome link -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://www.redbus.in/favicon.ico?root=rbus"
+      rel="shortcut icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+    />
+
+    <title>
+      Book Bus Travels, AC Volvo Bus, rPool &amp; Bus Hire - redBus India
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="../css/homePage.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="container-custom">
+        <div class="nav-bar">
+          <div class="nav-right">
+            <div class="brand">
+              <a class="navbar-brand-image" href="#"
+                ><img
+                  src="https://i.postimg.cc/zXFNsGkg/redbus-white.png"
+                  alt="redBus"
+                  height="48px"
+              /></a>
+            </div>
+            <div class="nav-item selected">BUS TICKETS</div>
+            <div class="nav-item rpool">
+              rPool
+              <span class="rpool-new">New</span>
+            </div>
+            <div class="nav-item">BUS HIRE</div>
+          </div>
+          <div class="nav-left">
+            <div class="nav-item-right">Help</div>
+            <div class="nav-item-right">
+              <div class="manage-items">
+                Manage Booking
+                <i
+                  class="fas fa-chevron-down icon"
+                  id="manage-booking-shower"
+                ></i>
+              </div>
+              <div class="drop-down-content manage-booking-content hide">
+                <p class="dropdownheading">Bus Tickets</p>
+                <p>Cancel</p>
+                <p>Change Travel Date</p>
+                <p>Show My Ticket</p>
+                <p>Email/SMS</p>
+              </div>
+            </div>
+            <div class="account">
+              <i class="bi bi-person-circle account-icon"></i>
+              <i class="fas fa-chevron-down icon" id="account-shower"></i>
+              <div class="drop-down-content account-content hide">
+                <p class="signUp-icon" onClick="openLogin()">Sign Up/Sign In</p>
+                <p class="logged hide">My Trips</p>
+                <p class="logged hide">Wallets Cards</p>
+                <p class="logged hide">My Profile</p>
+                <p class="logged hide">Wallet</p>
+                <p class="logged hide">Sign Out</p>
+                <p class="logged hide">Sign Out From All Devices</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <section class="banner">
+        <div class="banner-img">
+          <div class="banner-bg"></div>
+        </div>
+      </section>
+      <div class="rest">
+        <div class="coupen-codes-div">
+          <div class="container-custom">
+            <div class="coupen-codes">
+              <div class="control-coupens">
+                <i class="fas fa-chevron-left hide" id="previous-coupens"></i>
+              </div>
+              <div class="coupens-container" id="coupens-container">
+                <div class="coupen-box">
+                  <p>Save up to Rs 150 on bus tickets</p>
+                  <img
+                    src="https://st.redbus.in/Images/INDOFFER/Nonatak/new/80x80.png"
+                    alt="First"
+                    height="120px"
+                    width="320px"
+                  />
+                  <p style="margin-left: 50px">
+                    <strong>Use code FIRST</strong>
+                  </p>
+                </div>
+                <div class="coupen-box">
+                  <p>State wise Guidelines</p>
+                  <img
+                    src="https://st.redbus.in/Images/buscommon/guidelines.png"
+                    alt="First"
+                    height="120px"
+                    width="320px"
+                  />
+                  <p style="margin-left: 50px">
+                    <strong>Click here for latest updates</strong>
+                  </p>
+                </div>
+                <div class="coupen-box">
+                  <p>Get 10% off upto Rs 100 on Gujarat routes.</p>
+                  <img
+                    src="https://st.redbus.in/Images/INDOFFER/FESTIVE/New/Diwali/274x147.png"
+                    alt="First"
+                    height="120px"
+                    width="320px"
+                  />
+                  <p style="margin-left: 50px">
+                    <strong>Use code LIGHTS10</strong>
+                  </p>
+                </div>
+                <div class="coupen-box">
+                  <p>Flat Rs.300 cashback for first time slice users.</p>
+                  <img
+                    src="https://st.redbus.in/Images/buscommon/guidelines.png"
+                    alt="First"
+                    height="120px"
+                    width="320px"
+                  />
+                  <p style="margin-left: 50px">
+                    <strong>Use code SLIRED</strong>
+                  </p>
+                </div>
+                <div class="coupen-box">
+                  <p>Get upto Rs. 500 on minimum purchase of Rs 300.</p>
+                  <img
+                    src="https://s1.rdbuz.com/images/MobileOffers/amazon/offertile..png"
+                    alt="First"
+                    height="120px"
+                    width="320px"
+                  />
+                  <p style="margin-left: 50px">
+                    <strong>Pay using Amazon pay</strong>
+                  </p>
+                </div>
+              </div>
+              <div class="control-coupens">
+                <i class="fas fa-chevron-right" id="next-coupens"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-custom">
+          <div class="safety">
+            <div
+              class="on-time-guarantee d-flex mt-5 mb-5 p-4 border"
+              id="hideDiv"
+            >
+              <div class="pr-4">
+                <img
+                  src="https://i.postimg.cc/xTDTr7DW/hero-ontime.png"
+                  alt="hero_ontime"
+                  width="80px"
+                />
+              </div>
+
+              <div>
+                <div>
+                  <h2>Safety+</h2>
+                  <h4 class="text-muted font-weight-normal">
+                    Leave on time, everytime
+                  </h4>
+                </div>
+
+                <div class="d-flex pt-4 pb-4 hideBox">
+                  <p class="font-weight-light mr-3">
+                    <span
+                      ><img
+                        src="https://i.postimg.cc/Z5Ym4zfD/tip-icon.png"
+                        height="23"
+                    /></span>
+                    Look for buses with
+                  </p>
+                  <p class="mr-3">
+                    <img src="https://i.postimg.cc/fyxsTzn1/otgText.png" />
+                  </p>
+                  <p class="font-weight-light mr-3">
+                    tag while booking your journey
+                  </p>
+                </div>
+
+                <div class="d-flex hideBox">
+                  <div>
+                    <h5 class="text-primary">Bus on time</h5>
+                    <div class="font-weight-bold">Get 25% refund</div>
+                    <div class="text-muted">
+                      If bus departure is delayed by 30 mins from boarding
+                      point.
+                    </div>
+                  </div>
+
+                  <div>
+                    <h5 class="text-primary">No bus cancellation</h5>
+                    <div class="font-weight-bold">Get 150% refund</div>
+                    <div class="text-muted">
+                      Bus is cancelled without an alternate arrangement.
+                    </div>
+                  </div>
+
+                  <div>
+                    <h5 class="text-primary">Alternate assurance</h5>
+                    <div class="font-weight-bold">Get 300% refund</div>
+                    <div class="text-muted">
+                      Bus breaks down with no alternate arrangement within 6
+                      hours.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="convenience-div">
+          <div class="container-custom-img">
+            <div class="convenience">
+              <div class="text-content">
+                <h4 style="font-weight: 600; padding-bottom: 20px">
+                  CONVENIENCE ON-THE-GO.
+                </h4>
+                <p>
+                  Enjoy the following exclusive features on the redBus app
+                  <br />
+                  <br/>
+                  Last Minute Booking - In a hurry to book a bus at the last
+                  minute? Choose the bus passing from your nearest boarding
+                  point and book in a few easy steps. <br /><br/>
+                  Boarding Point Navigation - Never lose your way while
+                  travelling to your boarding point! <br /><br/>
+                  Comprehensive Ticket Details- Everything that you need to make
+                  the travel hassle free - rest stop details, boarding point
+                  images, chat with co-passengers, wake-up alarm and much more!<br /><br/>
+                  Enter your mobile number below to download the redBus mobile
+                  app.
+                </p>
+                <input type="text" value="+91" style="width: 50px; font-size:14px;" />
+                <input type="text" placeholder="Enter your mobile number" />
+              </div>
+
+              <div class="image">
+                <img
+                  src="https://s1.rdbuz.com/web/images/home/IOS_Android_device.png"
+                  alt="First"
+                  height="630px"
+                  width="500px"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="advantages-div">
+          <div class="container-custom">
+            <div class="advantages">
+              <div class="text-center pt-3">
+                <img
+                  src="https://i.postimg.cc/QN5hqb9S/promise.png"
+                  alt="promise"
+                  width="85"
+                />
+              </div>
+              <div class="heading">WE PROMISE TO DELIVER</div>
+              <div class="promises">
+                <div class="promise">
+                  <div class="icon">
+                    <img
+                      src="https://i.postimg.cc/wMKHptPh/maximum-choices.png"
+                      alt="maximum_choices"
+                      width="120"
+                    />
+                  </div>
+                  <div class="promise-name">MAXIMUM CHOICE</div>
+                  <div class="promise-description">
+                    We give you the widest number of travel options across
+                    thousands of routes.
+                  </div>
+                </div>
+                <div class="promise">
+                  <div class="icon">
+                    <img
+                      src="https://i.postimg.cc/Y2mqs7V6/customer-care.png"
+                      alt="customer_care"
+                      width="91"
+                    />
+                  </div>
+                  <div class="promise-name">SUPERIOR CUSTOMER SERVICE</div>
+                  <div class="promise-description">
+                    We put our experience and relationships to good use and are
+                    available to solve your travel issues.
+                  </div>
+                </div>
+                <div class="promise">
+                  <div class="icon">
+                    <img
+                      src="https://i.postimg.cc/JnHmv3Tr/lowest-Fare.png"
+                      alt="lowest_Fare"
+                      width="120"
+                    />
+                  </div>
+                  <div class="promise-name">LOWEST PRICES</div>
+                  <div class="promise-description">
+                    We always give you the lowest price with the best partner
+                    offers.
+                  </div>
+                </div>
+                <div class="promise">
+                  <div class="icon">
+                    <img
+                      src="https://i.postimg.cc/k4LMgYVR/benefits.png"
+                      alt="benefits"
+                      width="120"
+                    />
+                  </div>
+                  <div class="promise-name">UNMATCHED BENEFITS</div>
+                  <div class="promise-description">
+                    We take care of your travel beyond ticketing by providing
+                    you with innovative and unique benefits.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-custom">
+          <div class="awards-recognition">
+            <div class="heading">AWARDS & RECOGNITION</div>
+            <div class="awards-content">
+              <div class="award">
+                <img
+                  src="https://s2.rdbuz.com/web/images/home/awards/Business_Standard1.png"
+                  width="120px"
+                  height="100px"
+                />
+                <h6>Most Innovative Company</h6>
+              </div>
+              <div class="award">
+                <img
+                  src="https://s1.rdbuz.com/web/images/home/awards/Brand_Trust_Report.png"
+                  width="120px"
+                  height="100px"
+                />
+                <h6>Most Trusted Brand</h6>
+              </div>
+              <div class="award">
+                <img
+                  src="https://s3.rdbuz.com/web/images/home/awards/Eye_for_Travel1.png"
+                  width="120px"
+                  height="100px"
+                />
+                <h6>Mobile Innovation Award</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="global-presence-div">
+          <div class="container-custom">
+            <div class="global-presence">
+              <div class="heading">OUR GLOBAL PRESENCE</div>
+              <div class="global-presence-main">
+                <div class="global-presence-row">
+                  <div class="inner-global">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEIvuZc0cUixEQivP7ILNnIURU3HBNOcHs6-ddtCbY2_6kp53RNe7MDlkzMeps1c3hVA4&usqp=CAU"
+                      alt=""
+                      height="90px"
+                      width="150px"
+                    />
+                    <h6>COLUMBIA</h6>
+                  </div>
+                  <div class="inner-global">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyIZYcHYBs4yR6XCdd9P_Opfq4BaS0gxgCLNelNjM9yFlfZyAiqk0xc2FjUT6lgr28Uk4&usqp=CAU"
+                      alt=""
+                      height="90px"
+                      width="150px"
+                    />
+                    <h6>INDIA</h6>
+                  </div>
+                  <div class="inner-global hideBox">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDgT9Og2ki9Ostsy1pQv4FWTwfHiwH2E4ondRFgwkzlOMbS9VdCT2ZHiBiSkg_WL5aeZs&usqp=CAU"
+                      alt=""
+                      height="90px"
+                      width="150px"
+                    />
+                    <h6>INDONESIA</h6>
+                  </div>
+                </div>
+                <div class="global-presence-row">
+                  <div class="inner-global">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSynO9ph3tFE6AxGJ9A31uoWXBdWDCTzCnLb1gsallptWvsIY4FgoU6k7kLO_K0uiFHM8&usqp=CAU"
+                      alt=""
+                      height="90px"
+                      width="150px"
+                    />
+                    <h6>MALAYSIA</h6>
+                  </div>
+                  <div class="inner-global">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Flag_of_Peru_%28state%29.svg/2560px-Flag_of_Peru_%28state%29.svg.png"
+                      alt=""
+                      height="90px"
+                      width="150px"
+                    />
+                    <h6>PERU</h6>
+                  </div>
+                  <div class="inner-global hideBox">
+                    <img
+                      src="https://cdn.britannica.com/36/4036-004-710DB7F7/Flag-Singapore.jpg"
+                      alt=""
+                      height="90px"
+                      width="150px"
+                    />
+                    <h6>SINGAPORE</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-custom">
+          <div class="heading">THE NUMBERS ARE GROWING!</div>
+          <div class="number">
+            <div class="number-container">
+              <div class="count-player">customers</div>
+              <div class="count-value">36M</div>
+              <div class="description">
+                redBus is trusted by over 36 million happy customers globally
+              </div>
+            </div>
+            <div class="number-container">
+              <div class="count-player">operators</div>
+              <div class="count-value">3500</div>
+              <div class="description">
+                network of over 3500 bus operators worldwide
+              </div>
+            </div>
+            <div class="number-container">
+              <div class="count-player">bus tickets</div>
+              <div class="count-value">220+ M</div>
+              <div class="description">
+                Over 220 million trips booked using redBus
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sub-banner">
+        <div class="sub-banner-image">
+          <img
+            src="https://st.redbus.in/Images/natak/100x100.png"
+            alt="hero_ontime"
+            width="80px"
+          />
+        </div>
+        <div class="sub-banner-content">
+          <div class="title">SAVE THE DRAMA FOR THE STAGE!</div>
+          <div class="subtitle">
+            Book your favourite seat online with redBus.
+          </div>
+        </div>
+      </div>
+      <div class="search-bar">
+        <div class="interchange">
+          <i class="bi bi-arrow-left-right"></i>
+        </div>
+        <div class="item">
+          <div class="search-icon">
+            <i class="bi bi-building"></i>
+          </div>
+          <input
+            list="from-place"
+            type="text"
+            placeholder="FROM"
+            class="form-field"
+            autocomplete="off"
+            id="from"
+          />
+          <datalist id="from-place">
+            <option>Mangalore</option>
+            <option>Mumbai(All locations)</option>
+            <option>Madras</option>
+            <option>Madurai</option>
+            <option>Madiwala,Bangalore</option>
+            <option>Majestic,Bangalore</option>
+          </datalist>
+        </div>
+        <div class="item to">
+          <div class="search-icon"><i class="bi bi-building"></i></div>
+          <input
+            list="to-place"
+            type="text"
+            placeholder="TO"
+            class="form-field"
+            id="to"
+          />
+          <datalist id="to-place">
+            <option>Bihar</option>
+            <option>Bangalore(All locations)</option>
+            <option>Bhuvaneswar</option>
+            <option>Baroda</option>
+          </datalist>
+        </div>
+        <div class="item date">
+          <input
+            type="text"
+            placeholder="DATE"
+            onfocus="(this.type='date')"
+            id="select-date"
+            onblur="if(this.value==''){this.type='text'}"
+            data-date=""
+            data-date-format="DD MMMM YYYY"
+          />
+        </div>
+        <div class="search-button" onclick="callBusPage()">Search Buses</div>
+      </div>
+    </main>
+
+    <div class="login-modal hide">
+      <div class="bg"></div>
+      <div class="background">
+        <div class="main">
+          <div class="smart-way">
+            <div class="content">
+              <div>Unlock the</div>
+              <div>Smarter Way to Travel</div>
+            </div>
+            <img
+              src="https://s3.rdbuz.com/Images/webplatform/contextualLogin/desktop-payment-offers.svg"
+            />
+          </div>
+          <div class="login-verification">
+            <div class="login" id="login-form">
+              <div id="redbusImage"></div>
+              <div class="signin-header">
+                Sign in to avail exciting discounts and cashbacks!!
+              </div>
+              <div class="contact-box">
+                <div class="code-select clearfix">
+                  <ul id="phCode" data-cntrycode="IND" class="select-code">
+                    + 91
+                  </ul>
+                  <span><i class="bi bi-chevron-down"></i></span>
+                </div>
+                <div class="mobileInput">
+                  <input
+                    id="mobile-number"
+                    type="number"
+                    class="mobile"
+                    placeholder="Enter your mobile number"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="captcha-container"></div>
+              <div id="otp-container" class="otpContainer disabled clearfix">
+                <span>GENERATE OTP </span>(One Time Password)
+              </div>
+              <div class="text-social-acc">
+                <span class="or-text">OR, </span>
+                <span>Connect using social accounts</span>
+              </div>
+              <div class="w-106">
+                <div class="social-acc-box-br margin-g">
+                  <div
+                    id="container-google"
+                    style="
+                      padding: 2px 10px;
+                      display: inline-block;
+                      margin-left: -30px;
+                    "
+                  >
+                    <div aria-labelledby="button-label" class="google-btn">
+                      <div class="google-flex">
+                        <div>
+                          <img src="../Resources/google.png" />
+                        </div>
+                        <span class="signin-google">Sign in with Google</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="social-acc-box"
+                  id="newFbId"
+                  style="margin-left: -43px"
+                >
+                  <div class="facebook-logo">
+                    <img
+                      src="https://www.redbus.in/images/facebook-icon.svg"
+                      width="20"
+                      height="20"
+                    />
+                  </div>
+                  <div class="facebook-text">Facebook</div>
+                </div>
+              </div>
+              <div class="signin-screen"></div>
+              <div class="paddingTerms signin-terms">
+                By signing up, you agree to<br />our
+                <a
+                  target="_blank"
+                  href="https://www.redbus.in/info/termscondition"
+                  >Terms &amp; Conditions</a
+                >
+                and
+                <a
+                  target="_blank"
+                  href="https://www.redbus.in/info/privacypolicy"
+                  >Privacy Policy</a
+                >
+              </div>
+            </div>
+            <div class="verification" id="verification-form">
+              <div id="redbusImage"></div>
+              <div class="signin-header" style="margin-bottom: 15px">
+                Sign in to avail exciting discounts and cashbacks!!
+              </div>
+              <div class="instruction">
+                To Continue, Please enter OTP sent to verify mobile number
+              </div>
+              <div class="mobile-number">
+                <div class="label">MOBILE NUMBER</div>
+                <div class="number-change">
+                  <div class="mentioned-number">
+                    <div class="country-code">+91</div>
+                    <div class="phone-number" id="mobile-no"></div>
+                  </div>
+                  <div class="change-button" id="change-number">CHANGE</div>
+                </div>
+              </div>
+              <div class="enter-otp">
+                <input
+                  type="number"
+                  name=""
+                  id="entered-otp"
+                  placeholder="Enter OTP"
+                />
+              </div>
+              <div
+                class="verify-otp-button verification-buttons"
+                id="verify-otp"
+              >
+                VERIFY OTP
+              </div>
+              <div class="resend-otp-button verification-buttons">
+                <div id="resendOtp">RESEND OTP</div>
+              </div>
+              <div
+                class="other-signin-methods verification-buttons"
+                id="other-methods"
+              >
+                OTHER WAYS TO SIGN IN
+              </div>
+            </div>
+          </div>
+          <div class="close-button" id="close-button">
+            <i class="bi bi-x-lg"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="routes-div">
+        <div class="container-custom-footer">
+          <div class="routes">
+            <div class="content-list">
+              <div class="content-list-heading">Top Bus Routes</div>
+              <p class="top-city-text">Hyderabad to Bangalore Bus</p>
+              <p class="top-city-text">Bangalore to Chennai Bus</p>
+              <p class="top-city-text">Pune to Bangalore Bus</p>
+              <p class="top-city-text">Mumbai to Bangalore Bus</p>
+            </div>
+            <div class="content-list">
+              <div class="content-list-heading">Top Cities</div>
+              <p class="top-city-text">Hyderabad Bus Tickets</p>
+              <p class="top-city-text">Bangalore Bus Tickets</p>
+              <p class="top-city-text">Chennai Bus Tickets</p>
+              <p class="top-city-text">Pune Bus Tickets</p>
+            </div>
+            <div class="content-list">
+              <div class="content-list-heading">Top RTC's</div>
+              <p class="top-city-text">APSRTC</p>
+              <p class="top-city-text">MSRTC</p>
+              <p class="top-city-text">HRTC</p>
+              <p class="top-city-text">UPSRTC</p>
+            </div>
+            <div class="content-list">
+              <div class="content-list-heading">Other</div>
+              <p class="top-city-text">GSRTC</p>
+              <p class="top-city-text">RSPTC</p>
+              <p class="top-city-text">KTCL</p>
+              <p class="top-city-text">PEPSU</p>
+            </div>
+            <div class="content-list">
+              <div class="content-list-heading">Tempo Traveller in Cities</div>
+              <p class="top-city-text">Tempo Traveller in Bangalore</p>
+              <p class="top-city-text">Tempo Traveller in Mumbai</p>
+              <p class="top-city-text">Tempo Traveller in Coimbatore</p>
+              <p class="top-city-text">Tempo Traveller in Palakad</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="top-operators-div">
+        <div class="container-custom-footer">
+          <div class="operator-heading">Top Operators</div>
+          <div class="top-operators">
+            <div class="operator">SRS Travels</div>
+            <div class="operator">Evacay Bus</div>
+            <div class="operator">Kallada Travels</div>
+            <div class="operator">Top Operators</div>
+            <div class="operator">SRS Travels</div>
+            <div class="operator">Evacay Bus</div>
+            <div class="operator">Kallada Travels</div>
+            <div class="operator">KPN Travels</div>
+            <div class="operator">Orange Travels</div>
+            <div class="operator">Parveen Travels</div>
+            <div class="operator">Rajdhani Express</div>
+            <div class="operator">VRL Travels</div>
+            <div class="operator">Chartered Speed Bus</div>
+            <div class="operator">Bengal Tiger</div>
+            <div class="operator">SRM Travels</div>
+            <div class="operator">Infant Jesus</div>
+            <div class="operator">Patel Travels</div>
+            <div class="operator">JBT Travels</div>
+            <div class="operator">Shatabdi Travels</div>
+            <div class="operator">Eagle Travels</div>
+            <div class="operator">Kanker Roadways</div>
+            <div class="operator">Komitla</div>
+            <div class="operator">Sri Krishna Travels</div>
+            <div class="operator">Humsafar Travels</div>
+            <div class="operator">Mahasagar Travels</div>
+            <div class="operator">Raj Express</div>
+            <div class="operator">Sharma Travels</div>
+            <div class="operator">Shrinath Travels</div>
+            <div class="operator">Universal Travels</div>
+            <div class="operator">Verma Travels</div>
+            <div class="operator">Gujarat Travels</div>
+            <div class="operator">Madurai Radha Travels</div>
+            <div class="operator">Patel Tours and Travels</div>
+            <div class="operator">Paulo Travels</div>
+            <div class="operator">Royal Travels</div>
+            <div class="operator">Amarnath Travels</div>
+            <div class="operator">Vaibhav Travels</div>
+            <div class="operator">Ganesh Travels</div>
+            <div class="operator">Jabbar Travels</div>
+            <div class="operator">Jain Travels</div>
+            <div class="operator">Manish Travels</div>
+            <div class="operator">Pradhan Travels</div>
+            <div class="operator">YBM Travels</div>
+            <div class="operator">Hebron Transports</div>
+            <div class="operator">Mahalaxmi travels</div>
+            <div class="operator">MR Travels</div>
+            <div class="operator">Vivegam Travels</div>
+            <div class="operator">VST Travels</div>
+            <div class="operator">Jakhar Travels</div>
+            <div class="operator">Kaleswari Travels</div>
+            <div class="operator">Mahendra Travels</div>
+            <div class="operator">Neeta Tours and Travels</div>
+            <div class="operator">Yamani Travels</div>
+            <div class="operator">Arthi Travels</div>
+            <div class="operator">All</div>
+          </div>
+          <div class="operator-footer">All Operators ></div>
+        </div>
+      </div>
+      <div class="footer-row-div">
+        <div class="container-custom">
+          <div class="footer-row">
+            <div class="footer-col">
+              <div class="footer-heading">About redBus</div>
+              <p>About Us</p>
+              <p>Contact Us</p>
+              <p>Mobile Version</p>
+              <p>Redbus on mobile</p>
+              <p>Siemap</p>
+              <p>Offers</p>
+              <p>careers</p>
+              <p>values</p>
+            </div>
+            <div class="footer-col">
+              <div class="footer-heading">Info</div>
+              <p>T & C</p>
+              <p>Privacy Policy</p>
+              <p>Cookie Policy</p>
+              <p>FAQ</p>
+              <p>Blog</p>
+              <p>Privacy Policy</p>
+              <p>Cookie Policy</p>
+              <p>FAQ</p>
+            </div>
+            <div class="footer-col">
+              <div class="footer-heading">Global Sites</div>
+              <p>India</p>
+              <p>Singapore</p>
+              <p>Malaysia</p>
+              <p>Indonesia</p>
+              <p>Peru</p>
+              <p>Columbia</p>
+            </div>
+            <div class="footer-col">
+              <div class="footer-heading">Our Partners</div>
+              <p>Goibibo</p>
+              <p>Makemytrip</p>
+            </div>
+            <div class="footer-col last-col">
+              <div class="brand">
+                <a class="navbar-brand-image" href="#"
+                  ><img
+                    src="https://i.postimg.cc/zXFNsGkg/redbus-white.png"
+                    alt="redBus"
+                    height="48px"
+                /></a>
+              </div>
+              <div class="brand-text">
+                redBus is the world's largest online bus ticket booking service
+                trusted by over 25 million happy customers globally. redBus
+                offers bus ticket booking through its website,iOS and Android
+                mobile apps for all major routes.
+              </div>
+              <div class="contactus-icons">
+                <i class="fab fa-facebook-f contactus-icon"></i>
+                <i class="fab fa-twitter contactus-icon"></i>
+              </div>
+              <div class="copyright">Ⓒ 2021 ibibogroup All rights reserved</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="../JavaScript/homePage.js"></script>
+    <script
+      src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>
