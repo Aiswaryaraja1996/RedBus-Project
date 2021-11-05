@@ -126,7 +126,7 @@ async function handleOutstationForm(){
     const outstationFormValues = {tripType, outstationPickupInput, outstationDestinationInput, outstationFromDate, outstationTillDate, outstationPassengerNumber, tripKms}
     localStorage.setItem('outstationFormValues', JSON.stringify(outstationFormValues))
 
-    window.location.assign('http://127.0.0.1:5500/Html/userQuotes.html');
+    window.location.assign('/Html/userQuotes.html');
 }
 
 function fetchTripKms(city1, city2){
