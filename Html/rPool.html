@@ -1,0 +1,1627 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Responsive Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Adding Bootstrap CDN - Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <!-- <--------Adding fontawesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Adding CSS -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/app.css"> -->
+    <!-- <-----------Adding font----------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Adding CSS -->
+    <link
+      href="https://www.redbus.in/favicon.ico?root=rbus"
+      rel="shortcut icon"
+    />
+    <title>rPool - India’s new Carpool &amp; Bikepool mobile app</title>
+
+    <!-- <---------------Add flickty------------------------------------------------ -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        overflow-x: hidden;
+      }
+
+      .bg-danger{
+        background-color: #d84f57 !important;
+      }
+
+      .container {
+        margin: 0px;
+        margin-left: 3em;
+      }
+      .navbar-nav > li > a:hover {
+        background-color: red;
+        color: #ffc0cb;
+      }
+      .newNav > li > a:hover {
+        background-color: rgb(17, 15, 15);
+        color: #ffc0cb;
+      }
+      /* <------------------------Share your rides -------------------------------------------------------- */
+
+      #shareYourRides {
+        margin-top: 60px;
+        width: 100%;
+        height: 590px;
+        background-color: #d84f57;
+        padding: 3% 10%;
+      }
+      #imgShare {
+        background-color: white;
+        display: flex;
+        border-radius: 20px;
+      }
+      @media screen and (max-width: 700px) {
+        #imgShare {
+          flex-direction: column;
+        }
+        .imgimg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      #content {
+        padding: 50px 0px;
+        font-family: "Montserrat", sans-serif;
+        color: white;
+      }
+
+      /* <----------------------what is rPool css------------------------------------------------> */
+      #what-is-rPool {
+        display: flex;
+        margin: 50px;
+      }
+      #left-cont {
+        width: 45%;
+        margin: 2.5%;
+        padding: 0.5%;
+        font-family: "Montserrat", sans-serif;
+      }
+      #right-video {
+        width: 45%;
+        margin: 0% 2.5%;
+        /* margin-top:50px; */
+      }
+      @media screen and (max-width: 600px) {
+        #what-is-rPool {
+          flex-direction: column;
+        }
+        #left-cont {
+          width: 90%;
+          margin: auto;
+        }
+        #right-video {
+          width: 90%;
+          margin: auto;
+          margin-top: 30px;
+        }
+      }
+      /* <--------------rPool with your city------------------------ */
+
+      #rPool-within-city {
+        width: 90%;
+        margin: 0% 5%;
+        font-family: "Montserrat", sans-serif;
+        padding: 4%;
+        box-shadow: 2px 2px 8px rgb(204, 198, 173);
+        font-weight: 600px;
+      }
+      /* <--------------rPool outside your city------------------------ */
+
+      #rPool-outside-city {
+        width: 90%;
+        margin: 0% 5%;
+        font-family: "Montserrat", sans-serif;
+        padding: 4%;
+        box-shadow: 2px 2px 8px rgb(204, 198, 173);
+        /* font-weight: 700 !important; */
+      }
+
+      #cars {
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+        font-family: "Montserrat", sans-serif;
+      }
+      #div1 {
+        margin: 2%;
+        width: 45%;
+        margin-left: 0.5%;
+      }
+      #div2 {
+        margin: 2%;
+        width: 45%;
+      }
+      /* <-------------why-redbus-rpools----------------------------- */
+      #why-redbus {
+        width: 90%;
+        margin: 5%;
+        margin-top: 30px;
+        font-family: "Montserrat", sans-serif;
+        display: flex;
+      }
+      .why-redbus-img {
+        border-radius: 50%;
+        margin: 10px;
+      }
+      /* <----------------------------------------------------------------rPool corporate plius---------------------------------------------------------------> */
+      #rPool-corporate-plus {
+        width: 90%;
+        margin: 25px auto;
+        font-family: "Montserrat", sans-serif;
+        box-shadow: 2px 2px 8px rgb(204, 198, 173);
+        padding: 2.5%;
+      }
+      .div1234 {
+        display: flex;
+        flex-wrap: wrap;
+        line-height: 70px;
+      }
+      .h1Div {
+        width: 5%;
+        background-color: rgb(229, 235, 248);
+        border-radius: 50%;
+        height: 40px;
+        text-align: center;
+        margin: 18px;
+      }
+
+      /* <----------------------------------------------------------------Introducing rPool Points-------------------- --> */
+      #introRpool {
+        height: 400px;
+        width: 100%;
+        background-color: rgb(237, 237, 237);
+        font-family: "Montserrat", sans-serif;
+        padding: 5%;
+        display: flex;
+      }
+
+      #firstPart {
+        width: 20%;
+        padding: 10px;
+        margin: 10px;
+      }
+      .restThreeParts {
+        width: 20%;
+        padding: 10px;
+        margin: 10px;
+        margin-left: 70px;
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+      }
+
+      /* <----------------------customer review------------------------ */
+      .box {
+        margin: 10px;
+        height: 150px;
+        width: 600px;
+        border: 1px solid #ccc;
+        padding: 30px 20px;
+        box-shadow: 2px 5px 8px #888888;
+        border: 1px solid grey;
+      }
+      .box p {
+        padding-left: 40px;
+        font-size: 15px;
+      }
+      .box:hover {
+        background-color: aliceblue;
+      }
+
+      @media screen and (max-width: 600px) {
+        #codeFirst {
+          visibility: hidden;
+          display: none;
+        }
+        .hideBox {
+          visibility: hidden;
+          display: none;
+        }
+        #hideDiv {
+          height: 150px;
+          width: 90%;
+          margin: 5%;
+        }
+      }
+      /* <-----------------------FAQ's------------------------------------------------ */
+      .btn {
+        width: 100%;
+        margin: 0px 20px;
+        /* padding: 20px; */
+        border-bottom: 1px solid grey;
+        margin-bottom: 20px;
+        padding: 2% 5%;
+      }
+      .btn:hover {
+        cursor: pointer;
+        background-color: whitesmoke;
+      }
+      #c1 {
+        display: none;
+      }
+      #c2 {
+        display: none;
+      }
+      #c3 {
+        display: none;
+      }
+      #c4 {
+        display: none;
+      }
+      #c5 {
+        display: none;
+      }
+      #c6 {
+        display: none;
+      }
+      #c7 {
+        display: none;
+      }
+      .content {
+        width: 90%;
+        margin: 0% 5%;
+        padding: 10px;
+        box-shadow: 2px 8px 8px pink;
+        font-family: "Montserrat", sans-serif;
+        line-height: 35px;
+      }
+      /* <---------------------------footer css---------------------------> */
+      .footer {
+        /* margin-top:10px; */
+        padding-top: 20px;
+        display: flex;
+        gap: 2rem;
+        color: white;
+        background-color: rgb(31, 31, 46);
+        flex-direction: row;
+        font-family: "Montserrat", sans-serif;
+      }
+      .footer h4 {
+        color: rgb(90, 89, 89);
+      }
+      #firstCol {
+        margin-left: 10%;
+      }
+      #lastCol {
+        margin-left: 5%;
+        margin-right: 10%;
+      }
+      .icon {
+        border: 1px solid grey;
+        height: 30px;
+        width: 40px;
+        float: left;
+        text-align: center;
+        padding-top: 3px;
+        margin-right: 10px;
+        border-radius: 20px;
+      }
+      #lastP {
+        clear: both;
+        margin-top: 100px;
+      }
+
+      .widthFooter {
+        width: 15%;
+      }
+      #logoFooter {
+        height: 60px;
+        width: 80px;
+        background-color: rgb(31, 31, 46);
+        margin-top: 20px;
+        border: 1px solid grey;
+        border-radius: 20px;
+      }
+      #lastCol {
+        width: 55%;
+      }
+      @media screen and (max-width: 600px) {
+        .footer {
+          flex-direction: column;
+          flex-wrap: wrap;
+        }
+        #firstCol {
+          margin-left: 50px;
+        }
+        .widthFooter {
+          width: 60%;
+          margin-left: 50px;
+        }
+        #lastCol {
+          width: 90%;
+        }
+      }
+
+      .contentList p:hover {
+        color: red;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-sm bg-danger navbar-dark fixed-top">
+      <div class="container">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#"
+          ><img
+            src="https://i.postimg.cc/zXFNsGkg/redbus-white.png"
+            alt="redBus"
+            width="60px"
+        /></a>
+
+        <!-- Toggler/collapsibe Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#menu-nav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="menu-nav">
+          <!-- Left-aligned nav (default) -->
+          <div>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link text-white text-uppercase" href="#"
+                  >Bus Tickets</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">rPool</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white text-uppercase" href="#"
+                  >Bus Hire</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- <--------------Share your rides-------------------------->
+    <div id="shareYourRides">
+      <div id="imgShare">
+        <img
+          src="https://st.redbus.in/Images/rpools/rPoolIntracity.svg"
+          height="300px"
+          width="50%"
+          class="imgimg"
+        />
+        <img
+          src="https://st.redbus.in/Images/rpools/rPoolOutstation.svg"
+          height="300px"
+          width="50%"
+          class="imgimg"
+          id="noneShow"
+        />
+      </div>
+      <!-- <h3 id="firstImg" style="margin-top:-240px; margin-left: 40px; width: 40%;">Commuting within the City?</h3>
+          <h3 style="margin-top:-100px; margin-left: 290px; width: 40%;">Commuting within the City?</h3> -->
+      <div id="content">
+        <h3 style="font-weight: 700">
+          Share your rides on rPool,Bikepool & Carpool for Professionals
+        </h3>
+        <p>
+          Intra-City services currently live in BANGALORE, HYDERABAD, PUNE, NEW
+          DELHI – NCR and CHENNAI Outstation services currently live across
+          India
+        </p>
+      </div>
+    </div>
+
+    <!-- <--------------------------------Second navBar------------------------------------------------>
+    <div
+      class="navbar navbar-expand-sm navbar-dark"
+      style="background-color: rgb(62, 62, 82)"
+    >
+      <div class="container">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#"
+          ><img
+            src="https://i.postimg.cc/zXFNsGkg/redbus-white.png"
+            alt="redBus"
+            width="60px"
+        /></a>
+
+        <!-- Toggler/collapsibe Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#menu-nav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="menu-nav">
+          <!-- Left-aligned nav (default) -->
+          <div>
+            <ul class="navbar-nav newNav">
+              <!-- <li class="nav-item">
+                              <a class="nav-link text-white" href="#rPool-corporate-plus">How it works</a>
+                          </li> -->
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#menu-nav">What is Pool</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#rPool-corporate-plus"
+                  >Corporate+</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#rPool-rwa"
+                  >rPool for RWAs</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#why-redbus">Why rPool</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#firstBox"
+                  >Customer Review</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#id1">FAQs</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <---------------------------------------How it works------------------------------------------------------->
+
+    <!-- <---------------What is rPool---------------------------------------------------- -->
+    <div id="what-is-rPool">
+      <div id="left-cont">
+        <h1>What is rPool?</h1>
+        <p>
+          What is rPool? rPool is an eco-smart option for handling all your
+          travel needs by connecting you with fellow professional riders. As our
+          cities are growing, increased traffic adds to the chaos and pollution.
+          Hence, we have committed to providing a convenient, economical and
+          sustainable solution to this problem through carpooling and bike
+          pooling.
+        </p>
+      </div>
+      <div id="right-video">
+        <iframe
+          width="100%"
+          height="300"
+          src="https://www.youtube.com/embed/GIZlD2b2bn8"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- <-------------------------------rPool within your city:--------------------------------------->
+    <div id="rPool-within-city">
+      <h4>rPool within your city:</h4>
+      <p>
+        Ridesharing is the best option for socially responsible citizens to
+        commute within the city. Optimizing every ride, rPool makes it easy to
+        find fellow riders on your route and split your commute costs.
+      </p>
+    </div>
+
+    <!-- <-------------------------------rPool outside your city:--------------------------------------->
+    <div id="rPool-outside-city" style="margin-top: 40px">
+      <h4>rPool outside your city:</h4>
+      <p>
+        Now, carpool/bikepool to destinations outside your city too! We are
+        going the distance for you with outstation ridesharing on rPool.
+      </p>
+
+      <div id="cars">
+        <div id="div1">
+          <img
+            src="https://st.redbus.in/Images/rpools/safety.svg"
+            alt=""
+            width="100px"
+            height="100px"
+          />
+          <h4>Safety feature on the go!</h4>
+          <p>
+            With multiple safety features including the rPool Shield, Live
+            Tracking and SOS Button, it is certainly safe to travel outside your
+            city using rPool!
+          </p>
+        </div>
+        <div id="div2">
+          <img
+            src="https://st.redbus.in/Images/rpools/zeroCommision.svg"
+            alt=""
+            width="100px"
+            height="100px"
+          />
+          <h4>Pay zero commission!</h4>
+          <p>Outstation ridesharing services by rPool are free of cost.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- <---------------------------------------rPool corporate+------------------------------------>
+    <div id="rPool-corporate-plus">
+      <h3>rPool Corporate+, exclusive for Corporates</h3>
+      <h4>
+        Say “goodbye” to getting frustrated with traffic and road rage and say
+        “hello” to arriving fresh to work every morning.
+      </h4>
+      <p>
+        rPool Corporate+ is an exclusive bikepool and carpool model for
+        corporates. rPool partners with corporates to provide carpooling and
+        bikepooling as an alternative to existing modes of employee commute.
+        rPool Corporate+ pools employees commuting in the same routes into a
+        single ride, allowing them to travel smarter to work, save on commute
+        costs, and make connections along the way.
+      </p>
+
+      <h4 style="margin-top: 40px">How it works?</h4>
+      <div class="div1234">
+        <h2 class="h1Div">1</h2>
+        <p style="width: 90%">
+          Every month, the company fills the rPool wallets of all employees who
+          sign up as ride-takers on the rPool app
+        </p>
+      </div>
+      <div class="div1234">
+        <h2 class="h1Div">2</h2>
+        <p style="width: 90%">
+          Employees who have signed up as ride-givers will create their carpool
+          rides on rPool for daily commutes to the office
+        </p>
+      </div>
+      <div class="div1234">
+        <h2 class="h1Div">3</h2>
+        <p style="width: 90%">
+          Based on their routes, the rPool app matches riders who can carpool
+          together to work
+        </p>
+      </div>
+      <div class="div1234">
+        <h2 class="h1Div">4</h2>
+        <p style="width: 90%">
+          On ride completion, the fares are automatically deducted from
+          ride-takers’ rPool wallets, allowing for cash-free transactions
+        </p>
+      </div>
+
+      <div style="width: 97%; margin: auto"><h3>Benefits</h3></div>
+      <div class="div1234">
+        <h2 class="h1Div" style="background-color: rgb(214, 240, 228)">✔️</h2>
+        <p style="width: 50%">
+          Reduced exposure as employees travel to and from work with colleagues
+        </p>
+      </div>
+      <div class="div1234">
+        <h2 class="h1Div" style="background-color: rgb(214, 240, 228)">✔️</h2>
+        <p style="width: 50%">
+          Employees enjoy the benefits of ridesharing and arrive fresh to work
+          without having to take public transport
+        </p>
+      </div>
+      <div class="div1234">
+        <h2 class="h1Div" style="background-color: rgb(214, 240, 228)">✔️</h2>
+        <p style="width: 50%">
+          Reduced efforts in route optimization and seat planning in other modes
+          of commute
+        </p>
+      </div>
+      <div class="div1234">
+        <h2 class="h1Div" style="background-color: rgb(214, 240, 228)">✔️</h2>
+        <p style="width: 50%">
+          Corporates can choose either prepaid or postpaid models
+        </p>
+      </div>
+    </div>
+
+    <!-- <--------------------rPool for RWA's -------------------- -->
+
+    <div id="rPool-corporate-plus">
+      <h3>rPool for RWAs</h3>
+      <p>
+        An exclusive model for Gated Communities where we offer Carpooling and
+        Bikepooling as a safer, smarter and reliable mode of commute. Making
+        commute to work more economical and hassle-free for the residents.
+      </p>
+      <h4 style="margin-top: 40px">How it works?</h4>
+      <div class="div1234" id="rPool-rwa">
+        <h2 class="h1Div">1</h2>
+        <p style="width: 90%">
+          rPool partners with community Resident Welfare Associations (RWAs) to
+          promote ridesharing among residents
+        </p>
+      </div>
+      <div class="div1234">
+        <h2 class="h1Div">2</h2>
+        <p style="width: 90%">
+          RWAs allow rPool to promote ridesharing among the residents by
+          granting permissions for on-ground promotional activities.
+        </p>
+      </div>
+      <div class="div1234">
+        <h2 class="h1Div">3</h2>
+        <p style="width: 90%">
+          RWAs share the promotional communications on society groups and mails
+        </p>
+      </div>
+      <div class="div1234">
+        <h2 class="h1Div">4</h2>
+        <p style="width: 90%">
+          rPool customises offers and incentives exclusively for the RWAs
+        </p>
+      </div>
+      <div class="div1234">
+        <h2 class="h1Div">5</h2>
+        <p style="width: 90%">
+          For every 20 rPool rides happening from/to the society in a month,
+          rPool will contribute ₹500 to the RWA funds (capped to a maximum of
+          ₹2500 per month)
+        </p>
+      </div>
+      <div class="div1234">
+        <h2 class="h1Div">6</h2>
+        <p style="width: 90%">
+          rPool customises offers and incentives exclusively for the RWAs
+        </p>
+      </div>
+
+      <div style="width: 97%; margin: auto"><h3>Benefits</h3></div>
+
+      <div class="div1234">
+        <h2 class="h1Div" style="background-color: rgb(214, 240, 228)">✔️</h2>
+        <p style="width: 50%">
+          Adds to the suite of travel options for residents, enabling safer and
+          cheaper commute to work
+        </p>
+      </div>
+      <div class="div1234">
+        <h2 class="h1Div" style="background-color: rgb(214, 240, 228)">✔️</h2>
+        <p style="width: 50%">
+          Corporates can choose either prepaid or postpaid models
+        </p>
+      </div>
+      <div class="div1234">
+        <h2 class="h1Div" style="background-color: rgb(214, 240, 228)">✔️</h2>
+        <p style="width: 50%">
+          Employees enjoy the benefits of ridesharing and arrive fresh to work
+          without having to take public transport
+        </p>
+      </div>
+      <div class="div1234">
+        <h2 class="h1Div" style="background-color: rgb(214, 240, 228)">✔️</h2>
+        <p style="width: 50%">
+          Both corporates and employees save money on employee transport and
+          fuel
+        </p>
+      </div>
+      <div class="div1234">
+        <h2 class="h1Div" style="background-color: rgb(214, 240, 228)">✔️</h2>
+        <p style="width: 50%">
+          Reduced efforts in route optimization and seat planning in other modes
+          of commute
+        </p>
+      </div>
+      <div class="div1234">
+        <h2 class="h1Div" style="background-color: rgb(214, 240, 228)">✔️</h2>
+        <p style="width: 50%">
+          Convenient pickup and drop points for employees
+        </p>
+      </div>
+    </div>
+
+    <!-- <----------------why redBus rPool---------------- -->
+    <h3 style="width: 90%; margin: auto; font-family: 'Montserrat', sans-serif">
+      Why redBus rPool?
+    </h3>
+    <div id="why-redbus">
+      <div style="display: flex">
+        <div style="display: flex; width: 40%">
+          <img
+            src="https://www.hdfcergo.com/images/default-source/health-insurance-explore/ayush-benefit.svg"
+            height="100"
+            width="100"
+            class=".why-redbus-img"
+          />
+          <div style="margin-left: 30px">
+            <h4>Travel Smart with Insurance</h4>
+            <p>
+              We wish you a safe trip every time. That’s why when you ride on
+              rPool, we cover every trip with insurance
+            </p>
+          </div>
+        </div>
+        <div style="display: flex; width: 40%">
+          <img
+            src="https://image.shutterstock.com/image-vector/phone-receiver-vector-icon-style-260nw-344504414.jpg"
+            height="100"
+            width="100"
+            class=".why-redbus-img"
+          />
+          <div style="margin-left: 30px">
+            <h4>Privacy Protected</h4>
+            <p>
+              Your details are kept safe with us. When you call fellow
+              travellers, the call is routed through the app with phone masking
+              enabled.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="why-redbus">
+      <div style="display: flex">
+        <div style="display: flex; width: 40%">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8_EHcin-FBFPha9bpTPUBb-qlEXAylBhpLg&usqp=CAU"
+            height="100"
+            width="100"
+            class=".why-redbus-img"
+          />
+          <div style="margin-left: 30px">
+            <h4>Save More on every ride</h4>
+            <p>
+              With rPool you get the best value for rides with opportunities to
+              earn bonus rPool points through great offers
+            </p>
+          </div>
+        </div>
+        <div style="display: flex; width: 40%">
+          <img
+            src="https://1.bp.blogspot.com/-hKLOPmTWOwA/XmX7n8K5M8I/AAAAAAAAACA/fJ6nkJRm_jYzrQm5Hks99Pe8fR6FQ9UYACLcBGAsYHQ/s1600/No%2BGirl%2BAllowed%2BPng%2Band%2Bjpg.jpg"
+            height="100"
+            width="100"
+            class=".why-redbus-img"
+          />
+          <div style="margin-left: 30px">
+            <h4>Networking on the go</h4>
+            <p>
+              Create new friendships with your fellow bikepoolers or carpoolers.
+              Connect with various professionals and enjoy networking while on
+              your rides.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="why-redbus">
+      <div style="display: flex">
+        <div style="display: flex; width: 40%">
+          <img
+            src="https://spng.subpng.com/20180807/tot/kisspng-money-bag-coin-currency-bank-healthwatch-wisconsin-5b69de3da454c9.2416093115336648296731.jpg"
+            height="100"
+            width="100"
+            class=".why-redbus-img"
+          />
+          <div style="margin-left: 30px">
+            <h4>No Transaction Charges</h4>
+            <p>
+              We believe in making every ride even more pleasant, therefore
+              enjoy your pool without any transaction charges.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <----------------------------------------------------------------Introducing rPool Points-------------------- -->
+    <div id="introRpool">
+      <div id="firstPart">
+        <h1>Introducing rPool Points</h1>
+        <p>Load an amount into your rPool Wallet to use for your rides.</p>
+      </div>
+      <div class="restThreeParts">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Electric_charge_symbol_positive.svg/1024px-Electric_charge_symbol_positive.svg.png"
+          height="80"
+          width="80"
+        />
+        <h4>RECHARGE</h4>
+        <p>
+          Add an amount with a choice of netbanking, credit/debit cards and
+          wallets.
+        </p>
+      </div>
+      <div class="restThreeParts">
+        <img
+          src="https://previews.123rf.com/images/blankstock/blankstock1402/blankstock140200296/25795403-not-allowed-credit-card-sign-icon-debit-card-symbol-virtual-money-red-circle-prohibition-sign-stop-f.jpg"
+          height="100"
+          width="100"
+        />
+        <h4>AUTO DEBIT/CREDIT</h4>
+        <p>Set your points for auto debit after each ride.</p>
+      </div>
+      <div class="restThreeParts">
+        <img
+          src="https://thumbs.dreamstime.com/z/no-gift-concept-sign-icon-present-box-symbol-red-prohibition-stop-isolated-white-background-d-rendering-136096470.jpg"
+          height="100"
+          width="100"
+        />
+        <h4>REDEEM</h4>
+        <p>
+          Your points can be redeemed against TMW Card & Amazon Gift Card as
+          well.
+        </p>
+      </div>
+    </div>
+
+    <!-- <-------------------------------------------Customer Review ------------------------------------- -->
+    <h3
+      style="
+        width: 90%;
+        margin: auto;
+        font-family: 'Montserrat', sans-serif;
+        margin-top: 70px;
+      "
+    >
+      Customer Reviews
+    </h3>
+    <div
+      class="carousel"
+      data-flickity='{ "groupCells": true, "pageDots": false}'
+    >
+      <div class="box" id="firstBox">
+        <p style="margin-left: 50px"><strong>Neeraj Tiwari</strong></p>
+        <p>
+          rPool is very exciting and interesting to use.It has been a very good
+          experience using rPool.
+        </p>
+      </div>
+      <div class="box">
+        <p><strong>Ajinkya</strong></p>
+        <p style="margin-left: 50px">
+          It's just awesome. Mostly my travel experience has been amazing.
+        </p>
+      </div>
+      <div class="box">
+        <p><strong>Kunal dubey</strong></p>
+        <p>
+          Good initiative by redBus.It is very enjoyable and price is cheap too.
+        </p>
+      </div>
+      <div class="box">
+        <p><strong>Koteswara Rao Parimi.</strong></p>
+        <p>It's a very nice experience with rPool.</p>
+      </div>
+    </div>
+
+    <!-- <------------------------------------FAQ's--------------------------------- -->
+
+    <h3
+      style="
+        width: 90%;
+        margin: auto;
+        font-family: 'Montserrat', sans-serif;
+        margin-top: 70px;
+      "
+    >
+      FAQ's
+    </h3>
+
+    <div onclick="bt()" class="btn" id="id1">
+      <div
+        style="
+          float: left;
+          text-align: left;
+          width: 90%;
+          padding-left: 2%;
+          font-size: 20px;
+          font-weight: 600;
+        "
+      >
+        1. GENERAL
+      </div>
+      <div style="float: left; width: 10%" id="minus1">➕</div>
+    </div>
+    <br />
+    <div onclick="bt2()" class="btn" id="id2">
+      <div
+        style="
+          float: left;
+          text-align: left;
+          width: 90%;
+          padding-left: 2%;
+          font-size: 20px;
+          font-weight: 600;
+        "
+      >
+        2. ACCOUNT
+      </div>
+      <div style="float: left; width: 10%" id="minus2">➕</div>
+    </div>
+    <br />
+    <div onclick="bt3()" class="btn" id="id3">
+      <div
+        style="
+          float: left;
+          text-align: left;
+          width: 90%;
+          padding-left: 2%;
+          font-size: 20px;
+          font-weight: 600;
+        "
+      >
+        3. OFFER A RIDE
+      </div>
+      <div style="float: left; width: 10%" id="minus3">➕</div>
+    </div>
+    <br />
+    <div onclick="bt4()" class="btn" id="id4">
+      <div
+        style="
+          float: left;
+          text-align: left;
+          width: 90%;
+          padding-left: 2%;
+          font-size: 20px;
+          font-weight: 600;
+        "
+      >
+        4. SEEKING A RIDE
+      </div>
+      <div style="float: left; width: 10%" id="minus4">➕</div>
+    </div>
+    <br />
+    <div onclick="bt5()" class="btn" id="id5">
+      <div
+        style="
+          float: left;
+          text-align: left;
+          width: 90%;
+          padding-left: 2%;
+          font-size: 20px;
+          font-weight: 600;
+        "
+      >
+        5. OUTSTATION
+      </div>
+      <div style="float: left; width: 10%" id="minus5">➕</div>
+    </div>
+    <br />
+    <div onclick="bt6()" class="btn" id="id6">
+      <div
+        style="
+          float: left;
+          text-align: left;
+          width: 90%;
+          padding-left: 2%;
+          font-size: 20px;
+          font-weight: 600;
+        "
+      >
+        6. PAYMENT/REDEMPTION
+      </div>
+      <div style="float: left; width: 10%" id="minus6">➕</div>
+    </div>
+    <br />
+    <div onclick="bt7()" class="btn" id="id7">
+      <div
+        style="
+          float: left;
+          text-align: left;
+          width: 90%;
+          padding-left: 2%;
+          font-size: 20px;
+          font-weight: 600;
+        "
+      >
+        7. SAFETY
+      </div>
+      <div style="float: left; width: 10%" id="minus7">➕</div>
+    </div>
+    <br />
+    <div id="id8"></div>
+
+    <div id="c1" class="content">
+      <p><strong>What is rPool?</strong></p>
+      <p>
+        rPool is an online carpool platform that connects Driver(s) (herein
+        after referring to those who offer rides) and Rider(s) (herein after
+        referring to those who are searching for rides). Both parties herein
+        after referred to as “Riders”.
+      </p>
+      <p><strong>What is carpooling?</strong></p>
+      <p>
+        Carpooling is a smart way to commute by sharing just one vehicle. A car
+        owner, offers ride and chooses fellow riders who travel along the same
+        route. In addition to being a more affordable way to commute, it also
+        helps the environment by reducing the number of cars on the road and
+        bringing down the pollution.
+      </p>
+      <p>
+        <strong
+          >How is rPool different than other carpooling cab services?</strong
+        >
+      </p>
+      <p>
+        rPool is not a cab service. It is an online carpool platform that
+        connects Driver(s) and Rider(s). rPool caters exclusively to working
+        professionals, who are verified riders.
+      </p>
+      <p><strong>How does rPool work?</strong></p>
+      <p>
+        Private car owners desirous of offering a Trip to other professionals
+        traveling on the routes of daily commute will register on the rPool
+        platform and offer rides or invite registered Riders. Alternately,
+        Riders who find Drivers on their route of commute can approach the
+        Driver to ride in their vehicle. In both cases, subject to the approval
+        of the Driver or Rider, both will be paired to ride together. When the
+        offer is mutually accepted, the Users connect with each other through
+        the redBus app. The chat and calls are secure as they don’t reveal the
+        phone number of the Driver or Rider. Once the Trip is completed, the
+        rPool Points agreed for the Trip are credited from the Rider’s rPool
+        Wallet to Driver’s rPool Wallet.
+      </p>
+      <p><strong>What is rPool Wallet?</strong></p>
+      <p>
+        rPool Wallet is a wallet provided to each User of the rPool, to
+        seamlessly transact for each Trip provided and availed on redBus App.
+      </p>
+      <p>
+        <strong
+          >What are rPool Points? What can a Rider do with the points received
+          by offering Trips to others?</strong
+        >
+      </p>
+      <p>
+        As a part of your rPool Wallet, rPool Points allow riders to seamlessly
+        transact for rides. Additionally, rPool Points can be redeemed for
+        shopping cards or vouchers as agreed and provided by rPool. Currently,
+        rPool allows redemption of rPool Points. Points can also be donated
+        towards the planting of trees by the MakeMyTrip Foundation.
+      </p>
+      <p><strong>How does a User benefit from rPool?</strong></p>
+      <p>
+        Users get to save more on every Trip by splitting the cost between
+        fellow Users while making the best use of a single vehicle. rPool Users
+        also contribute to making the city better by reducing the number of cars
+        and resultantly reducing the pollution. Additionally, as rPool is a
+        carpool exclusively for professionals one can network with fellow Users.
+      </p>
+      <p><strong>How secure is the platform?</strong></p>
+      <p>
+        rPool is only open to professionals and we verify users through their
+        corporate email. We ensure that all Users have their privacy protected
+        by routing all calls and chats through our app where the phone numbers
+        are not visible to either party.
+      </p>
+      <p><strong>What is a Recurring Trip?</strong></p>
+      <p>
+        A Recurring Trip allows a Driver, to auto-generate their daily commute
+        (home to office and vice versa). This eliminates the need to post rides
+        every day.
+      </p>
+      <p><strong>Can I alter part of my recurring ride?</strong></p>
+      <p>
+        rPool allows you cancel a single Trip. If you won’t be available for a
+        few days we recommend stopping the Recurring Ride until your return.
+      </p>
+      <p><strong>How do I contact rPool ’s support team?</strong></p>
+      <p>
+        We are always here to help, in case of any issue do email us at
+        rPool@redbus.in for any queries.
+      </p>
+    </div>
+
+    <div id="c2" class="content">
+      <p><strong>How can I register for the service?</strong></p>
+      <p>
+        Download the redBus App, tap on the rPool tab, next complete and
+        activate your rPool profile to start riding.
+      </p>
+      <p>
+        <strong
+          >Can I register on rPool using my Google / Facebook account?</strong
+        >
+      </p>
+      <p>Yes, you can register using either your Google or Facebook account.</p>
+      <p><strong>How is the verification done?</strong></p>
+      <p>
+        We send an email verification to your corporate email ID that you
+        provide us at the time of creation of your profile. You can either enter
+        the 6-digit OTP sent to the email to verify the account or click on the
+        link given in the mail which will automatically verify the account.
+      </p>
+    </div>
+
+    <div id="c3" class="content">
+      <p><strong>How do I offer Trips?</strong></p>
+      <p>
+        Simply provide us with the details of your vehicle including the
+        registration number, type and make of vehicle along with your driving
+        license details. After submitting these details, you can offer Trips by
+        entering your start and end location. Based on the aforesaid
+        information, you will receive a notification on the app suggesting the
+        Rider(s) seeking a Trip on or along the same route. Accordingly, you may
+        then invite Rider(s) basis your selection.
+      </p>
+      <p><strong>How do I invite a Rider?</strong></p>
+      <p>
+        Simply click on the notification and choose from the suggestions
+        provided.
+      </p>
+      <p>
+        <strong
+          >How can I coordinate for the pickup point with the Rider(s)?</strong
+        >
+      </p>
+      <p>
+        The locations of Rider(s) who have accepted the invite are provided on
+        the live tracking map. You can use the group chat to coordinate with
+        them on their pick-up point. You can also directly call them through the
+        app, which ensures your privacy is protected through mobile number
+        masking.
+      </p>
+      <p><strong>Can I schedule Trips for an entire week?</strong></p>
+      <p>
+        Yes, you can. Simple select the days and timing for which you would like
+        to offer a Trip. You can also make a Rider a “favourite” to ride with
+        them again.
+      </p>
+      <p>
+        <strong
+          >Whether there is any higher/default pricing fixed for the
+          Trips?</strong
+        >
+      </p>
+      <p>
+        rPool has a cap on the maximum rPool Points that can be charged for each
+        kilometre to be travelled on a given Trip. You may refer the detailed
+        terms and conditions of rPool to know more about point system.
+      </p>
+      <p><strong>How can I set up points to be charged for a Trip?</strong></p>
+      <p>
+        A Driver is at liberty to offer a Trip even below the maximum limit per
+        kilometre for each seat. This can be done by changing the default value
+        in the “settings” section. Once selected the fare will be applied for
+        all Trips. They can also customize the fare for each Trip individually.
+      </p>
+      <p><strong>Should my GPS remain on, while using rPool?</strong></p>
+      <p>
+        GPS is a required to track each live Trip. It is always advisable to
+        keep your GPS on when using rPool, for the best experience.
+      </p>
+      <p><strong>Can I reject a Trip request?</strong></p>
+      <p>Yes, You can.</p>
+      <p><strong>How do I cancel my Trip?</strong></p>
+      <p>
+        Go to My Trips, click the Options bar and select Cancel to cancel your
+        Trip.
+      </p>
+    </div>
+
+    <div id="c4" class="content">
+      <p><strong>Can I schedule Trips for an entire week?</strong></p>
+      <p>
+        Yes, you can. Simple select the days and timing for which you would like
+        to offer a Trip. You can also make a Rider a “favourite” to ride with
+        them again.
+      </p>
+      <p>
+        <strong
+          >Whether there is any higher/default pricing fixed for the
+          Trips?</strong
+        >
+      </p>
+      <p>
+        rPool has a cap on the maximum rPool Points that can be charged for each
+        kilometre to be travelled on a given Trip. You may refer the detailed
+        terms and conditions of rPool to know more about point system.
+      </p>
+      <p><strong>How can I set up points to be charged for a Trip?</strong></p>
+      <p>
+        A Driver is at liberty to offer a Trip even below the maximum limit per
+        kilometre for each seat. This can be done by changing the default value
+        in the “settings” section. Once selected the fare will be applied for
+        all Trips. They can also customize the fare for each Trip individually.
+      </p>
+      <p><strong>Should my GPS remain on, while using rPool?</strong></p>
+      <p>
+        GPS is a required to track each live Trip. It is always advisable to
+        keep your GPS on when using rPool, for the best experience.
+      </p>
+      <p><strong>Can I reject a Trip request?</strong></p>
+      <p>Yes, You can.</p>
+      <p><strong>How do I cancel my Trip?</strong></p>
+      <p>
+        Go to My Trips, click the Options bar and select Cancel to cancel your
+        Trip.
+      </p>
+    </div>
+
+    <div id="c5" class="content">
+      <p>
+        <strong>Who decides the fare for the outstation rides on rPool?</strong>
+      </p>
+      <p>
+        The cost incurred for the ride is shared equally among all riders on
+        rPool. So, the Ride-Giver gets to set the fare upto a maximum of ₹7 per
+        kilometre.
+      </p>
+      <p>
+        <strong> How is the payment done on an rPool outstation ride?</strong>
+      </p>
+      <p>
+        On successful completion of a trip, the payment gets deducted from the
+        wallet ride takers’ wallet and get added on the ride giver’s wallet.
+      </p>
+      <p>
+        <strong>Do I need an e-Pass to travel outstation using rPool?</strong>
+      </p>
+      <p>
+        Yes, all local, inter-district and inter-state travel guidelines laid
+        out by the Government needs to be adhered to by all travellers. For
+        routes that require an e-pass, both the ride-givers and the ride-takers
+        have to travel only after applying and receiving a valid e-Pass from the
+        respective authorities.
+      </p>
+    </div>
+
+    <div id="c6" class="content">
+      <p><strong>How is payment handled on rPool?</strong></p>
+      <p>
+        rPool works on a system of prepaid points called rPool Points. These
+        points are agreed between a Driver and Rider before confirmation of
+        rendering and/or availing of a given Trip. These rPool points will be
+        transferred from the rPool Wallet of the Rider to the rPool Wallet of
+        the Driver after each Trip. This will ensure a hassle and cash free
+        ride.
+      </p>
+      <p><strong>How do I recharge my account?</strong></p>
+      <p>
+        You can recharge your account by accessing the rPool Wallet section and
+        choosing the mode of recharge. You can choose between the following
+        options:
+      </p>
+      <p>Net Banking</p>
+      <p>Credit Card</p>
+      <p>Debit Card</p>
+      <p>Google Pay</p>
+      <p>PayTm</p>
+      <p><strong>What is the default fare set by rPool?</strong></p>
+      <p>
+        rPool has a capping on fixation of maximum rPool points for every
+        kilometer to be travelled on a given Trip. The maximum rPool Points that
+        can be charged by a Driver from a Rider for a Hatchback is 5 rPool
+        Points per kilometer, for a Sedan is 5 rPool Points per kilometer,
+        MUV/SUV is 5 rPool Points per kilometer, Premium vehicles is 5 rPool
+        Points per kilometer for a given Trip.
+      </p>
+      <p><strong>What is the fee for using rPool?</strong></p>
+      <p>
+        rPool is a free to register and use service. We levy no service charge
+        for using the technology. However, redBus reserves the right to levy the
+        same in future.
+      </p>
+    </div>
+
+    <div id="c7" class="content">
+      <p><strong> How secure is the system?</strong></p>
+      <p>
+        All users are required to verify their phone number and official email
+        id for registering with rPool. Aside from this, users can configure
+        their social network profiles, so other users can make informed
+        decisions before connecting. We carry out regular checks on users and
+        invite other users to report any false information by users.
+      </p>
+
+      <p>
+        <strong
+          >What if do not wish to travel with someone from the past?
+        </strong>
+      </p>
+      <p>
+        You are in control of every Trip. If you choose to not ride with a
+        Driver, you can simply choose to not send an invitation to that Driver.
+        Similarly Driver will have an option of rejecting the invitation of a
+        Rider, if Driver chose not to travel with a particular Rider. Should you
+        feel concerned beyond the rejection, kindly reach out to us at
+        rpool@redbus.in
+      </p>
+
+      <p><strong>How can I report abuse against a fellow User?</strong></p>
+      <p>
+        You can contact us on our emergency line +918071280009 or email us at
+        rPool@redbus.in. We take all feedback very seriously and reserve the
+        option to suspend or permanently delete accounts if required.
+      </p>
+
+      <p><strong>Will my phone number be seen during the calls?</strong></p>
+      <p>
+        No, your contact number is hidden through call masking and will not be
+        visible to anyone.
+      </p>
+
+      <p><strong>Will my profile visible to everyone on the rPool?</strong></p>
+      <p>
+        No, your profile is only made visible to Rider who is travelling on a
+        similar route and need carpool services for the said route.
+      </p>
+
+      <p><strong>How does rPool ensure security?</strong></p>
+      <p>
+        All rPool users are verified with contact number and official email id.
+        Also, we use call masking to ensure that your number is hidden both on
+        calls as well as on chats.
+      </p>
+
+      <p><strong>Is it mandatory to set my profile photo?</strong></p>
+      <p>
+        Yes, it’s a mandatory thing to complete your rPool ’s profile and
+        provide an authentic photo. Failure to do so will result in suspension
+        of your account.
+      </p>
+
+      <p><strong>Where do I see my transaction history?</strong></p>
+      <p>You can view your transaction history from your rPool wallet.</p>
+    </div>
+
+    <!-- <-------------top bus Routes------------------ -->
+    <div id="doneHere"></div>
+    <div
+      class="footer"
+      style="
+        background-color: rgb(229, 229, 229);
+        color: grey;
+        font-weight: 400px;
+      "
+    >
+      <div class="contentList widthFooter" id="firstCol">
+        <h4>Top Bus Routes</h4>
+        <p>Hyderabad to Bangalore Bus</p>
+        <p>Bangalore to Chennai Bus</p>
+        <p>Pune to Bangalore Bus</p>
+        <p>Mumbai to Bangalore Bus</p>
+      </div>
+      <div class="contentList widthFooter">
+        <h4>Top Cities</h4>
+        <p>Hyderabad Bus Tickets</p>
+        <p>Bangalore Bus Tickets</p>
+        <p>Chennai Bus Tickets</p>
+        <p>Pune Bus Tickets</p>
+        <p>Blog</p>
+      </div>
+      <div class="contentList widthFooter">
+        <h4>Top RTC's</h4>
+        <p>APSRTC</p>
+        <p>MSRTC</p>
+        <p>HRTC</p>
+        <p>UPSRTC</p>
+      </div>
+      <div class="contentList widthFooter">
+        <h4>Other</h4>
+        <p>GSRTC</p>
+        <p>RSPTC</p>
+        <p>KTCL</p>
+        <p>PEPSU</p>
+      </div>
+    </div>
+
+    <!-- <---------------------footer html--------------------------------->
+
+    <footer id="footer">
+      <div class="footer">
+        <div class="contentList widthFooter" id="firstCol">
+          <h4>About redBus</h4>
+          <p>About Us</p>
+          <p>Contact Us</p>
+          <p>Mobile Version</p>
+        </div>
+        <div class="contentList widthFooter">
+          <h4>Info</h4>
+          <p>T & C</p>
+          <p>Privacy Policy</p>
+          <p>Cookie Policy</p>
+          <p>FAQ</p>
+          <p>Blog</p>
+        </div>
+        <div class="contentList widthFooter">
+          <h4>Global Sites</h4>
+          <p>India</p>
+          <p>Singapore</p>
+          <p>Malaysia</p>
+          <p>Indonesia</p>
+          <p>Peru</p>
+          <p>Columbia</p>
+        </div>
+        <div class="contentList widthFooter">
+          <h4>Our Partners</h4>
+          <p>Goibibo</p>
+          <p>Makemytrip</p>
+        </div>
+        <div id="lastCol">
+          <img src="https://logodix.com/logo/304293.png" id="logoFooter" />
+          <p>
+            redBus is the world's largest online bus ticket booking service
+            trusted by over 25 million happy customers globally. redBus offers
+            bus ticket booking through its website,iOS and Android mobile apps
+            for all major routes.
+          </p>
+          <div>
+            <div class="icon"><i class="fa fa-facebook-f"></i></div>
+            <div class="icon"><i class="fa fa-twitter"></i></div>
+          </div>
+          <div id="lastP">
+            <p>© 2021 ibibogroup All rights reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Adding Bootstrap CDN - jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Adding Bootstrap CDN - Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+    <script>
+      var body = document.querySelector("body");
+
+      var btn1 = document.getElementById("id1");
+      var div1 = document.getElementById("c1");
+
+      var btn2 = document.getElementById("id2");
+      var div2 = document.getElementById("c2");
+
+      var btn3 = document.getElementById("id3");
+      var div3 = document.getElementById("c3");
+
+      var btn4 = document.getElementById("id4");
+      var div4 = document.getElementById("c4");
+
+      var btn5 = document.getElementById("id5");
+      var div5 = document.getElementById("c5");
+
+      var btn6 = document.getElementById("id6");
+      var div6 = document.getElementById("c6");
+
+      var btn7 = document.getElementById("id7");
+      var div7 = document.getElementById("c7");
+
+      var div8 = document.getElementById("id8");
+
+      var a = 1;
+      function bt() {
+        if (a == 1) {
+          body.insertBefore(div1, btn2);
+          document.getElementById("c1").style.display = "block";
+          const minus = document.getElementById("minus1");
+          minus.innerHTML = "➖";
+          return (a = 0);
+        } else {
+          document.getElementById("c1").style.display = "none";
+          const minus = document.getElementById("minus1");
+          minus.innerHTML = "➕";
+          return (a = 1);
+        }
+      }
+      var b = 1;
+      function bt2() {
+        if (b == 1) {
+          body.insertBefore(div2, btn3);
+          document.getElementById("c2").style.display = "block";
+          const minus2 = document.getElementById("minus2");
+          minus2.innerHTML = "➖";
+          return (b = 0);
+        } else {
+          document.getElementById("c2").style.display = "none";
+          const minus2 = document.getElementById("minus2");
+          minus2.innerHTML = "➕";
+          return (b = 1);
+        }
+      }
+      var c = 1;
+      function bt3() {
+        if (c == 1) {
+          body.insertBefore(div3, btn4);
+          document.getElementById("c3").style.display = "block";
+          const minus3 = document.getElementById("minus3");
+          minus3.innerHTML = "➖";
+          return (c = 0);
+        } else {
+          document.getElementById("c3").style.display = "none";
+          const minus3 = document.getElementById("minus3");
+          minus3.innerHTML = "➕";
+          return (c = 1);
+        }
+      }
+      var d = 1;
+      function bt4() {
+        if (d == 1) {
+          body.insertBefore(div4, btn5);
+          document.getElementById("c4").style.display = "block";
+          const minus4 = document.getElementById("minus4");
+          minus4.innerHTML = "➖";
+          return (d = 0);
+        } else {
+          document.getElementById("c4").style.display = "none";
+          const minus4 = document.getElementById("minus4");
+          minus4.innerHTML = "➕";
+          return (d = 1);
+        }
+      }
+      var e = 1;
+      function bt5() {
+        if (e == 1) {
+          body.insertBefore(div5, btn6);
+          document.getElementById("c5").style.display = "block";
+          const minus5 = document.getElementById("minus5");
+          minus5.innerHTML = "➖";
+          return (e = 0);
+        } else {
+          document.getElementById("c5").style.display = "none";
+          const minus5 = document.getElementById("minus5");
+          minus5.innerHTML = "➕";
+          return (e = 1);
+        }
+      }
+      var f = 1;
+      function bt6() {
+        if (f == 1) {
+          body.insertBefore(div6, btn7);
+          document.getElementById("c6").style.display = "block";
+          const minus6 = document.getElementById("minus6");
+          minus6.innerHTML = "➖";
+          return (f = 0);
+        } else {
+          document.getElementById("c6").style.display = "none";
+          const minus6 = document.getElementById("minus6");
+          minus6.innerHTML = "➕";
+          return (f = 1);
+        }
+      }
+      var g = 1;
+      function bt7() {
+        if (g == 1) {
+          body.insertBefore(div7, div8);
+          document.getElementById("c7").style.display = "block";
+          const minus7 = document.getElementById("minus7");
+          minus7.innerHTML = "➖";
+          return (g = 0);
+        } else {
+          document.getElementById("c7").style.display = "none";
+          const minus7 = document.getElementById("minus7");
+          minus7.innerHTML = "➕";
+          return (g = 1);
+        }
+      }
+    </script>
+  </body>
+</html>
