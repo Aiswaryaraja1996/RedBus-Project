@@ -4449,6 +4449,56 @@
           "image": "../Resources/perosnal_tv.svg"
         }
       ]
+    },
+    {
+      "id": 5,
+      "cityOfOperation": "delhi",
+      "name": "49 Seater TATA (2+2)",
+      "modelOrMake": "2017",
+      "vehicleNumber": {
+        "number": "DL 3 AZ 7331",
+        "show": true
+      },
+      "registeredOn": "03-May-2017",
+      "vehicleImages": [
+        "https://s1.rdbuz.com/busoperatorimages/1585488360830_cr.jpeg",
+        "https://s1.rdbuz.com/busoperatorimages/1585488360820_cr.jpeg",
+        "https://s1.rdbuz.com/busoperatorimages/1585490606821_cr.jpeg",
+        "https://s1.rdbuz.com/busoperatorimages/1612268796079_cr.jpeg"
+      ],
+      "timesBooked": 99,
+      "maxPassengers": 49,
+      "fareDetails": {
+        "ac": {
+          "baseFare": 55,
+          "forExtraKm": 50,
+          "forExtraHour": 350
+        },
+        "nonAc": {
+          "baseFare": 48,
+          "forExtraKm": 45,
+          "forExtraHour": 350
+        },
+        "driverAllowance": 800
+      },
+      "amenities": [
+        {
+          "title": "FasTag",
+          "image": "../Resources/ic-fastag.svg"
+        },
+        {
+          "title": "Music System",
+          "image": "../Resources/music.svg"
+        },
+        {
+          "title": "Charging Point",
+          "image": "../Resources/charging_socket.svg"
+        },
+        {
+          "title": "Personal TV",
+          "image": "../Resources/perosnal_tv.svg"
+        }
+      ]
     }
   ],
   "tripKms": {
