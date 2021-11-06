@@ -48,7 +48,7 @@
       <header id="rh_header" class="home-only-header fixer1">
         <div class="main-header-row">
           <div class="main-header clearfix">
-            <a href="../Html/bookHomePage.html" class="redbus-logo home-redirect"
+            <a href="../Html/homePage.html" class="redbus-logo home-redirect"
               >redbus</a
             >
 
@@ -305,19 +305,16 @@
                   </div>
                   <div class="textbox fl">
                     <div class="top-lbl">DATE</div>
-                    <input
-                      type="text"
-                      id="onward_cal"
-                      readonly=""
-                      value="05-Nov-2021"
-                    />
+                    <input type="date" id="onward_cal" />
                     <div
                       id="onward_modify"
                       class="calendar-blk-search calendar-blk-ond hide"
                     ></div>
                   </div>
                   <div class="parent-textbox fl">
-                    <button class="button ms-btn">SEARCH</button>
+                    <button class="button ms-btn" onClick="changeDate()">
+                      SEARCH
+                    </button>
                   </div>
                   <div class="fr" id="mod_cancel" onClick="closeModify()">
                     <i class="bi bi-x-circle"></i>
@@ -541,31 +538,36 @@
                     <li value="1" class="clearfix fl">
                       <i class="fl bi bi-wifi"></i>
                       <span class="fl" title="WIFI">WIFI (5)</span>
-                      
                     </li>
                     <li value="4" class="clearfix fl">
-                      <i class="bi fl bi-droplet"></i><span class="fl" title="Water Bottle"
+                      <i class="bi fl bi-droplet"></i
+                      ><span class="fl" title="Water Bottle"
                         >Water Bottle (8)</span
                       >
                     </li>
                     <li value="5" class="clearfix fl">
-                      <i class="bi fl bi-border-width"></i><span class="fl" title="Blankets">Blankets (8)</span>
+                      <i class="bi fl bi-border-width"></i
+                      ><span class="fl" title="Blankets">Blankets (8)</span>
                     </li>
                     <li value="7" class="clearfix fl">
-                      <i class="bi fl bi-battery-half"></i><span class="fl" title="Charging Point"
+                      <i class="bi fl bi-battery-half"></i
+                      ><span class="fl" title="Charging Point"
                         >Charging Point (23)</span
                       >
                     </li>
                     <li value="8" class="clearfix fl">
-                      <i class="bi fl bi-film"></i><span class="fl" title="Movie">Movie (9)</span>
+                      <i class="bi fl bi-film"></i
+                      ><span class="fl" title="Movie">Movie (9)</span>
                     </li>
                     <li value="19" class="clearfix fl">
-                      <i class="bi fl bi-geo"></i><span class="fl" title="Track My Bus"
+                      <i class="bi fl bi-geo"></i
+                      ><span class="fl" title="Track My Bus"
                         >Track My Bus (24)</span
                       >
                     </li>
                     <li value="27" class="clearfix fl">
-                      <i class="bi fl bi-telephone"></i><span class="fl" title="Emergency Contact Number"
+                      <i class="bi fl bi-telephone"></i
+                      ><span class="fl" title="Emergency Contact Number"
                         >Emergency Contact Nu... (19)</span
                       >
                     </li>
@@ -599,25 +601,83 @@
                   </div>
                   <div class="w-10 float-left f-12 d-color">
                     <a>Departure</a>
+                    <i
+                      id="dep-arrow"
+                      class="bi bi-arrow-down hide"
+                      style="color: #da4e52"
+                    ></i>
                   </div>
                   <div class="w-10 float-left f-12 d-color">
-                    <a>Duration</a>
+                    <a
+                      onclick="durationSort()"
+                      id="dur"
+                      data-sort
+                      class="sort-attr"
+                      >Duration</a
+                    >
+                    <i
+                      id="dur-arrow"
+                      class="bi bi-arrow-down hide"
+                      style="color: #da4e52"
+                    ></i>
                   </div>
                   <div class="w-10 float-left f-12 d-color">
-                    <a>Arrival</a>
+                    <a onclick="arrSort()" id="arr" data-sort class="sort-attr"
+                      >Arrival</a
+                    >
+                    <i
+                      id="arr-arrow"
+                      class="bi bi-arrow-down hide"
+                      style="color: #da4e52"
+                    ></i>
                   </div>
                   <div class="w-10 float-left f-12 d-color">
-                    <a>Ratings</a>
+                    <a onclick="rateSort()" id="rat" data-sort class="sort-attr"
+                      >Ratings</a
+                    >
+                    <i
+                      id="rate-arrow"
+                      class="bi bi-arrow-down hide"
+                      style="color: #da4e52"
+                    ></i>
                   </div>
                   <div class="w-15 float-left f-12 d-color">
-                    <a>Fare</a>
+                    <a
+                      onclick="fareSort()"
+                      id="fares"
+                      data-sort
+                      class="sort-attr"
+                      >Fare</a
+                    >
+                    <i
+                      id="fare-arrow"
+                      class="bi bi-arrow-down hide"
+                      style="color: #da4e52"
+                    ></i>
                   </div>
                   <div class="w-15 float-left f-12 d-color">
                     <a>Seats Available</a>
+                    <i
+                      id="seat-arrow"
+                      class="bi bi-arrow-down hide"
+                      style="color: #da4e52"
+                    ></i>
                   </div>
                 </div>
                 <div class="result-section">
                   <ul class="busItems" id="busItems"></ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="t-center errorPage">
+              <div class="error-view oops-page">
+                <img src="	https://www.redbus.in/images/no_bus.png" />
+                <div class="oops-wrapper">
+                  <h3>Oops! No buses found.</h3>
+                  <div class="message-container">
+                    <div class="msg-c-msg">No routes available</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2269,13 +2329,15 @@
                       />
                     </div>
                     <div>
-                      redBus is the world's largest online bus ticket booking service
-                      trusted by over 25 million happy customers globally. redBus
-                      offers bus ticket booking through its website,iOS and Android
-                      mobile apps for all major routes.
+                      redBus is the world's largest online bus ticket booking
+                      service trusted by over 25 million happy customers
+                      globally. redBus offers bus ticket booking through its
+                      website,iOS and Android mobile apps for all major routes.
                     </div>
                     <div id="social-media">
-                      <a target="_blank" href="https://www.facebook.com/redbus.in/"
+                      <a
+                        target="_blank"
+                        href="https://www.facebook.com/redbus.in/"
                         ><span class="fbicon icon-Facebook"></span
                       ></a>
                       <a target="_blank" href="https://twitter.com/redBus_in"
@@ -2292,12 +2354,13 @@
             </div>
           </footer>
         </div>
-
-    
       </div>
-     
     </div>
-  
+
     <script type="text/javascript" src="../JavaScript/busTicket.js"></script>
+    <script
+      src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"
+      type="text/javascript"
+    ></script>
   </body>
 </html>
