@@ -45,7 +45,16 @@ main {
   /* position: relative; */
 }
 
-.container > .pages {
+.pages {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+
+.container > .pages > .leftPages {
   display: flex;
   gap: 25px;
   padding-top: 9.5px;
@@ -53,12 +62,38 @@ main {
   align-items: center;
 }
 
-.quotesContainer > .pages {
+.quotesContainer > .pages > .leftPages {
   display: flex;
   gap: 25px;
   padding-top: 9.5px;
   padding-bottom: 9.5px;
   align-items: center;
+}
+
+.rightPages {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+}
+.userIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.manageBooking {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pageLink {
+  font-size: 12px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .active {
