@@ -20,7 +20,6 @@ var clickCount = 0;
 var totalBusCount = 0;
 
 window.addEventListener("load", () => {
-  
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
 
@@ -1656,11 +1655,15 @@ const selectGender = () => {
   console.log(gender);
 };
 
+var ticketNo = 0;
+
 const payAmnt = () => {
   nameP = document.getElementById("seatno-04").value;
   age = document.getElementById("seatno-01").value;
   mail = document.getElementById("seatno-05").value;
   phone = document.getElementById("seatno-06").value;
+
+  ticketNo = "TC" + Math.floor(1000 + Math.random() * 9000);
 
   var selSeat = [];
   for (var k = 0; k < seat.length; k++) {
@@ -1689,6 +1692,7 @@ const payAmnt = () => {
       mail: mail,
       phone: phone,
       amount: fare,
+      ticket: ticketNo,
     });
   }
 
@@ -1723,10 +1727,10 @@ async function updateSeats(payload) {
   try {
     console.log(payload);
     alert(
-      "You have successfully booked the tickets.Details will be sent your registered phone and email."
+      `You have successfully booked the tickets.Details will be sent your registered phone and email.Your ticket number is ${ticketNo}.`
     );
     const res = await patchSeat(payload);
-
+    sleep(500);
   } catch (e) {
     console.log(e.message);
   }

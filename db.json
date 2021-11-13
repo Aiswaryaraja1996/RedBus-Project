@@ -119,8 +119,8 @@
         },
         {
           "name": "L6",
-          "value": "0",
-          "sex": "",
+          "value": "1",
+          "sex": "F",
           "type": "W",
           "rate": "1500"
         },
@@ -168,8 +168,8 @@
         },
         {
           "name": "L13",
-          "value": "0",
-          "sex": "",
+          "value": "1",
+          "sex": "F",
           "type": "W",
           "rate": "1500"
         },
@@ -252,8 +252,8 @@
         },
         {
           "name": "U8",
-          "value": "0",
-          "sex": "",
+          "value": "1",
+          "sex": "F",
           "type": "N",
           "rate": "1500"
         },
@@ -273,22 +273,22 @@
         },
         {
           "name": "U11",
-          "value": "0",
-          "sex": "",
+          "value": "1",
+          "sex": "F",
           "type": "N",
           "rate": "1500"
         },
         {
           "name": "U12",
-          "value": "0",
-          "sex": "0",
+          "value": "1",
+          "sex": "F",
           "type": "W",
           "rate": "1500"
         },
         {
           "name": "U13",
-          "value": "0",
-          "sex": "",
+          "value": "1",
+          "sex": "F",
           "type": "W",
           "rate": "1600"
         },
@@ -847,8 +847,8 @@
         },
         {
           "name": "U11",
-          "value": "0",
-          "sex": "",
+          "value": "1",
+          "sex": "F",
           "type": "N",
           "rate": "1500"
         },
@@ -4218,14 +4218,158 @@
   ],
   "passengers": [
     {
-      "id": 1,
-      "name": "Abhirami",
-      "age": "24",
-      "seat": "U2",
+      "name": "Dummy",
+      "age": "25",
+      "seat": "U11",
       "sex": "F",
-      "mail": "abhirami@gmail.com",
+      "mail": "dummy@gmail.com",
+      "phone": "9562152083",
+      "amount": "1500.00",
+      "ticket": "TC4627",
+      "id": 2
+    },
+    {
+      "name": "dummy",
+      "age": "25",
+      "seat": "U11",
+      "sex": "F",
+      "mail": "dummy@gmail.com",
       "phone": "9048934825",
-      "amount": "2000"
+      "amount": "1500.00",
+      "ticket": "TC1629",
+      "id": 3
+    },
+    {
+      "name": "Aiswarya",
+      "age": "25",
+      "seat": "U11",
+      "sex": "F",
+      "mail": "dummy@gmail.com",
+      "phone": "9562152083",
+      "amount": "1500.00",
+      "ticket": "TC2062",
+      "id": 4
+    },
+    {
+      "name": "Aiswarya",
+      "age": "25",
+      "seat": "L5",
+      "sex": "F",
+      "mail": "dummy@gmail.com",
+      "phone": "9562152083",
+      "amount": "1500.00",
+      "ticket": "TC1799",
+      "id": 5
+    },
+    {
+      "name": "Aiswarya",
+      "age": "25",
+      "seat": "U14",
+      "sex": "F",
+      "mail": "dummy@gmail.com",
+      "phone": "9562152083",
+      "amount": "1500.00",
+      "ticket": "TC4343",
+      "id": 6
+    },
+    {
+      "name": "Aiswarya",
+      "age": "25",
+      "seat": "U12",
+      "sex": "F",
+      "mail": "dummay@gmail.com",
+      "phone": "9562152083",
+      "amount": "1500.00",
+      "ticket": "TC9754",
+      "id": 7
+    },
+    {
+      "name": "Aiswarya",
+      "age": "25",
+      "seat": "L5",
+      "sex": "F",
+      "mail": "ammua@gmail.com",
+      "phone": "9562152083",
+      "amount": "1500.00",
+      "ticket": "TC3944",
+      "id": 8
+    },
+    {
+      "name": "Aiswarya",
+      "age": "25",
+      "seat": "L11",
+      "sex": "F",
+      "mail": "d@gmail.com",
+      "phone": "9562152083",
+      "amount": "1500.00",
+      "ticket": "TC5286",
+      "id": 9
+    },
+    {
+      "name": "Aiswarya",
+      "age": "25",
+      "seat": "L5",
+      "sex": "F",
+      "mail": "dumayy@hgmail.com",
+      "phone": "9562152083",
+      "amount": "1500.00",
+      "ticket": "TC2029",
+      "id": 10
+    },
+    {
+      "name": "a",
+      "age": "26",
+      "seat": "U12",
+      "sex": "F",
+      "mail": "dummy@gmal.com",
+      "phone": "9562152083",
+      "amount": "1500.00",
+      "ticket": "TC3719",
+      "id": 11
+    },
+    {
+      "name": "Aiswarya",
+      "age": "25",
+      "seat": "U3",
+      "sex": "F",
+      "mail": "d@gmail.com",
+      "phone": "9562152083",
+      "amount": "1500.00",
+      "ticket": "TC7939",
+      "id": 12
+    },
+    {
+      "name": "Aiswarya",
+      "age": "25",
+      "seat": "U13",
+      "sex": "F",
+      "mail": "d@gmail.com",
+      "phone": "9562152083",
+      "amount": "1600.00",
+      "ticket": "TC5619",
+      "id": 13
+    },
+    {
+      "name": "ABC",
+      "age": "25",
+      "seat": "L13",
+      "sex": "F",
+      "mail": "D@GMAIL.COM",
+      "phone": "9562152083",
+      "amount": "1500.00",
+      "ticket": "TC4433",
+      "id": 14
+    },
+    {
+      "name": "Roopa",
+      "age": "25",
+      "seat": "U13",
+      "sex": "F",
+      "mail": "r@gmail.com",
+      "phone": "9562152083",
+      "amount": "1600.00",
+      "ticket": "TC6893",
+      "id": 15
     }
   ],
   "busForHire": [

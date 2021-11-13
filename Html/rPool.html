@@ -37,6 +37,12 @@
       rel="stylesheet"
       href="https://unpkg.com/flickity@2/dist/flickity.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
       * {
@@ -70,17 +76,26 @@
         border-bottom: 2px solid #fff;
       }
       .navbar-collapse {
-        justify-content:space-between !important;
+        justify-content: space-between !important;
       }
 
-      .navbar-collapse div{
+      .navbar-collapse div {
         width: 100%;
         display: flex;
-        justify-content:space-between !important;
+        justify-content: space-between !important;
       }
 
-      .navbar-collapse div ul{
+      .navbar-collapse div ul {
         width: 100%;
+      }
+      .contentList h4 {
+        font-size: 18px;
+        font-weight: bolder;
+      }
+
+      .contentList p {
+        font-size: 14px;
+        color: #d7d7d7;
       }
       /* <------------------------Share your rides -------------------------------------------------------- */
 
@@ -242,8 +257,8 @@
         width: 600px;
         border: 1px solid #ccc;
         padding: 30px 20px;
-        box-shadow: 2px 5px 8px #888888;
-        border: 1px solid grey;
+        /* box-shadow: 2px 5px 8px #888888; */
+        border: 1px solid #e3e3e3;
       }
       .box p {
         padding-left: 40px;
@@ -270,12 +285,17 @@
       }
       /* <-----------------------FAQ's------------------------------------------------ */
       .btn {
-        width: 100%;
-        margin: 0px 20px;
+        width: 95%;
+        /* margin: 0px 20px; */
         /* padding: 20px; */
-        border-bottom: 1px solid grey;
-        margin-bottom: 20px;
-        padding: 2% 5%;
+        border-bottom: 2px solid #f1f1f1;
+        /* margin-bottom: 20px; */
+        /* padding: 2% 5%; */
+        margin-bottom: 1em;
+        margin-top: 1em;
+
+        margin-left: 50px;
+        margin-right: auto;
       }
       .btn:hover {
         cursor: pointer;
@@ -302,18 +322,27 @@
       #c7 {
         display: none;
       }
+
+      hr {
+        background: #f1f1f1;
+        border-color: transparent;
+        height: 1px;
+        border-width: 1px 0 0;
+        margin: 10px 0;
+      }
       .content {
         width: 90%;
         margin: 0% 5%;
         padding: 10px;
-        box-shadow: 2px 8px 8px pink;
+        /* box-shadow: 2px 8px 8px pink; */
         font-family: "Montserrat", sans-serif;
-        line-height: 35px;
+        /* line-height: 35px; */
       }
       /* <---------------------------footer css---------------------------> */
       .footer {
         /* margin-top:10px; */
-        padding-top: 20px;
+        padding: 3em 7em;
+        /* padding-top: 20px; */
         display: flex;
         gap: 2rem;
         color: white;
@@ -324,12 +353,16 @@
       .footer h4 {
         color: rgb(90, 89, 89);
       }
-      #firstCol {
-        margin-left: 10%;
+      .topFooter{
+        justify-content: space-between !important;
       }
+      /* #firstCol {
+        margin-left: 10%;
+      } */
       #lastCol {
-        margin-left: 5%;
-        margin-right: 10%;
+        margin-left: 30%;
+        /* margin-right: 10%; */
+        font-size: 14px;
       }
       .icon {
         border: 1px solid grey;
@@ -354,11 +387,11 @@
         width: 80px;
         background-color: rgb(31, 31, 46);
         margin-top: 20px;
-        border: 1px solid grey;
+        /* border: 1px solid grey; */
         border-radius: 20px;
       }
       #lastCol {
-        width: 55%;
+        width: 26%;
       }
       @media screen and (max-width: 600px) {
         .footer {
@@ -378,8 +411,11 @@
       }
 
       .contentList p:hover {
-        color: red;
+        /* color: red; */
         cursor: pointer;
+      }
+      .upContent p {
+        color: black !important;
       }
     </style>
   </head>
@@ -917,7 +953,7 @@
       data-flickity='{ "groupCells": true, "pageDots": false}'
     >
       <div class="box" id="firstBox">
-        <p style="margin-left: 50px"><strong>Neeraj Tiwari</strong></p>
+        <p><strong>Neeraj Tiwari</strong></p>
         <p>
           rPool is very exciting and interesting to use.It has been a very good
           experience using rPool.
@@ -925,9 +961,7 @@
       </div>
       <div class="box">
         <p><strong>Ajinkya</strong></p>
-        <p style="margin-left: 50px">
-          It's just awesome. Mostly my travel experience has been amazing.
-        </p>
+        <p>It's just awesome. Mostly my travel experience has been amazing.</p>
       </div>
       <div class="box">
         <p><strong>Kunal dubey</strong></p>
@@ -949,9 +983,10 @@
         margin: auto;
         font-family: 'Montserrat', sans-serif;
         margin-top: 70px;
+        font-weight: 700;
       "
     >
-      FAQ's
+      FAQ
     </h3>
 
     <div onclick="bt()" class="btn" id="id1">
@@ -961,7 +996,7 @@
           text-align: left;
           width: 90%;
           padding-left: 2%;
-          font-size: 20px;
+          font-size: 16px;
           font-weight: 600;
         "
       >
@@ -970,6 +1005,7 @@
       <div style="float: left; width: 10%" id="minus1">➕</div>
     </div>
     <br />
+
     <div onclick="bt2()" class="btn" id="id2">
       <div
         style="
@@ -977,7 +1013,7 @@
           text-align: left;
           width: 90%;
           padding-left: 2%;
-          font-size: 20px;
+          font-size: 16px;
           font-weight: 600;
         "
       >
@@ -993,7 +1029,7 @@
           text-align: left;
           width: 90%;
           padding-left: 2%;
-          font-size: 20px;
+          font-size: 16px;
           font-weight: 600;
         "
       >
@@ -1009,7 +1045,7 @@
           text-align: left;
           width: 90%;
           padding-left: 2%;
-          font-size: 20px;
+          font-size: 16px;
           font-weight: 600;
         "
       >
@@ -1025,7 +1061,7 @@
           text-align: left;
           width: 90%;
           padding-left: 2%;
-          font-size: 20px;
+          font-size: 16px;
           font-weight: 600;
         "
       >
@@ -1041,7 +1077,7 @@
           text-align: left;
           width: 90%;
           padding-left: 2%;
-          font-size: 20px;
+          font-size: 16px;
           font-weight: 600;
         "
       >
@@ -1057,7 +1093,7 @@
           text-align: left;
           width: 90%;
           padding-left: 2%;
-          font-size: 20px;
+          font-size: 16px;
           font-weight: 600;
         "
       >
@@ -1069,33 +1105,35 @@
     <div id="id8"></div>
 
     <div id="c1" class="content">
-      <p><strong>What is rPool?</strong></p>
-      <p>
+      <p style="font-size: 14px; font-weight: 600">What is rPool?</p>
+      <p style="font-size: 14px">
         rPool is an online carpool platform that connects Driver(s) (herein
         after referring to those who offer rides) and Rider(s) (herein after
         referring to those who are searching for rides). Both parties herein
         after referred to as “Riders”.
       </p>
-      <p><strong>What is carpooling?</strong></p>
-      <p>
+      <p style="font-size: 14px; font-weight: 600">What is carpooling?</p>
+      <p style="font-size: 14px">
         Carpooling is a smart way to commute by sharing just one vehicle. A car
         owner, offers ride and chooses fellow riders who travel along the same
         route. In addition to being a more affordable way to commute, it also
         helps the environment by reducing the number of cars on the road and
         bringing down the pollution.
       </p>
-      <p>
+      <p style="font-size: 14px; font-weight: 600">
         <strong
           >How is rPool different than other carpooling cab services?</strong
         >
       </p>
-      <p>
+      <p style="font-size: 14px">
         rPool is not a cab service. It is an online carpool platform that
         connects Driver(s) and Rider(s). rPool caters exclusively to working
         professionals, who are verified riders.
       </p>
-      <p><strong>How does rPool work?</strong></p>
-      <p>
+      <p style="font-size: 14px; font-weight: 600">
+        <strong>How does rPool work?</strong>
+      </p>
+      <p style="font-size: 14px">
         Private car owners desirous of offering a Trip to other professionals
         traveling on the routes of daily commute will register on the rPool
         platform and offer rides or invite registered Riders. Alternately,
@@ -1108,71 +1146,81 @@
         rPool Points agreed for the Trip are credited from the Rider’s rPool
         Wallet to Driver’s rPool Wallet.
       </p>
-      <p><strong>What is rPool Wallet?</strong></p>
-      <p>
+      <p style="font-size: 14px; font-weight: 600">What is rPool Wallet?</p>
+      <p style="font-size: 14px">
         rPool Wallet is a wallet provided to each User of the rPool, to
         seamlessly transact for each Trip provided and availed on redBus App.
       </p>
-      <p>
-        <strong
-          >What are rPool Points? What can a Rider do with the points received
-          by offering Trips to others?</strong
-        >
+      <p style="font-size: 14px; font-weight: 600">
+        What are rPool Points? What can a Rider do with the points received by
+        offering Trips to others?
       </p>
-      <p>
+      <p style="font-size: 14px">
         As a part of your rPool Wallet, rPool Points allow riders to seamlessly
         transact for rides. Additionally, rPool Points can be redeemed for
         shopping cards or vouchers as agreed and provided by rPool. Currently,
         rPool allows redemption of rPool Points. Points can also be donated
         towards the planting of trees by the MakeMyTrip Foundation.
       </p>
-      <p><strong>How does a User benefit from rPool?</strong></p>
-      <p>
+      <p style="font-size: 14px; font-weight: 600">
+        How does a User benefit from rPool?
+      </p>
+      <p style="font-size: 14px">
         Users get to save more on every Trip by splitting the cost between
         fellow Users while making the best use of a single vehicle. rPool Users
         also contribute to making the city better by reducing the number of cars
         and resultantly reducing the pollution. Additionally, as rPool is a
         carpool exclusively for professionals one can network with fellow Users.
       </p>
-      <p><strong>How secure is the platform?</strong></p>
-      <p>
+      <p style="font-size: 14px; font-weight: 600">
+        How secure is the platform?
+      </p>
+      <p style="font-size: 14px">
         rPool is only open to professionals and we verify users through their
         corporate email. We ensure that all Users have their privacy protected
         by routing all calls and chats through our app where the phone numbers
         are not visible to either party.
       </p>
-      <p><strong>What is a Recurring Trip?</strong></p>
-      <p>
+      <p style="font-size: 14px; font-weight: 600">What is a Recurring Trip?</p>
+      <p style="font-size: 14px">
         A Recurring Trip allows a Driver, to auto-generate their daily commute
         (home to office and vice versa). This eliminates the need to post rides
         every day.
       </p>
-      <p><strong>Can I alter part of my recurring ride?</strong></p>
-      <p>
+      <p style="font-size: 14px; font-weight: 600">
+        Can I alter part of my recurring ride?
+      </p>
+      <p style="font-size: 14px">
         rPool allows you cancel a single Trip. If you won’t be available for a
         few days we recommend stopping the Recurring Ride until your return.
       </p>
-      <p><strong>How do I contact rPool ’s support team?</strong></p>
-      <p>
+      <p style="font-size: 14px; font-weight: 600">
+        How do I contact rPool ’s support team?
+      </p>
+      <p style="font-size: 14px">
         We are always here to help, in case of any issue do email us at
         rPool@redbus.in for any queries.
       </p>
     </div>
 
     <div id="c2" class="content">
-      <p><strong>How can I register for the service?</strong></p>
-      <p>
+      <p style="font-size: 14px; font-weight: 600">
+        How can I register for the service?
+      </p>
+      <p style="font-size: 14px">
         Download the redBus App, tap on the rPool tab, next complete and
         activate your rPool profile to start riding.
       </p>
-      <p>
-        <strong
-          >Can I register on rPool using my Google / Facebook account?</strong
-        >
+      <p style="font-size: 14px; font-weight: 600">
+        Can I register on rPool using my Google / Facebook account?
       </p>
-      <p>Yes, you can register using either your Google or Facebook account.</p>
-      <p><strong>How is the verification done?</strong></p>
-      <p>
+      <p style="font-size: 14px">
+        Yes, you can register using either your Google or Facebook account.
+      </p>
+      <p style="font-size: 14px; font-weight: 600">
+        How is the verification done?
+      </p>
+      <p style="font-size: 14px">
         We send an email verification to your corporate email ID that you
         provide us at the time of creation of your profile. You can either enter
         the 6-digit OTP sent to the email to verify the account or click on the
@@ -1415,21 +1463,21 @@
     <!-- <-------------top bus Routes------------------ -->
     <div id="doneHere"></div>
     <div
-      class="footer"
+      class="footer topFooter"
       style="
         background-color: rgb(229, 229, 229);
         color: grey;
         font-weight: 400px;
       "
     >
-      <div class="contentList widthFooter" id="firstCol">
+      <div class="contentList widthFooter upContent" id="firstCol">
         <h4>Top Bus Routes</h4>
         <p>Hyderabad to Bangalore Bus</p>
         <p>Bangalore to Chennai Bus</p>
         <p>Pune to Bangalore Bus</p>
         <p>Mumbai to Bangalore Bus</p>
       </div>
-      <div class="contentList widthFooter">
+      <div class="contentList widthFooter upContent">
         <h4>Top Cities</h4>
         <p>Hyderabad Bus Tickets</p>
         <p>Bangalore Bus Tickets</p>
@@ -1437,14 +1485,14 @@
         <p>Pune Bus Tickets</p>
         <p>Blog</p>
       </div>
-      <div class="contentList widthFooter">
+      <div class="contentList widthFooter upContent">
         <h4>Top RTC's</h4>
         <p>APSRTC</p>
         <p>MSRTC</p>
         <p>HRTC</p>
         <p>UPSRTC</p>
       </div>
-      <div class="contentList widthFooter">
+      <div class="contentList widthFooter upContent">
         <h4>Other</h4>
         <p>GSRTC</p>
         <p>RSPTC</p>
@@ -1457,7 +1505,7 @@
 
     <footer id="footer">
       <div class="footer">
-        <div class="contentList widthFooter" id="firstCol">
+        <div class="contentList widthFooter upcontent" id="firstCol">
           <h4>About redBus</h4>
           <p>About Us</p>
           <p>Contact Us</p>
@@ -1471,7 +1519,7 @@
           <p>FAQ</p>
           <p>Blog</p>
         </div>
-        <div class="contentList widthFooter">
+        <!-- <div class="contentList widthFooter">
           <h4>Global Sites</h4>
           <p>India</p>
           <p>Singapore</p>
@@ -1484,9 +1532,12 @@
           <h4>Our Partners</h4>
           <p>Goibibo</p>
           <p>Makemytrip</p>
-        </div>
+        </div> -->
         <div id="lastCol">
-          <img src="https://logodix.com/logo/304293.png" id="logoFooter" />
+          <img
+            src="https://s3.rdbuz.com/web/images/home/sgp/r_logo.png"
+            id="logoFooter"
+          />
           <p>
             redBus is the world's largest online bus ticket booking service
             trusted by over 25 million happy customers globally. redBus offers
