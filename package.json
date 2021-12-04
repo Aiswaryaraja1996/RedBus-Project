@@ -2,12 +2,13 @@
   "name": "redbus-project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "json-server --watch db.json"
+    "start": "node server.js"
   },
-  "keywords": [],
+  "keywords": [
+    "json-server,heroku, node, REST API"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
