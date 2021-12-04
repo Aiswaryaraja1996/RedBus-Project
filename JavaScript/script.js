@@ -140,7 +140,7 @@ async function handleOutstationForm(){
 }
 
 function fetchTripKms(city1, city2){
-    return fetch('http://localhost:3000/tripKms')
+    return fetch('https://mock-redbus-server.herokuapp.com/tripKms')
     .then( res => res.json() )
     .then ( res => res[city1][city2])
 }
@@ -191,7 +191,7 @@ async function displayBusForHire(){
 }
 
 function fetchBusForHire(){
-    return fetch('http://localhost:3000/busForHire')
+    return fetch('https://mock-redbus-server.herokuapp.com/busForHire')
     .then( res => res.json() )
 }
 
@@ -345,7 +345,7 @@ function diffBetweenDates(date1, date2){
 }
 
 function fetchVehicle(id){
-    return fetch(`http://localhost:3000/busForHire/${id}`)
+    return fetch(`https://mock-redbus-server.herokuapp.com/busForHire/${id}`)
     .then( res => res.json() )
 }
 

@@ -121,7 +121,7 @@ const changeDate = () => {
 
 const getBuses = (dateForm) => {
   return fetch(
-    `http://localhost:3000/busDetails?date=${dateForm}&source=Mumbai&destination=Bangalore`
+    `https://mock-redbus-server.herokuapp.com/busDetails?date=${dateForm}&source=Mumbai&destination=Bangalore`
   ).then((response) => response.json());
 };
 
@@ -1713,7 +1713,7 @@ async function addPassenger(load) {
 }
 
 function addPass(payload) {
-  return fetch(`http://localhost:3000/passengers`, {
+  return fetch(`https://mock-redbus-server.herokuapp.com/passengers`, {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
@@ -1737,7 +1737,7 @@ async function updateSeats(payload) {
 }
 
 function patchSeat(payload) {
-  return fetch(`http://localhost:3000/busDetails/${busNo}`, {
+  return fetch(`https://mock-redbus-server.herokuapp.com/busDetails/${busNo}`, {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
@@ -1831,11 +1831,11 @@ const sortItems = async (asc_desc, item) => {
 const getsort = (asc_desc, item) => {
   if (asc_desc === 1) {
     return fetch(
-      `http://localhost:3000/busDetails?date=10 Nov 2021&source=Mumbai&destination=Bangalore&_sort=${item}&_order=asc`
+      `https://mock-redbus-server.herokuapp.com/busDetails?date=10 Nov 2021&source=Mumbai&destination=Bangalore&_sort=${item}&_order=asc`
     ).then((res) => res.json());
   } else {
     return fetch(
-      `http://localhost:3000/busDetails?date=10 Nov 2021&source=Mumbai&destination=Bangalore&_sort=${item}&_order=desc`
+      `https://mock-redbus-server.herokuapp.com/busDetails?date=10 Nov 2021&source=Mumbai&destination=Bangalore&_sort=${item}&_order=desc`
     ).then((res) => res.json());
   }
 };
