@@ -148,7 +148,7 @@ const callBusPage = () => {
   if (!from || !to || !dat) {
   } else {
     window.location.replace(
-      `http://127.0.0.1:5500/RedBus-Project/Html/busTicket.html?from=${from}&to=${to}&date=${dat}`
+      `https://aiswaryaraja1996.github.io/RedBus-Project/Html/busTicket.html?from=${from}&to=${to}&date=${dat}`
     );
   }
 };
