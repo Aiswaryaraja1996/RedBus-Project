@@ -16,3 +16,9 @@ npm install
 npm run start
 
 ```
+
+### Tech Stack Used
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap
